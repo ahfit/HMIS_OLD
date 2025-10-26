@@ -1,0 +1,117 @@
+<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Job_Experience.aspx.vb" Inherits="Job_Experience" %>
+
+<%@ Register Assembly="Infragistics2.WebUI.WebDateChooser.v6.1, Version=6.1.20061.28, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb"
+    Namespace="Infragistics.WebUI.WebSchedule" TagPrefix="igsch" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>HACIMS + { Sheikh Zayed Medical Complex, Lahore }</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 505px; height: 183px">
+            <tr>
+                <td style="width: 118px">
+                    Organization Name</td>
+                <td style="width: 100px">
+                    <asp:TextBox ID="TextBox_organization_name" runat="server" Width="246px"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td style="width: 118px">
+                    Designation</td>
+                <td style="width: 100px">
+                    <asp:TextBox ID="TextBox_designation" runat="server" Width="246px"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td style="width: 118px">
+                    City</td>
+                <td style="width: 100px">
+                    <asp:TextBox ID="TextBox_city" runat="server" Width="247px"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td style="width: 118px">
+                    Country</td>
+                <td style="width: 100px">
+                    <asp:DropDownList ID="DropDownList_country" runat="server" DataSourceID="SqlDataSource1"
+                        DataTextField="Country_Name" DataValueField="Country_ID" Width="251px">
+                    </asp:DropDownList></td>
+            </tr>
+            <tr>
+                <td style="width: 118px">
+                    Start Date</td>
+                <td style="width: 100px">
+                    <igsch:webdatechooser id="WebDateChooser_satrt_date" runat="server"></igsch:webdatechooser>
+                    <asp:HiddenField ID="HiddenField_start_Date" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 118px">
+                    Completion Date</td>
+                <td style="width: 100px">
+                    <igsch:webdatechooser id="WebDateChooser_completion_Date" runat="server"></igsch:webdatechooser>
+                    <asp:HiddenField ID="HiddenField_completion_Date" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 118px">
+                    Responsibilities</td>
+                <td style="width: 100px">
+                    <asp:TextBox ID="TextBox_Responsibilites" runat="server" Width="250px"></asp:TextBox></td>
+            </tr>
+        </table>
+    
+    </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:job ApplicationConnectionString %>"
+            SelectCommand="SELECT [Country_ID], [Country_Name] FROM [Country]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:job ApplicationConnectionString %>"
+            DeleteCommand="DELETE FROM [Job_Experience] WHERE [Employee_ID] = @Employee_ID AND [Job_Experience_ID] = @Job_Experience_ID"
+            InsertCommand="INSERT INTO [Job_Experience] ( [Organization_Name], [Designation], [City], [Country], [Start_Date], [Completion_Date], [Responsibilities]) VALUES ( @Organization_Name, @Designation, @City, @Country, @Start_Date, @Completion_Date, @Responsibilities)"
+            SelectCommand="SELECT Job_Experience.Employee_ID, Job_Experience.Job_Experience_ID, Job_Experience.Organization_Name, Job_Experience.Designation, Job_Experience.City, Country.Country_Name, Job_Experience.Start_Date, Job_Experience.Completion_Date, Job_Experience.Responsibilities FROM Job_Experience INNER JOIN Country ON Job_Experience.Country = Country.Country_ID"
+            UpdateCommand="UPDATE [Job_Experience] SET [Organization_Name] = @Organization_Name, [Designation] = @Designation, [City] = @City, [Country] = @Country, [Start_Date] = @Start_Date, [Completion_Date] = @Completion_Date, [Responsibilities] = @Responsibilities WHERE [Employee_ID] = @Employee_ID AND [Job_Experience_ID] = @Job_Experience_ID">
+            <DeleteParameters>
+                <asp:Parameter Name="Employee_ID" Type="Int32" />
+                <asp:Parameter Name="Job_Experience_ID" Type="Int32" />
+            </DeleteParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="Organization_Name" Type="String" />
+                <asp:Parameter Name="Designation" Type="String" />
+                <asp:Parameter Name="City" Type="String" />
+                <asp:Parameter Name="Country" Type="Int32" />
+                <asp:Parameter Name="Start_Date" Type="DateTime" />
+                <asp:Parameter Name="Completion_Date" Type="DateTime" />
+                <asp:Parameter Name="Responsibilities" Type="String" />
+                <asp:Parameter Name="Employee_ID" Type="Int32" />
+                <asp:Parameter Name="Job_Experience_ID" Type="Int32" />
+            </UpdateParameters>
+            <InsertParameters>
+                <asp:Parameter Name="Organization_Name" Type="String" />
+                <asp:Parameter Name="Designation" Type="String" />
+                <asp:Parameter Name="City" Type="String" />
+                <asp:Parameter Name="Country" Type="Int32" />
+                <asp:Parameter Name="Start_Date" Type="DateTime" />
+                <asp:Parameter Name="Completion_Date" Type="DateTime" />
+                <asp:Parameter Name="Responsibilities" Type="String" />
+            </InsertParameters>
+        </asp:SqlDataSource>
+        <asp:Button ID="Button_save" runat="server" Text="Save" />
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2">
+            <Columns>
+                <asp:BoundField DataField="Organization_Name" HeaderText="Organization_Name" SortExpression="Organization_Name" />
+                <asp:BoundField DataField="Designation" HeaderText="Designation" SortExpression="Designation" />
+                <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                <asp:BoundField DataField="Country_Name" HeaderText="Country_Name" SortExpression="Country_Name" />
+                <asp:BoundField DataField="Start_Date" HeaderText="Start_Date" SortExpression="Start_Date" />
+                <asp:BoundField DataField="Completion_Date" HeaderText="Completion_Date" SortExpression="Completion_Date" />
+                <asp:BoundField DataField="Responsibilities" HeaderText="Responsibilities" SortExpression="Responsibilities" />
+                <asp:CommandField ShowEditButton="True" />
+                <asp:CommandField ShowDeleteButton="True" />
+            </Columns>
+        </asp:GridView>
+    </form>
+</body>
+</html>

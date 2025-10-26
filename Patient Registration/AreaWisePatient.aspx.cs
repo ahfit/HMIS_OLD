@@ -1,0 +1,120 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using System.Data.SqlClient;
+using Microsoft.Reporting.WebForms;
+public partial class Patient_Registration_AreaWisePatient : System.Web.UI.Page
+{
+    ReportDocument abc = new ReportDocument();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            FillHospital();
+            ReportViewer1.LocalReport.SetBasePermissionsForSandboxAppDomain(AppDomain.CurrentDomain.PermissionSet);
+            WebDateChooser1.Value = DateTime.Now.AddDays(-1);
+            WebDateChooser2.Value = DateTime.Now;
+            GetPatientType();
+            showrpt();
+        }
+        
+    }
+    protected void FillHospital()
+    {
+        string conststr = ConfigurationManager.ConnectionStrings["Basic_Data_ConnectionString"].ConnectionString;
+        using (SqlConnection con = new SqlConnection(conststr))
+        {
+            SqlCommand command = new SqlCommand("SELECT    Hospital_ID, Hospital_Name FROM  Hospital ", con);
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            ddl_Hospital.DataValueField = "Hospital_ID";
+            ddl_Hospital.DataTextField = "Hospital_Name";
+            ddl_Hospital.DataSource = dt;
+            ddl_Hospital.DataBind();
+        }
+    }
+    protected void showrpt()
+    {
+       
+        SqlParameter[] para={new SqlParameter("@Start_Date",WebDateChooser1.Value.ToString()),new SqlParameter("@End_Date",WebDateChooser2.Value.ToString()),new SqlParameter("@PatientType", DropDownList1.SelectedValue)};
+        DbManager dbMgr=new DbManager();
+
+        ReportParameter[] repParams = new ReportParameter[3];
+
+        repParams[0] = new ReportParameter("StartDate", WebDateChooser1.Value.ToString());
+        repParams[1] = new ReportParameter("EndDate", WebDateChooser2.Value.ToString());
+        repParams[2] = new ReportParameter("PatientType", DropDownList1.SelectedItem.Text);
+
+        
+        DataTable dt = dbMgr.ExecuteDataTable("Get_Patient_Dept_Wise","Basic_Data_ConnectionString",para);
+        ReportViewer1.LocalReport.DataSources.Clear();
+        ReportViewer1.LocalReport.ReportPath = Server.MapPath("Daily_Position_Rpt.rdlc");
+        ReportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1",dt));
+        ReportViewer1.LocalReport.SetParameters(repParams);
+        ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(subReports);
+        ReportViewer1.LocalReport.Refresh();
+    }
+
+    public void subReports(object sender, SubreportProcessingEventArgs e)
+    {
+        try
+        {
+            e.DataSources.Clear();
+            DataTable dt = (DataTable)Session["DynamicHeader"];
+            e.DataSources.Add(new ReportDataSource("DataSet1", dt));
+            e.DataSources.Add(new ReportDataSource("DataSetFooter", dt));
+        }
+        catch (Exception)
+        {
+
+        }
+
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+       
+        showrpt();
+    }
+    protected void GetPatientType()
+    {
+        String conString = ConfigurationManager.ConnectionStrings["Basic_Data_ConnectionString"].ToString();
+        SqlCommand cmd;
+        SqlConnection con = new SqlConnection();
+        try
+        {
+            con = new SqlConnection(conString);
+            con.Open();
+            cmd = new SqlCommand("select Patient_type.Patient_Type_ID,Patient_type.Patient_type from Patient_type inner join Registration.dbo.Patient_Type_HospitalWise PH on PH.Patient_Type_Id=Patient_type.Patient_Type_ID where Active= 1 and PH.Hospital_Id=@HospitalId ", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cmd.Parameters.AddWithValue("@HospitalId", ddl_Hospital.SelectedValue);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DropDownList1.DataSource = dt;
+            DropDownList1.DataTextField="Patient_type";
+            DropDownList1.DataValueField = "Patient_type_id";
+            DropDownList1.DataBind();
+            DropDownList1.Items.Insert(0, new ListItem() { Selected = true, Text = "All", Value = "0" });
+        }
+        catch (Exception ex)
+        {
+
+            con.Close();
+        }
+
+    }
+    protected void ddl_Hospital_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        GetPatientType();
+    }
+}

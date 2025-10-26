@@ -1,0 +1,4 @@
+https://secure.digitalpersona.com/buy.digitalpersona/fulfillment/
+
+http://forum.griaule.com/viewtopic.php?t=69 
+Unable to cast object of type 'System.Drawing.Bitmap' to type 'stdole.IPictureDisp'.

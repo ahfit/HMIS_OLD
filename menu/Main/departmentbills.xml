@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<shortagemedicine>
+	
+
+<item type="departmentbills" >
+			<department>Urology</department>
+			<duto>Sanction of Rs. 5000 for Conference</duto>
+			<date>16 Jul 09</date>
+</item>
+
+<item type="departmentbills" >
+			<department>Pathology</department>
+			<duto>Sanction of Rs. 15000 for Conference</duto>
+			<date>16 Jul 09</date>
+</item>
+
+
+<item type="departmentbills" >
+			<department>Emergency</department>
+			<duto>Sanction of Rs. 1200 for Conference</duto>
+			<date>16 Jul 09</date>
+</item>
+
+
+
+
+
+
+</shortagemedicine>
+
+
+
+
+   

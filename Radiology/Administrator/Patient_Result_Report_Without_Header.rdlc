@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Patient Name</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.00487in</Top>
+        <Left>0.41552in</Left>
+        <Height>0.16679in</Height>
+        <Width>1.31457in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:       </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!PATIENTNAME.Value, "DataSet2")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.00487in</Top>
+        <Left>1.78149in</Left>
+        <Height>0.16679in</Height>
+        <Width>2.53404in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Visit #</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.1786in</Top>
+        <Left>4.46762in</Left>
+        <Height>0.17154in</Height>
+        <Width>0.90625in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:   </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!PayID.Value,"DataSet2")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.1786in</Top>
+        <Left>5.41691in</Left>
+        <Height>0.17154in</Height>
+        <Width>2.07292in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contact</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.36264in</Top>
+        <Left>4.46762in</Left>
+        <Height>0.15767in</Height>
+        <Width>0.90625in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:   </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!MobilePhone.Value, "DataSet2")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.36264in</Top>
+        <Left>5.41691in</Left>
+        <Height>0.15767in</Height>
+        <Width>2.07292in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <CanGrow>true</CanGrow>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Report.Value,"DataSet3")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox34</rd:DefaultName>
+        <Top>1.22791in</Top>
+        <Left>0.41136in</Left>
+        <Height>0.16945in</Height>
+        <Width>6.9493in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Patient Type</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.1786in</Top>
+        <Left>0.41552in</Left>
+        <Height>0.17154in</Height>
+        <Width>1.31457in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:       </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!PatientType.Value,"DataSet2")</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.1786in</Top>
+        <Left>1.78149in</Left>
+        <Height>0.17154in</Height>
+        <Width>2.65835in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Exam</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.97375in</Top>
+        <Left>0.41291in</Left>
+        <Height>0.14931in</Height>
+        <Width>1.31302in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>1.1786in</Top>
+        <Left>0.42583in</Left>
+        <Height>0.01042in</Height>
+        <Width>7.03125in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <TopBorder>
+            <Style>Solid</Style>
+          </TopBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>MR # </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.00487in</Top>
+        <Left>4.46762in</Left>
+        <Height>0.16679in</Height>
+        <Width>0.90625in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">   </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!PLName.Value, "DataSet2")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.00487in</Top>
+        <Left>5.41691in</Left>
+        <Height>0.16679in</Height>
+        <Width>2.07292in</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Address</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.7918in</Top>
+        <Left>0.41552in</Left>
+        <Height>0.14167in</Height>
+        <Width>1.31457in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:       </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!House_No.Value,"DataSet2")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.7918in</Top>
+        <Left>1.77888in</Left>
+        <Height>0.14167in</Height>
+        <Width>2.64695in</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Consultant</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.7918in</Top>
+        <Left>4.46762in</Left>
+        <Height>0.15556in</Height>
+        <Width>0.90625in</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:   </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!ReferedName.Value,"DataSet2")</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.7918in</Top>
+        <Left>5.41691in</Left>
+        <Height>0.15556in</Height>
+        <Width>2.07292in</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Report Time</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.57169in</Top>
+        <Left>4.4664in</Left>
+        <Height>0.16386in</Height>
+        <Width>0.90625in</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:   </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>h:mm tt</Format>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!Report_date_time.Value,"DataSet1")</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                  <Format>h:mm tt</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.57169in</Top>
+        <Left>5.41569in</Left>
+        <Height>0.16386in</Height>
+        <Width>2.07292in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Report Date</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.55781in</Top>
+        <Left>0.4143in</Left>
+        <Height>0.18052in</Height>
+        <Width>1.31457in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:       </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!Report_date_time.Value,"DataSet1")</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                  <Format>MMM d, yyyy</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.57169in</Top>
+        <Left>1.78027in</Left>
+        <Height>0.16386in</Height>
+        <Width>1.96112in</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox31">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Age</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.36264in</Top>
+        <Left>0.41136in</Left>
+        <Height>0.17084in</Height>
+        <Width>1.31457in</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:       </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!PatientAge.Value, "DataSet2")</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.36264in</Top>
+        <Left>1.78565in</Left>
+        <Height>0.15766in</Height>
+        <Width>2.65835in</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:       </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!TB_Name.Value, "DataSet3")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.99041in</Top>
+        <Left>1.77888in</Left>
+        <Height>0.13265in</Height>
+        <Width>5.70973in</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>1.44944in</Height>
+    <Style />
+  </Body>
+  <Width>7.53in</Width>
+  <Page>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <TopMargin>1.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="RadiologyDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>f3376157-feb5-4341-a082-0afd057e2c39</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>RadiologyDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="TGName">
+          <DataField>TGName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TestName">
+          <DataField>TestName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ComponentName">
+          <DataField>ComponentName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TUnitName">
+          <DataField>TUnitName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TCValue">
+          <DataField>TCValue</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Employee_Name">
+          <DataField>Employee_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Report">
+          <DataField>Report</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TC_Range_Unit">
+          <DataField>TC_Range_Unit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TCID">
+          <DataField>TCID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TSGID">
+          <DataField>TSGID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="trDate">
+          <DataField>trDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CompUnits">
+          <DataField>CompUnits</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TB_Name">
+          <DataField>TB_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Referred_by">
+          <DataField>Referred_by</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Status_by">
+          <DataField>Status_by</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Report_date_time">
+          <DataField>Report_date_time</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Refrence_No">
+          <DataField>Refrence_No</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Prefix">
+          <DataField>Prefix</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EFName">
+          <DataField>EFName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EMName">
+          <DataField>EMName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ELName">
+          <DataField>ELName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Perform_Date">
+          <DataField>Perform_Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="End_datetime">
+          <DataField>End_datetime</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Any_Complication">
+          <DataField>Any_Complication</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TB_ID">
+          <DataField>TB_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>RadiologyDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\VSPractice\WebSite2\App_Code\RadiologyDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>RadiologyCompnentInformation</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>RadiologyCompnentInformationTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>RadiologyDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RegNo">
+          <DataField>RegNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportTime">
+          <DataField>ReportTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PATIENTNAME">
+          <DataField>PATIENTNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Relation">
+          <DataField>Relation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RELATIONNAMEe">
+          <DataField>RELATIONNAMEe</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RegDateTime">
+          <DataField>RegDateTime</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="StreetAddress">
+          <DataField>StreetAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Gender">
+          <DataField>Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MobilePhone">
+          <DataField>MobilePhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CNIC">
+          <DataField>CNIC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateOfBirth">
+          <DataField>DateOfBirth</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="HomePhone">
+          <DataField>HomePhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PFName">
+          <DataField>PFName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PMName">
+          <DataField>PMName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PLName">
+          <DataField>PLName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PatientAge">
+          <DataField>PatientAge</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="House_No">
+          <DataField>House_No</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Main_ID">
+          <DataField>Main_ID</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Test_Booking_Date">
+          <DataField>Test_Booking_Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Sample_Collection_Date">
+          <DataField>Sample_Collection_Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="RegDate">
+          <DataField>RegDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PatientType">
+          <DataField>PatientType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReferFrom">
+          <DataField>ReferFrom</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReferedName">
+          <DataField>ReferedName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PayID">
+          <DataField>PayID</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Patient_Type">
+          <DataField>Patient_Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>RadiologyDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\VSPractice\WebSite2\App_Code\RadiologyDataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>RadiologyPatientInformation</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>RadiologyPatientInformationTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet3">
+      <Query>
+        <DataSourceName>RadiologyDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="TGName">
+          <DataField>TGName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TestName">
+          <DataField>TestName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ComponentName">
+          <DataField>ComponentName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TUnitName">
+          <DataField>TUnitName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TCValue">
+          <DataField>TCValue</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Employee_Name">
+          <DataField>Employee_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Report">
+          <DataField>Report</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TC_Range_Unit">
+          <DataField>TC_Range_Unit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TCID">
+          <DataField>TCID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TSGID">
+          <DataField>TSGID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="trDate">
+          <DataField>trDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CompUnits">
+          <DataField>CompUnits</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TB_Name">
+          <DataField>TB_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Referred_by">
+          <DataField>Referred_by</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Status_by">
+          <DataField>Status_by</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Report_date_time">
+          <DataField>Report_date_time</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Refrence_No">
+          <DataField>Refrence_No</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Prefix">
+          <DataField>Prefix</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EFName">
+          <DataField>EFName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EMName">
+          <DataField>EMName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ELName">
+          <DataField>ELName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Perform_Date">
+          <DataField>Perform_Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="End_datetime">
+          <DataField>End_datetime</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Any_Complication">
+          <DataField>Any_Complication</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TB_ID">
+          <DataField>TB_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Doc_Name">
+          <DataField>Doc_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Qualification">
+          <DataField>Qualification</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Designation">
+          <DataField>Designation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LoggedEmpName">
+          <DataField>LoggedEmpName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ConsultantName">
+          <DataField>ConsultantName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Consultant_Remarks">
+          <DataField>Consultant_Remarks</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>RadiologyDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\VSPractice\WebSite2\App_Code\RadiologyDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>RadiologyReportInformation</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>RadiologyReportInformationTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="img_logo3">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>4dc1f444-cc39-4105-812d-03afaad5bef3</rd:ReportID>
+</Report>

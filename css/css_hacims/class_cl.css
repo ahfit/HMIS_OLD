@@ -1,0 +1,7 @@
+
+ #nav {position:absolute; margin-left:0px;  }
+.leftnav {width:0px; display:none; background:url(../images_hacims/img_dots_ver.png) 1px 0 repeat-y;  }
+.open { display:inline-block;  background:url(../images_hacims/toright.png) 0 0 no-repeat; height:21px; width:17px; cursor:pointer;}
+.close { display:none;}
+
+ 

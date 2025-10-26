@@ -1,0 +1,14 @@
+
+
+
+
+BACKUP DATABASE MyDataBase -- DataBase Name
+TO DISK = 'C:\MyDataBase_1.BAK', --Backup Location
+DISK = 'D:\MyDataBase_2.BAK', -- Optional
+DISK = 'E:\MyDataBase_3.BAK' -- Optional
+
+WITH STATS = 1, -- show progress of database backup process after each 1% // default value is 10 if we write 'With STATS' instead of 'With STATS=1' (Optional)
+DESCRIPTION = 'Full backup for MyDataBase', -- Description of DataBase File (Optional)
+PASSWORD = 'Q!W@E#R$'  --Create Password for Restoring DataBase   (Optional) 
+
+GO --Do the Backup

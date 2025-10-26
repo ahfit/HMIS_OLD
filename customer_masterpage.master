@@ -1,0 +1,300 @@
+﻿<%@ Master Language="VB" CodeFile="customer_masterpage.master.vb" Inherits="customer_masterpage" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+<title>HACIMS </title>
+<!--Styles -->
+ 
+<link href="css_hacims/class_reset.css"   rel="stylesheet"   type="text/css" media="screen, projection" />
+<link href="css_hacims/class_content.css" rel="stylesheet"   type="text/css" media="screen, projection" />
+      <link href="css/bootstrap.min.css" rel="stylesheet" />
+<!--[if IE]><link rel="stylesheet" href="css_hacims/content_ie.css" type="text/css" media="screen, projection"/><![endif]-->
+
+<link rel="shortcut icon" href="images_hacims/favicon.ico"/>
+    <a href="css/glyphicons-halflings-regular.ttf"></a>
+<script src="<%# Page.ResolveClientUrl("~/css_hacims/jquery.floatobject-1.0.js") %>" type="text/javascript"  language="javascript"></script>
+
+
+
+<link media="screen" rel="stylesheet" href="css_hacims/colorbox.css" />
+ 
+<script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $('.Grid_1 tr').click(function () {
+                $('.Grid_1 tr').removeClass('gridedit');
+                $(this).addClass('gridedit');
+            });
+        });
+</script>  
+    
+  
+    <!-- jQuery library -->
+ 
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="~/css_hacims/jquery_ui/themes/base/jquery.ui.all.css"/>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.core.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.widget.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.mouse.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.draggable.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.position.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.resizable.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.dialog.js") %>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.datepicker.js")%>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/validate.js")%>"></script>
+<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css/jquery.min.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css/bootstrap.min.js")%>"></script>
+    
+
+<script type="text/javascript" language="javascript">
+    $(function () {
+        $(".box").dialog({
+            autoOpen: false,
+            modal: true
+        });
+
+        $(".openbox").click(function () {
+            $(".box").dialog("open");
+
+            return false;
+        });
+    });
+	
+ </script>
+
+ <script type="text/javascript" language="javascript">
+
+     $(document).ready(function () {        
+             $('.captxt').bind('keyup', function () {
+                 var val = $(this).val().toUpperCase()
+                 $(this).val(val);
+              });  
+     });
+
+</script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $(".intdata").keydown(function (event) {
+
+
+
+            if (!(event.keyCode == 8
+        || event.keyCode == 46
+		|| event.keyCode == 9
+		 || event.keyCode == 190
+        || (event.keyCode >= 35 && event.keyCode <= 40)
+        || (event.keyCode >= 48 && event.keyCode <= 57)
+
+        || (event.keyCode >= 96 && event.keyCode <= 105))
+        ) {
+                event.preventDefault();
+            }
+
+
+
+        });
+    });
+
+</script>
+<script>
+$(document).ready(function(){
+    $("#button").click(function(){
+        $("#hide").toggle();
+    });
+});
+</script>
+    <script>
+$(document).ready(function(){
+    $("#button2").click(function(){
+        $("#hide2").toggle();
+    });
+});
+</script>
+   
+ 
+
+
+<script type="text/javascript">	
+    
+        $(function () {
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy',
+            currentText: 'Now'
+
+        });
+
+        $(".datepicker").datepicker('setDate', new Date());
+    });
+
+
+</script>
+
+    
+ 
+ 
+
+<asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div style="  background: url(/images_hacims/NewFolder1/texture3.png);">
+    <form id="form1" runat="server"> 
+        <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>--%>
+			<div class="hinfo" Style="display:none;">
+  <asp:Image ID="Image1" runat="server" CssClass="hslogo"   />
+        <asp:Label ID="hospital" runat="server"  Text="Label" CssClass="hsname"></asp:Label></div> 
+ <div>
+ <div id="feedb" style="display:none;"><a id="A1" href="~/administrator/feedback.aspx" runat="server" class="feed"></a></div>
+    <div id="header" class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="logo">
+                        <span>
+                            <asp:Label ID="Hospital_Name" runat="server" Text="Hospital_Name" Visible="false"></asp:Label></span>
+                    </div>
+        
+                    <div id="logininfo" class="col-md-12 col-sm-12 col-xs-12">
+                        <ul>
+                            <li class="welcome">Welcome!<span class="dname"><asp:Label ID="LabelDoctorName" runat="server" ToolTip="User Name"></asp:Label></span>
+                                <span class="spltr">|
+                                <a id="AB" href="~/CChangePassword.aspx" class="cpass" runat="server">Change Password</a>
+                                <%--<span class="spltr">|&nbsp;</span><asp:HyperLink ID="hlnkDemoPage" CssClass="cpass" runat="server" 
+            NavigateUrl="~/DemoHome.aspx" Text="Demo"></asp:HyperLink>--%>
+                                <asp:Literal ID="ltrDemo" runat="server" Text=""></asp:Literal>
+                                <span class="spltr">|&nbsp;</span><a id="A2" href="~/login.aspx" title="Logout" runat="server">Logout</a>
+                            </li>
+
+                            <li class="datet">
+                                <asp:Label ID="LabelDate" runat="server" ToolTip="Current Date" Style="color: #0155a6;"></asp:Label></li>
+
+                        </ul>
+                    </div>
+                    </div>
+ 
+		
+
+        <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12" >
+                  
+<div class="navbar Header-Top">
+  <div class="container" style="margin-left:0em">
+    <div class="navbar-header">
+        
+        <div class="navbar-toggle" style="display:none">
+      <button type="button" class="navbar-toggle hidden-sm hidden-xs" style="background-color:white; padding:1em 1.6em 1em 1.6em;border-radius: 11px;" data-toggle="collapse" data-target="#navMain" >
+  
+      
+  </button>
+        <button id="button2" type="button" class="btn hidden-md hidden-sm visible-xs" style="background-color: #38383800; float: right; margin-top: -6.6em;" data-toggle="collapse" data-target="#collapse3">
+            <span class="glyphicon glyphicon-list" style=" font-size: 2.3em; color: #ffffff; "></span>
+       </button>
+     
+    </div>
+    <div class="collapse navbar-collapse col-md-12 col-sm-12 col-xs-12"  id="navMain" style="font-family: sans-serif;">
+    <asp:Menu ID="menuBarr" runat="server" Orientation="Horizontal" CssClass="nav navbar-nav pull-right" MaximumDynamicDisplayLevels="10">
+                        <StaticMenuItemStyle CssClass="StaticMenuItemStyle2"/>
+                        <StaticHoverStyle CssClass="StaticHoverStyle22" />  
+                        <StaticSelectedStyle CssClass="StaticSelectedStyle" />              
+                        
+                        <DynamicMenuItemStyle CssClass="StaticMenuItemStyle3" />
+                        <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+    </asp:Menu>
+        
+                   
+
+    </div> 
+        <button id="button"  type="button" class="btn hidden-xs More-Button"><span class="glyphicon glyphicon-list" style="font-size: 1.7em; " ></span></button>	
+      
+   </div>
+    
+                  
+  </div>
+                  
+
+</div>
+
+                                    <div id="hide" class="collapse">				
+					    <div class="collapse navbar-collapse Header-Toggle" id="myNavbar">
+					      <ul class="nav navbar-nav" >  
+                              
+					          <asp:Menu ID="menuBarr2" 
+                                  runat="server" Orientation="Horizontal" 
+                                CssClass="" MaximumDynamicDisplayLevels="10">
+                              
+                                <StaticMenuItemStyle CssClass="StaticMenuItemStyle" />
+                                <StaticHoverStyle CssClass="StaticHoverStyle" />  
+                                <StaticSelectedStyle CssClass="StaticSelectedStyle" />              
+                                
+                                <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+                               
+                                <DynamicMenuItemStyle  CssClass="StaticMenuItemStyle3" />
+                                   
+                            </asp:Menu>
+                               
+                                
+					      </ul>
+					    </div>	  
+					</div>
+
+                           
+                            </div>
+                        </div>
+             
+    <%-- <asp:Panel ID="Panel1"  CssClass="posmenu" runat="server"></asp:Panel> --%>
+   
+      
+    </div> <!--navigation END-->
+      <div id="hide2" class="collapse hidden-lg hidden-md hidden-sm col-xs-12" style="margin-top: -1.4em;">
+                 <div style="border-left: 6px solid white;background-color: rgba(0, 0, 0, 0.78); text-align: center;margin-top: -7px; border-right: 6px solid white;">
+                  <ul class="">
+                      <li></li>
+                  </ul></div>
+                     
+             </div>
+ 
+  <!--header END-->
+  
+<div id="content"> 
+  
+<div id="inner-content">
+<h1 class="mh1" style="background: none; margin-top: 0px; margin-left: 1em;padding-left: 1em; border-bottom: 0.1em dashed #bbbbbb; display:none;"><span><asp:SiteMapPath ID="SiteMapPath1" runat="server"   CurrentNodeStyle-ForeColor="#000"   RenderCurrentNodeAsLink="false" PathSeparator="&nbsp;&nbsp;&raquo;&nbsp;&nbsp;" RootNodeStyle-ForeColor="#999999" PathDirection="RootToCurrent"></asp:SiteMapPath></span> 
+   </h1>
+  
+</div>
+<div id="forms_items"  style="min-height:400px;">
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+ </div>
+<asp:Label ID="label_i_f" runat ="server" Visible="false" ></asp:Label>
+<br />
+<br />
+
+ <asp:HiddenField ID="HiddenFieldPage_Name" runat="server" /><asp:HiddenField ID="HiddenFieldPage" runat="server" /> 
+  
+  
+ </div> <!--inner-content END-->
+ </div>
+  <!--content END-->
+  <div id="footer"><span><a href="#" title="HACIMS - Design &amp; Developed by Megaplus Technologies" target="_blank">&copy; 2012  -  All rights reserved - Megaplus Technologies</a></span></div>
+
+<!--container END-->
+
+        
+      
+    
+ </form>
+        </div>
+    
+<%--   <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/jquery-latest.js")%>"></script>--%>
+
+</body>
+</html>

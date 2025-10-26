@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<expiremedicine>
+	
+
+<item type="expire" >
+			<name>Peracetamol</name>
+			<date>16 July 2009</date>
+			<type>Tab</type>
+			<bnumber>14258</bnumber>
+</item>
+
+
+<item type="expire" >
+			<name>Insuline Plain </name>
+			<date>16 July 2009</date>
+			<type>Inj</type>
+			<bnumber>24258</bnumber>
+</item>
+
+
+
+</expiremedicine>
+
+
+
+
+   

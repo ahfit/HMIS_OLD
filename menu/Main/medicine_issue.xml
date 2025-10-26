@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<medicine_issue>
+	
+<item type="issue" >
+			<name>Peracetamol</name>
+			<type>tab</type>
+			<qty>200</qty>
+</item>
+
+<item type="issue" >
+			<name>Insuline Plain</name>
+			<type>Inj</type>
+			<qty>100</qty>
+</item>
+
+<item type="issue">
+			<name>Peracetamol</name>
+			<type>tab</type>
+			<qty>2500</qty>
+</item>
+
+</medicine_issue>

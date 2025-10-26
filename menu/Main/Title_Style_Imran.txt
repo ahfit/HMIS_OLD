@@ -1,0 +1,28 @@
+<script language ='javascript'>window.document.title='HACIMS + { Lahore General hospital }';</script>
+<meta http-equiv="Pragma" content="no-cache"/>
+<link href='/images1/st_sheet_01.css' rel='stylesheet' type='text/css' />
+<link href='../images1/st_sheet_011234.css' rel='stylesheet' type='text/css' />
+<link href="images1/st_sheet_01.css" rel="stylesheet" type="text/css" />
+<link href="images1/st_sheet_02.css" rel="stylesheet" type="text/css" />
+
+<link href="menu/css/class_reset.css" rel="stylesheet" 	 type="text/css" />
+<link href="menu/css/class_elements.css" rel="stylesheet" type="text/css" />
+
+<link href="css1/dropdown/dropdown.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css1/dropdown/default.advanced.css" media="all" rel="stylesheet" type="text/css" />
+
+<link href="css/dropdown/dropdown.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/dropdown/default.advanced.css" media="all" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 7]>
+<script type="text/javascript" src="css/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="css/js/jquery/jquery.dropdown.js"></script>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<script type="text/javascript" src="css1/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="css1/js/jquery/jquery.dropdown.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="menu/css/js/ddsmoothmenu.css" />
+<script type="text/javascript" src="menu/css/js/jquery.js"></script>
+<script type="text/javascript" src="menu/css/js/ddsmoothmenu.js"></script>

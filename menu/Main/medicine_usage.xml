@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+
+<medicineusage>
+	
+
+<item type="fast" >
+			<name>Tremexamic Acid</name>
+			<type>Inj</type>
+			<qty>200</qty>
+			</item>
+
+<item type="fast" >
+			<name>Chest Tube</name>
+			<type>Tube</type>
+			<qty>20</qty>
+			</item>
+
+<item type="fast" >
+			<name>Tremexamic Zinc</name>
+			<type>Tab</type>
+			<qty>100</qty>
+			</item>
+
+
+
+<item type="slow" >
+			<name>Ringr Lactate</name>
+			<type>Inj</type>
+			<qty>10</qty>
+			</item>
+
+<item type="slow" >
+			<name>Lactate</name>
+			<type>Tab</type>
+			<qty>8</qty>
+			</item>
+
+
+</medicineusage>

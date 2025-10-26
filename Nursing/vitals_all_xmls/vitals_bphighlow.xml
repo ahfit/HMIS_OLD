@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<chart caption='Blood Pressure (High/Low)' subcaption='(from 10:35:25 to 17:12:31)' lineThickness='2' showValues='1' formatNumberScale='0' anchorRadius='5'   divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridColor='CC3300' shadowAlpha='40' numvdivlines='5'  border='0'  bgColor='ffffff' borderColor='ffffff'    >
+<categories >
+<category label='10:35:25' />
+<category label='10:40:15' />
+<category label='14:36:04' />
+<category label='16:10:31' />
+<category label='17:12:31' />
+ 
+
+</categories>
+<dataset seriesName='BP High' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
+	<set value='210'/>
+    <set value='220'/>
+	<set value='230' anchorBgColor='ff0033'/>
+    <set value='240'/>
+	<set value='200'/>
+ 
+</dataset>
+
+<dataset seriesName='BP Low' color='F1683C' anchorBorderColor='F1683C' anchorBgColor='F1683C'>
+	<set value='140'  anchorBgColor='ff0033'/>
+    <set value='150'/>
+	<set value='160'/>
+    <set value='170'/>
+	<set value='130'/>
+</dataset>
+
+ 
+	<styles>                
+		<definition>
+                         
+			<style name='CaptionFont' type='font' size='12'/>
+		</definition>
+		<application>
+			<apply toObject='CAPTION' styles='CaptionFont' />
+			<apply toObject='SUBCAPTION' styles='CaptionFont' />
+		</application>
+	</styles>
+
+</chart>

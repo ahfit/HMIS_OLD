@@ -1,0 +1,1158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PhilHealth - Your Partner in Health</title>
+
+<script src="images/jquery-2.2.0.min.js"></script>
+
+<script>
+
+$(document).ready(function(e) {
+    
+		
+		 
+		
+		$(document).on("click",".sec_checkList li label",function(){
+			
+			
+					//$(this).css("background","red");
+					if($(this).children('div').attr('style')){
+					$(this).children('div').removeAttr('style');
+					 
+					}else {
+					
+					$(this).children('div')
+					.css("background","url(images/checkMark.png) center center no-repeat")
+					.css("background-size","100%");	
+					 	
+						  }
+			 
+			});
+	
+	
+	
+	
+	
+});
+
+</script>
+
+
+<style type="text/css">
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	border: 0;
+	font-family: inherit;
+	list-style: none;
+	padding: 0;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: none;
+}
+body {
+	font-family: Verdana;
+	margin: 0 auto;
+}
+.mainContainer {
+	width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+	box-sizing: border-box;
+}
+.bx_title {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;  
+	height: 30px;
+	width: 100%;
+	background: #ccc;
+	display: block;
+	float: left1;
+	border-bottom: #000 solid 1px;
+}
+.listForm {
+	list-style: none;
+	float: left;
+	width: 100%;
+	display: block;
+	height: auto;
+}
+.listForm li {
+	font-size: 12px;
+	border-bottom: #000 solid 1px;
+	height: auto;
+	box-sizing: border-box;
+	padding-left: 10px;
+	box-sizing: border-box;
+	float: left;
+	padding-top: 5px;
+}
+.listForm li label {
+	font-weight: bold;
+	display: block;
+}
+.listForm li input.tr_txt {
+	border: 0;
+	outline: none;
+	height: 35px;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+.dl_1 {
+	height: 25px;
+	line-height: 25px;
+	font-size: 11px;
+	text-align: center;
+	width: 100%;
+}
+.dl_1 dt {
+	width: 20%;
+	display: inline-block;
+	font-size: 9px;
+	text-align: center;
+	border-left: #000 solid 1px;
+	float: left;
+	box-sizing: border-box;
+}
+.section {
+	width: 100%;
+	float: left;
+	height: auto;
+	display: block;
+	display: none;
+	border: #000 solid 1px;
+	box-sizing: border-box;
+}
+.date_boxes {
+	list-style: none;
+	float: left;
+	width: 100%;
+}
+.date_boxes li {
+	list-style: none;
+	display: inline-block;
+	height: 15px;
+	width: 25px;
+	border: #000 solid 1px;
+	box-sizing: border-box;
+	margin-left: 0;
+	float: left;
+	border-top: 0;
+border-left:
+}
+.date_boxes li input {
+	list-style: none;
+	display: block;
+	height: 25px;
+	width: 100%;
+	border: none;
+	background: none;
+	text-align: center;
+	margin-top: -13px;
+}
+.date_boxes li span {
+	font-size: 10px;
+	text-align: center;
+	display: block;
+}
+.date_boxesb {
+	list-style: none;
+	float: left;
+	width: 100%;
+	margin-left: 170px;
+}
+.date_boxesb li {
+	list-style: none;
+	display: inline-block;
+	height: 15px;
+	width: 25px;
+	border: #000 solid 1px;
+	box-sizing: border-box;
+	margin-left: 0;
+	float: left;
+	border-top: 0;
+	padding: 0;
+}
+.date_boxesb li input {
+	list-style: none;
+	display: block;
+	height: 25px;
+	width: 100%;
+	border: none;
+	background: none;
+	text-align: center;
+	margin-top: -13px;
+}
+.date_boxesb li span {
+	font-size: 10px;
+	text-align: center;
+	display: block;
+	display: n1one;
+}
+.sec_6 {
+	width: 100%;
+	list-style: none;
+	font-size: 13px;
+}
+.sec_6 li {
+	width: auto;
+	display: inline-block;
+}
+.sec_6 li label {
+	font-size: 13px;
+	line-height: 25px;
+}
+.sec_6 li label .checkbx {
+	border: #000 solid 2px;
+	width: 25px;
+	height: 25px;
+	background: red;
+}
+.sec_6 li label div {
+	border: #000 solid 1px;
+	width: 25px;
+	height: 25px;
+	background: none;
+	float: left;
+	margin-right: 5px;
+	margin-left: 20px;
+}
+.sec_checkList {
+	width: 100%;
+	list-style: none;
+	font-size: 13px;
+	margin-top: 25px;
+}
+.sec_checkList li {
+	width: 25%;
+	display: inline-block;
+	border-bottom: 0; 
+}
+.sec_checkList li label {
+	font-size: 13px;
+	line-height: 25px;
+	font-weight: normal; cursor:pointer;  
+	 -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;  
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+	
+	
+}
+.sec_checkList li label div {
+	border: #000 solid 1px;
+	width: 25px;
+	height: 25px;
+	/*background: none;*/
+	float: left;
+	margin-right: 5px;
+	margin-left: 20px;  background-size:100%;
+}
+.tbl_sec_5 {
+	font-size: 13px;  
+}
+.tbl_sec_5 th {
+	font-weight: normal;
+	border-bottom: #000 solid 1px;
+	border-right: #000 solid 1px;
+}
+.tbl_sec_5 tr {
+	height: 32px;
+}
+.tbl_sec_5 td {
+	border-bottom: #000 solid 1px;
+	border-right: #000 solid 1px;
+}
+.tbl_sec_5 td:last-child {
+	border-bottom: #000 solid 1px;
+	border-right: #000 solid 0px;
+}
+</style>
+</head>
+
+<body>
+<div class="mainContainer" style="padding-top:25px;">
+  <div style="padding:5px; font-size:12px;">
+    <div style="background:url(images/Image_001.png) 0px 0px no-repeat; background-size:100%; display:block; width:200px; height:90px; float:left;"></div>
+    <div style="position:absolute; right:75px; top:100px;">
+      <label style="position:absolute; margin-top:0px; left:-65px; font-weight:bold;">Series # </label>
+      <ul class="date_boxes" >
+        <li>
+          <input type="text" maxlength="1" />
+        </li>
+        <li style="border-left:0;">
+          <input type="text"  maxlength="1"/>
+        </li>
+        <li style="border-left:0px;">
+          <input type="text" maxlength="1" />
+        </li>
+        <li style="border-left:0;">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li style="border-left:0px; ">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li  style="border-left:0;">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li  style="border-left:0;">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li  style="border-left:0;">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li style="border-left:0;">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li style="border-left:0;">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li style="border-left:0px;">
+          <input type="text" maxlength="1"/>
+        </li>
+        <li style="border-left:0;">
+          <input type="text"maxlength="1" />
+        </li>
+        <li style="border-left:0px; ">
+          <input type="text" maxlength="1"/>
+        </li>
+      </ul>
+    </div>
+    <div style="float:left; width:100%; display:block; padding-bottom:5px;">
+      <p style="font-size:12px; font-weight:bold;">IMPORTANT REMINDERS:</p>
+      <p>PLEASE FILL OUT APPROPRIATE FIELDS. WRITE IN CAPITAL LETTERS AND CHECK THE APPROPRIATE BOXES.</p>
+      <p>This form, together with other supporting documents, should be filed within <span style="font-weight:bold;">sixty (60) calendar days</span> from date of discharge.</p>
+      <p>All information, fields and tick boxes in this form are necessary. <span style="font-weight:bold;">Claim forms with incomplete information shall not be processed.</span></p>
+      <p style="font-weight:bold;">FALSE / INCORRECT INFORMATION OR MISREPRESENTATION SHALL BE SUBJECT TO CRIMINAL, CIVIL OR ADMINISTRATIVE LIABILITIES.</p>
+    </div>
+  </div>
+  <div class="section" id="section_1" style="display:block;">
+    <div class="bx_title">I. HEALTH CARE INSTITUTION (HCI) INFORMATION</div>
+    <ul class="listForm">
+      <li style="width:70%;">
+        <label>1. Name of HCI</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:30%; border-left:#000 solid 1px;">
+        <label>2. Accreditation Number</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:100%;">
+        <label> 3. Address of HCI </label>
+        <input type="text" class="tr_txt"/>
+      </li>
+    </ul>
+    <dl class="dl_1">
+      <dt style="border-left:0;">Bldg No. and Name/Lot/Block</dt>
+      <dt>Street/Subdivision/Village</dt>
+      <dt style="width:30%;">Barangay/City/Municipality</dt>
+      <dt>Province</dt>
+      <dt style="width:10%;">Zip Code</dt>
+    </dl>
+  </div>
+  <div class="section" id="section_2" style="display:block; border-top:0; border-bottom:0;">
+    <div class="bx_title">II. PATIENT’S DATA</div>
+    <ul class="listForm">
+      <li style="width:70%;">
+        <label>1. Name of Patient</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:30%; border-left:#000 solid 1px;">
+        <label>2. PIN</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:70%;">
+        <dl class="dl_1" style="margin-top:-5px; margin-left:-10px; border-bottom:#000 solid 1px; width:101.2%; margin-bottom:5px;">
+          <dt style="width:33%; border-left:0;">Last Name</dt>
+          <dt style="width:33%;">First Name</dt>
+          <dt style="width:33%;">Middle Name</dt>
+        </dl>
+        <label>5. Chief Complaint</label>
+        <input type="text" class="tr_txt" style="height:64px;"/>
+      </li>
+      <li style="width:30%; border-left:#000 solid 1px; height1:100px;">
+        <label>3. Age</label>
+        <input type="text" class="tr_txt" style="border-bottom:#000 solid 1px; height1:20px; padding-left:10px; margin-left:-10px; width:102.8%; margin-bottom:5px;"/>
+        <label>4. Sex</label>
+        <div style="position:absolute; margin-left:100px;"><span style="border:#000 solid 1px; width:25px; display:inline-block; margin-right:5px; height:25px;"><i style="font-style:normal;line-height:25px; margin-left:30px; ">Male</i></span></div>
+        <div style="position:absolute; margin-left:180px;"><span style="border:#000 solid 1px; width:25px; display:inline-block; margin-right:5px; height:25px;"><i style="font-style:normal;line-height:25px; margin-left:30px; ">Female</i></span></div>
+        <input type="text" class="tr_txt" style="visibility:hidden;"/>
+      </li>
+      <li style="width:35%; border-right:#000 solid 1px; height:112px;">
+        <label>6. Admitting Diagnosis</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:35%; height:112px;">
+        <label>7. Discharge Diagnosis</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:30%; border-left:#000 solid 1px; ">
+        <label>8. a. 1st Case Rate Code</label>
+        <input type="text" class="tr_txt"/>
+        <label style="border-top:#000 solid 1px; margin-left:-10px; padding-left:9px; padding-top:5px;">8. b. 2nd Case Rate Code</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:50%;">
+        <label>9. a. Date Admitted:</label>
+        <input type="text" class="tr_txt" style="visibility:hidden"/>
+        <ul class="date_boxesb" style="position:absolute; width:auto; margin-top:-30px;">
+          <li>
+            <input type="text" />
+            <span style="width:50px; text-align:center;">month</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:5px;">
+            <input type="text" />
+            <span style="width:50px; text-align:center;">day</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:5px; ">
+            <input type="text" />
+            <span style="width:100px; text-align:center;">year</span> </li>
+          <li  style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li  style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li  style="border-left:0;">
+            <input type="text" />
+          </li>
+        </ul>
+      </li>
+      <li style="width:50%;">
+        <label>9. b. Time Admitted:</label>
+        <input type="text" class="tr_txt" style="visibility:hidden;"/>
+        <ul class="date_boxesb" style="position:absolute; width:auto; margin-top:-30px;">
+          <li>
+            <input type="text" />
+            <span style="width:50px; text-align:center;">hour</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:5px;">
+            <input type="text" />
+            <span style="width:50px; text-align:center;">min</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:20px; border:none;">
+            <div style="position:absolute; margin-top:-12px;"><span style="border:#000 solid 1px; width:25px; display:inline-block; margin-right:5px; height:25px;"><i style="font-style:normal; font-size:12px;line-height:25px; margin-left:30px; ">AM</i></span></div>
+          </li>
+          <li style="margin-left:30px; border:none;">
+            <div style="position:absolute; margin-top:-12px;"><span style="border:#000 solid 1px; width:25px; display:inline-block; margin-right:5px; height:25px;"><i style="font-style:normal; font-size:12px;line-height:25px; margin-left:30px; ">PM</i></span></div>
+          </li>
+        </ul>
+      </li>
+      <li style="width:50%;">
+        <label>10. a. Date Discharged:</label>
+        <input type="text" class="tr_txt" style="visibility:hidden"/>
+        <ul class="date_boxesb" style="position:absolute; width:auto; margin-top:-30px;">
+          <li>
+            <input type="text" />
+            <span style="width:50px; text-align:center;">month</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:5px;">
+            <input type="text" />
+            <span style="width:50px; text-align:center;">day</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:5px; ">
+            <input type="text" />
+            <span style="width:100px; text-align:center;">year</span> </li>
+          <li  style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li  style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li  style="border-left:0;">
+            <input type="text" />
+          </li>
+        </ul>
+      </li>
+      <li style="width:50%;">
+        <label>10. b. Time Discharged:</label>
+        <input type="text" class="tr_txt" style="visibility:hidden;"/>
+        <ul class="date_boxesb" style="position:absolute; width:auto; margin-top:-30px;">
+          <li>
+            <input type="text" />
+            <span style="width:50px; text-align:center;">hour</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:5px;">
+            <input type="text" />
+            <span style="width:50px; text-align:center;">min</span> </li>
+          <li style="border-left:0;">
+            <input type="text" />
+          </li>
+          <li style="margin-left:20px; border:none;">
+            <div style="position:absolute; margin-top:-12px;"><span style="border:#000 solid 1px; width:25px; display:inline-block; margin-right:5px; height:25px;"><i style="font-style:normal; font-size:12px;line-height:25px; margin-left:30px; ">AM</i></span></div>
+          </li>
+          <li style="margin-left:30px; border:none;">
+            <div style="position:absolute; margin-top:-12px;"><span style="border:#000 solid 1px; width:25px; display:inline-block; margin-right:5px; height:25px;"><i style="font-style:normal; font-size:12px;line-height:25px; margin-left:30px; ">PM</i></span></div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="section" id="section_3" style="display:block; border-top:0; border-bottom:0;" >
+    <div class="bx_title">III. REASON FOR ADMISSION</div>
+    <ul class="listForm">
+      <li style="width:100%;">
+        <label> 1. History of Present Illness:</label>
+        <textarea type="text" class="tr_txt" style="height:200px; border:none; width:98%;"></textarea>
+      </li>
+      <li style="width:100%; border-bottom:0;">
+        <label> 2.a. Pertinent Past Medical History:</label>
+        <textarea type="text" class="tr_txt" style="height:120px; border:none; width:98%;"></textarea>
+      </li>
+      <li style="width:100%; border-top:0;">
+        <label> 2.b. OB/GYN History</label>
+        <input type="text" class="tr_txt"/>
+      </li>
+      <li style="width:100%; min-height:350px; padding-bottom:25px;">
+        <label> 3. Pertinent Signs and Symptoms on Admission (tick applicable box/es):</label>
+        <ul class="sec_checkList">
+        
+         <li> 
+         <label>
+            <div></div> Altered mental sensorium </label>
+          </li>
+<li> <label>
+            <div></div>Abdominal cramp/pain </label>
+          </li>
+<li> <label>
+            <div></div>Anorexia </label>
+          </li>
+<li> <label>
+            <div></div>Bleeding gums </label>
+          </li>
+<li> <label>
+            <div></div>Body weakness </label>
+          </li>
+<li> <label>
+            <div></div>Blurring of vision </label>
+          </li>
+<li> <label>
+            <div></div>Chest pain/discomfort </label>
+          </li>
+<li> <label>
+            <div></div>Constipation </label>
+          </li>
+<li> <label>
+            <div></div>Cough </label>
+          </li>
+<li> <label>
+            <div></div>Diarrhea </label>
+          </li>
+<li> <label>
+            <div></div>Dizziness </label>
+          </li>
+<li> <label>
+            <div></div>Dysphagia </label>
+          </li>
+<li> <label>
+            <div></div>Dyspnea </label>
+          </li>
+<li> <label>
+            <div></div>Dysuria </label>
+          </li>
+<li> <label>
+            <div></div>Epistaxis </label>
+          </li>
+<li> <label>
+            <div></div>Fever </label>
+          </li>
+<li> <label>
+            <div></div>Frequency of urination </label>
+          </li>
+<li> <label>
+            <div></div>Headache </label>
+          </li>
+<li> <label>
+            <div></div>Hematemesis </label>
+          </li>
+<li> <label>
+            <div></div>Hematuria </label>
+          </li>
+<li> <label>
+            <div></div>Hemoptysis </label>
+          </li>
+<li> <label>
+            <div></div>Irritability </label>
+          </li>
+<li> <label>
+            <div></div>Jaundice </label>
+          </li>
+<li> <label>
+            <div></div>Lower extremity edema </label>
+          </li>
+<li> <label>
+            <div></div>Myalgia </label>
+          </li>
+<li> <label>
+            <div></div>Orthopnea </label>
+          </li>
+<li> <label>
+            <div></div>Pain, ______________(site) </label>
+          </li>
+<li> <label>
+            <div></div>Palpitations </label>
+          </li>
+<li> <label>
+            <div></div>Seizures </label>
+          </li>
+<li> <label>
+            <div></div>Skin rashes </label>
+          </li>
+<li> <label>
+            <div></div>Stool, bloody/black tarry/mucoid </label>
+          </li>
+<li> <label>
+            <div></div>Sweating </label>
+          </li>
+<li> <label>
+            <div></div>Urgency </label>
+          </li>
+<li> <label>
+            <div></div>Vomiting </label>
+          </li>
+<li> <label>
+            <div></div>Weight loss </label>
+          </li>
+<li> <label>
+            <div></div>Others_______ </label>
+          </li>
+        </ul>
+      </li>
+      <li style="width:100%; height:100px;">
+        <label> 4. Referred from another health care institution (HCI):</label>
+        <ul class="sec_6">
+          <li style="border-bottom:0;">
+            <label>
+            <div></div>
+            YES
+            </label>
+          </li>
+          <li style="border-bottom:0;">
+            <label>
+            <div></div>
+            NO
+            </label>
+          </li>
+          <li style="margin-left:30px; border-bottom:0;">Specify reason:
+            <input type="text" style="border:0;border-bottom:#000 solid 1px; background:none; width:250px; " />
+          </li>
+          <li style="margin-left:30px; border-bottom:0;">Name of Originating HCI:
+            <input type="text" style="border:0;border-bottom:#000 solid 1px; background:none; width:250px; " />
+          </li>
+        </ul>
+      </li>
+      <li style="width:100%; min-height:250px; padding-bottom:25px;">
+        <label>5. Physical Examination on Admission (Pertinent Findings per System)</label>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="14%">General Survey</td>
+            <td><ul class="sec_checkList">
+                <li>
+                  <label>
+                  <div></div>Awake and alert</label></li> 
+             
+                <li>
+                  <label>
+                  <div></div>Altered sensorium:</label></li>
+                  </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Vital Signs:</td>
+            <td><ul class="sec_checkList">
+                <li>
+                  <label>
+                  <div></div>BP:______________</label></li>
+            
+             <li>
+                  <label>
+                  <div></div>HR:______________</label></li>
+             <li>
+                  <label>
+                  <div></div>RR:______________</label></li>
+             <li>
+                  <label>
+                  <div></div>Temp:______________</label></li></ul></td>
+          </tr>
+          <tr>
+            <td>HEENT:</td>
+            <td><ul class="sec_checkList">
+                <li>
+                  <label>
+                  <div></div>Essentially normal</label></li>
+ 
+ <li>
+                  <label>
+                  <div></div>Abnormal pupillary reaction</label></li>
+ <li>
+                  <label>
+                  <div></div>Cervical lymphadenopathy</label></li>
+ <li>
+                  <label>
+                  <div></div>Dry mucous membrane</label></li>
+ <li>
+                  <label>
+                  <div></div>Icteric sclerae</label></li>
+ <li>
+                  <label>
+                  <div></div>Pale conjunctivae</label></li>
+ <li>
+                  <label>
+                  <div></div>Sunken eyeballs</label></li>
+ <li>
+                  <label>
+                  <div></div>Sunken fontanelle</label></li></ul></td>
+          </tr>
+          <tr>
+            <td width="14%">CHEST/LUNGS:</td>
+            <td width="86%"><ul class="sec_checkList">
+                <li>
+                  <label>
+                  <div></div>
+                  Essentially normal
+                  </label>
+                </li>
+                <li>
+                  <label>
+                  <div></div>
+                  Lump/s over breast(s)
+                  </label>
+                </li>
+                <li>
+                  <label>
+                  <div></div>
+                  Asymmetrical chest expansion
+                  </label>
+                </li>
+                <li>
+                  <label>
+                  <div></div>
+                  Rales/crackles/rhonchi
+                  </label>
+                </li>
+                <li>
+                  <label>
+                  <div></div>
+                  Decreased breath sounds
+                  </label>
+                </li>
+                <li>
+                  <label>
+                  <div></div>
+                  Lump/s over breast(s)
+                  </label>
+                </li>
+                <li>
+                  <label>
+                  <div></div>
+                  Wheezes
+                  </label>
+                </li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td>CVS:</td>
+            <td><ul class="sec_checkList">
+                <li>
+                  <label>
+                  <div></div>Essentially normal</label></li>
+ 
+<li>
+                  <label>
+                  <div></div>Displaced apex beat</label></li>
+<li>
+                  <label>
+                  <div></div>Heaves and/or thrills</label></li>
+<li>
+                  <label>
+                  <div></div>Pericardial bulge</label></li>
+<li>
+                  <label>
+                  <div></div>Irregular rhythm</label></li>
+<li>
+                  <label>
+                  <div></div>Muffled heart sounds</label></li>
+<li>
+                  <label>
+                  <div></div>Murmur</label></li></ul></td>
+          </tr>
+          <tr>
+            <td>ABDOMEN:</td>
+            <td><ul class="sec_checkList"><li>
+                  <label>
+                  <div></div>Essentially normal</label></li>
+ 
+<li>
+                  <label>
+                  <div></div>Abdominal rigidity</label></li>
+<li>
+                  <label>
+                  <div></div>Abdomen tenderness</label></li>
+<li>
+                  <label>
+                  <div></div>Hyperactive bowel sounds</label></li>
+<li>
+                  <label>
+                  <div></div>Palpable mass(es)</label></li>
+<li>
+                  <label>
+                  <div></div>Tympanitic/dull abdomen</label></li>
+<li>
+                  <label>
+                  <div></div>Uterine contraction</label></li></ul></td>
+          </tr>
+          <tr>
+            <td>GU (IE):</td>
+            <td><ul class="sec_checkList"><li>
+                  <label>
+                  <div></div>Essentially normal</label></li>
+ 
+<li>
+                  <label>
+                  <div></div>Blood stained in exam finger</label></li>
+<li>
+                  <label>
+                  <div></div>Cervical dilatation</label></li>
+<li>
+                  <label>
+                  <div></div>Presence of abnormal discharge</label></li></ul></td>
+          </tr>
+          <tr>
+            <td>SKIN/EXTREMITIES:</td>
+            <td><ul class="sec_checkList">
+            <li>
+                  <label>
+                  <div></div>Essentially normal</label></li>
+ 
+<li>
+                  <label>
+                  <div></div>Clubbing</label></li>
+<li>
+                  <label>
+                  <div></div>Cold clammy skin</label></li>
+<li>
+                  <label>
+                  <div></div>Cyanosis/mottled skin</label></li>
+<li>
+                  <label>
+                  <div></div>Edema/swelling</label></li>
+<li>
+                  <label>
+                  <div></div>Decreased mobility</label></li>
+<li>
+                  <label>
+                  <div></div>Pale nailbeds</label></li>
+<li>
+                  <label>
+                  <div></div>Poor skin turgor</label></li>
+<li>
+                  <label>
+                  <div></div>Others:</label></li>
+<li>
+                  <label>
+                  <div></div>Rashes/petechiae</label></li>
+<li>
+                  <label>
+                  <div></div>Weak pulses</label></li></ul></td>
+          </tr>
+          <tr>
+          <td>NEURO-EXAM:</td>
+          <td><ul class="sec_checkList"><li>
+                  <label>
+                  <div></div>Essentially normal</label></li>
+
+<li>
+                  <label>
+                  <div></div>Abnormal gait</label></li>
+<li>
+                  <label>
+                  <div></div>Abnormal position sense</label></li>
+<li>
+                  <label>
+                  <div></div>Abnormal/decreased sensation</label></li>
+<li>
+                  <label>
+                  <div></div>Abnormal reflex(es)</label></li>
+<li>
+                  <label>
+                  <div></div>Poor/altered memory</label></li>
+<li>
+                  <label>
+                  <div></div>Poor muscle tone/strength</label></li>
+<li>
+                  <label>
+                  <div></div>Poor coordination</label></li>
+<li>
+                  <label>
+                  <div></div>Others:</label></li></ul></td>
+          
+          </tr>
+          
+          
+        </table>
+
+      </li>
+    </ul>
+  </div>
+  <!--section-->
+  
+  <div class="section" id="section_4" style="display:block; border-top:0; border-bottom:0;">
+    <div class="bx_title">IV. COURSE IN THE WARD (Attach photocopy of laboratory/imaging results)
+      <div style="position:relative; float:right;"><i style="font-style:normal; margin-left:30px; font-weight:normal; font-size:11px; margin-right:10px; position:absolute; width:305px; right:0; ">Check box if there is/are additional sheet(s).</i><span style="border:#000 solid 1px; width:20px; margin-top:5px; display:inline-block; margin-right:5px; height:20px;"></span></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tbl_sec_5">
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col" style="border-right:0;">DOCTOR’S ORDER/ACTION</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+  <!--section-->
+  
+  <div class="section" id="section_5" style="display:block; border-top:0; border-bottom:0;">
+    <div class="bx_title">V. DRUGS/MEDICINES
+      <div style="position:relative; float:right;"><i style="font-style:normal; margin-left:30px; font-weight:normal; margin-right:10px; position:absolute; width:370px; right:0; ">Check box if there is/are additional sheet(s).</i><span style="border:#000 solid 1px; width:20px; margin-top:5px; display:inline-block; margin-right:5px; height:20px;"></span></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tbl_sec_5">
+      <tr>
+        <th scope="col">Generic Name</th>
+        <th scope="col">Quantity/Dosage/Route</th>
+        <th scope="col">Total Cost</th>
+        <th scope="col">Generic Name (cont)</th>
+        <th scope="col">Quantity/Dosage/Route (cont)</th>
+        <th scope="col" style="border-right:0;">Total Cost (cont)</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+  <!--section-->
+  
+  <div class="section" id="section_6" style=" display:block;border-top:0;">
+    <div class="bx_title">VI. OUTCOME OF TREATMENT</div>
+    <div style="padding:5px;">
+      <ul class="sec_6">
+        <li>
+          <label>
+          <div></div>
+          IMPROVED
+          </label>
+        </li>
+        <li>
+          <label>
+          <div></div>
+          IHAMA
+          </label>
+        </li>
+        <li>
+          <label>
+          <div></div>
+          IEXPIRED
+          </label>
+        </li>
+        <li>
+          <label>
+          <div></div>
+          IABSCONDED
+          </label>
+        </li>
+        <li>
+          <label>
+          <div></div>
+          ITRANSFERRED
+          </label>
+        </li>
+        <li style="margin-left:30px;">Specify reason:
+          <input type="text" style="border:0;border-bottom:#000 solid 1px; background:none; width:250px; " />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--section-->
+  
+  <div class="section" id="section_7" style="border-top:0; display:block; margin-bottom:20px;">
+    <div class="bx_title">VII. CERTIFICATION OF HEALTH CARE PROFESSIONAL</div>
+    <div style="padding:5px;">
+      <p style="font-size:12px;">Certification of Attending Health Care Professional:</p>
+      <p style="font-size:12px; font-style:italic; text-align:center; margin-top:10px; margin-bottom:20px;">I certify that the above information given in this form, including all attachments, are true and correct.</p>
+      <p style="font-size:12px;   width:440px; text-align:center; padding-bottom:15px; padding-top:5px; margin-top:30px; margin-left:13%;">
+        <input type="text" style="border:0;border-bottom:#000 solid 1px; width:100%; margin-bottom:5px; text-align:center; font-size:15px; padding-bottom:5px; background:none;" />
+        Signature over Printed Name of Attending Health Care Professional</p>
+    </div>
+    <div style="width:230px; text-align:center;   position:absolute; float:right; right:0; right:75px; margin-top:-60px; padding-bottom:0px;">
+      <ul class="date_boxes">
+        <li>
+          <input type="text" />
+          <span style="width:50px; text-align:center;">Month</span> </li>
+        <li style="border-left:0;">
+          <input type="text" />
+        </li>
+        <li style="margin-left:5px;">
+          <input type="text" />
+          <span style="width:50px; text-align:center;">Day</span> </li>
+        <li style="border-left:0;">
+          <input type="text" />
+        </li>
+        <li style="margin-left:5px; ">
+          <input type="text" />
+          <span style="width:100px; text-align:center;">Year</span> </li>
+        <li  style="border-left:0;">
+          <input type="text" />
+        </li>
+        <li  style="border-left:0;">
+          <input type="text" />
+        </li>
+        <li  style="border-left:0;">
+          <input type="text" />
+        </li>
+      </ul>
+      <br>
+      <p style="font-size:11px; margin-top:15px; display:block; width:100%;">Date Signed</p>
+    </div>
+  </div>
+  <!--section--> 
+  
+</div>
+<!--mainContainer-->
+
+</body>
+</html>

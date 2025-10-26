@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<medicineusage>
+	
+
+<item type="today" >
+			<name>Asif Ali</name>
+			<type>TUR-BT</type>
+			<time>10:00 am</time>
+			</item>
+
+<item type="today" >
+			<name>Tanvir Ahmed</name>
+			<type>TUR-BT2</type>
+			<time>10:00 am</time>
+			</item>
+
+
+<item type="nextweek" >
+			<name>Noman Sadiq</name>
+			<type>Pyeloplasty</type>
+			<time>10:00 am</time>
+			</item>
+
+
+
+</medicineusage>

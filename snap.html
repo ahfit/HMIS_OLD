@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		 
+        <style>
+          
+            #info {
+	            width: 100%;
+	            height: 30px;
+	            top: 50%;
+                color:red;
+	            margin-top: 115px;
+            }
+
+            #output {
+	            width: auto;
+	            height: 60%;
+	            background: black;
+	            /*-webkit-transform: scale(-1, 1);*/   /*Flip horizontally */
+            }
+		</style>
+	</head>
+	<body>
+		<p id="info">Please allow access to your camera!</p>
+		<canvas id="output" style="width:94px; height:112px;"  ></canvas>
+        <br/>
+    <div style="display:none;">    <input type="button" value="Play/Pause" onclick="btnPlayPause()"  /></div>
+        <input type="button" value="Capture" onclick="btnCapture()" />
+        <br />
+        
+        <div id="div_annoation" style="display:none; width:500px; margin:0px auto; text-align:left;">
+            Annotation<br/>
+            <input id="r_line" checked="checked" type="radio" onclick="radioClicked(this)" />Line&nbsp;&nbsp;
+            <input id="r_rect" type="radio" onclick="radioClicked(this)" />Rectangle&nbsp;&nbsp;
+            <input id="r_arc" type="radio" onclick="radioClicked(this)" />arc&nbsp;&nbsp;
+            <input id="r_text" type="radio" onclick="radioClicked(this)" />Text&nbsp;&nbsp;
+            <input id="r_image" type="radio" onclick="radioClicked(this)" />Image
+            <br /><br />
+            <div id="div_line" style="display:inline">
+                Start X:<input id="line_startX" type="number" style="width:50px" value="0"/>&nbsp;
+                Start Y:<input id="line_startY" type="number" style="width:50px" value="0"/>&nbsp;
+                End X:<input id="line_endX" type="number" style="width:50px" value="100"/>&nbsp;
+                End Y:<input id="line_endY" type="number" style="width:50px" value="100"/>
+                <br />
+                Line Cap:<select id="line_cap">
+                    <option selected="selected">butt</option>
+                    <option>round</option>
+                    <option>square</option>
+                </select>&nbsp;
+                Line Join:<select id="line_join">
+                    <option selected="selected">miter</option>
+                    <option>round</option>
+                    <option>bevel</option>
+                </select>
+                <br />
+                Line Width: <input id="line_width" type="number" style="width:50px" value="1"/>&nbsp;
+                Color: <input id="line_color" type="text" style="width:70px" value="#FF0000"/>&nbsp;
+            </div>
+            <div id="div_rect" style="display:none">
+                Start X:<input id="rect_startX" type="number" style="width:50px" value="0"/>&nbsp;
+                Start Y:<input id="rect_startY" type="number" style="width:50px" value="0"/>&nbsp;
+                Width:<input id="rect_width" type="number" style="width:50px" value="100"/>&nbsp;
+                Height:<input id="rect_height" type="number" style="width:50px" value="100"/>
+                <br />
+                Line Width: <input id="rect_lineWidth" type="number" style="width:50px" value="1"/>&nbsp;
+                Color: <input id="rect_color" type="text" style="width:70px" value="#FF0000"/>&nbsp;
+            </div>
+            <div id="div_arc" style="display:none">
+                Start X:<input id="arc_startX" type="number" style="width:50px" value="100"/>&nbsp;
+                Start Y:<input id="arc_startY" type="number" style="width:50px" value="100"/>&nbsp;
+                <br />
+                Start Angle:<input id="arc_startA" type="number" style="width:50px" value="0"/>&nbsp;
+                End Angle:<input id="arc_endA" type="number" style="width:50px" value="180"/>
+                <br />
+                Line Width: <input id="arc_width" type="number" style="width:50px" value="1"/>&nbsp;
+                Radius:<input id="arc_radius" type="number" style="width:50px" value="30"/>&nbsp;
+                Color: <input id="arc_color" type="text" style="width:70px" value="#FF0000"/>&nbsp;
+            </div>
+            <div id="div_text" style="display:none">
+                Start X:<input id="text_startX" type="number" style="width:50px" value="150"/>&nbsp;
+                Start Y:<input id="text_startY" type="number" style="width:50px" value="150"/>&nbsp;
+                <br />
+                Text: <input id="text_text" type="text" style="width:300px" value="Hello World!"/>
+                <br />
+                Font: <input id="text_font" type="text" style="width:100px" value="10px sans-serif"/>&nbsp;
+                Align: <select id="text_align">
+                    <option>start</option>
+                    <option>end</option>
+                    <option>center</option>
+                    <option selected="selected">left</option>
+                    <option>right</option>
+                </select>
+                <br />
+                Line Width: <input id="text_width" type="number" style="width:50px" value="1"/>&nbsp;
+                Color: <input id="text_color" type="text" style="width:70px" value="#FF0000"/>&nbsp;
+            </div>
+            <div id="div_image" style="display:none">
+                Start X:<input id="img_startX" type="number" style="width:50px" value="100"/>&nbsp;
+                Start Y:<input id="img_startY" type="number" style="width:50px" value="50"/>&nbsp;
+                Width:<input id="img_width" type="number" style="width:50px" value="74"/>&nbsp;
+                Height:<input id="img_height" type="number" style="width:50px" value="91"/>
+            </div>
+            <br />
+            <div style="text-align:center">
+                <input id="btn_draw" type="button" value="Add annotation" onclick="addAnnotation()" />
+                <input id="btn_clear" type="button" value="Clear all annotations" onclick="clearAnnotations()" />
+            </div>
+        </div>
+        <br />
+
+        <script src="HTML5Webcam.js" type="text/javascript"></script>
+	</body>
+</html>

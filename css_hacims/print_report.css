@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {font-size:12px; font-family:"Segoe UI";     }
+.medication {margin-top:0; margin-left:-20px;         }
+.medication li  { font-family:"Segoe UI"; list-style:none; }
+.medication li .span {color:#cccccc; padding-left:10px; padding-right:10px;}
+ 
+#nav { color:#fff;   } 
+#footer {display:none;}
+#navigation {display:none;}
+#header {display:none;}
+.leftnav {display:none; }
+#p_info {display:none;}
+.Grid_1 { font-family:"Segoe UI"; font-size:10px; display:block; width:100%; border:0; }
+.Grid_1 td { font-family:"Segoe UI"; font-size:10px; height:16px; padding-right:3px; border:0; }
+.Grid_1 th { background-image:none; padding:0; margin:0;}
+#mprint {display:none;}
+.mh1 { font-size:14px; color:#000; text-decoration:none; font-family:"Segoe UI"; display:none;  }
+.h1 {font-size:14px; font-family:"Segoe UI"; height:22px; display:block; line-height:20px; padding-left:10px; background-color:#d2d2d2; border:#ccc solid 1px; }  
+.mname { text-decoration:underline; color:#000000; }

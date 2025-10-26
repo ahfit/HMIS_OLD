@@ -1,0 +1,163 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Microsoft.Reporting.WebForms;
+
+public partial class Store_SearchItemsNarcoticsReport : System.Web.UI.Page
+{
+    SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["STOREConnectionString"].ConnectionString);
+    String conString = ConfigurationManager.ConnectionStrings["STOREConnectionString"].ConnectionString;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            bind_Categories();
+            bindSubCategory();
+        }
+    }
+    [System.Web.Script.Services.ScriptMethod(), System.Web.Services.WebMethod()]
+    public static List<string> SearchItems(string prefixText, int count)
+    {
+        List<string> items = new List<string>();
+        SqlConnection conn = new SqlConnection();
+        conn.ConnectionString = ConfigurationManager.ConnectionStrings["STOREConnectionString"].ConnectionString;
+        SqlCommand cmd = new SqlCommand();
+        cmd.CommandText = "Select Item_Code,Item_Name Item_Name From Store_Items Where Item_Name LIKE '%' + @Search + '%' Or Item_Code like '%' + @Search + '%'";
+        cmd.CommandType = CommandType.Text;
+        cmd.Parameters.AddWithValue("@Search", prefixText);
+        cmd.Connection = conn;
+        conn.Open();
+        SqlDataReader sdr = cmd.ExecuteReader();
+        while (sdr.Read())
+        {
+            items.Add(AjaxControlToolkit.AutoCompleteExtender.CreateAutoCompleteItem(sdr["Item_Name"].ToString(), sdr["Item_Code"].ToString()));
+        }
+        return items;
+    }
+
+    private void bindSubCategory()
+    {
+        con.Open();
+        try
+        {
+
+            SqlCommand cmd;
+            cmd = new SqlCommand("select '--- All ---' as [Generic_Name] ,0 as [G_N_Id] union SELECT [Generic_Name], [G_N_Id] FROM [Generic_Names] WHERE ([Cat_Id] = @Cat_Id or @Cat_Id=0)", con);
+            cmd.Parameters.AddWithValue("@Cat_Id", ddl_Category.SelectedValue);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ddlSubCategory.DataSource = dt;
+            ddlSubCategory.DataTextField = "Generic_Name";
+            ddlSubCategory.DataValueField = "G_N_Id";
+            ddlSubCategory.DataSource = dt;
+            ddlSubCategory.DataBind();
+            con.Close();
+        }
+        catch (Exception ex)
+        {
+
+            con.Close();
+        }
+
+    }
+
+    private void FillGridView()
+    {
+        using (SqlConnection connection = new SqlConnection(conString))
+        {
+            SqlCommand command = new SqlCommand("usp_SerachItems", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(command);       
+            command.Parameters.AddWithValue("@ItemName", txtItemName.Text);
+            command.Parameters.AddWithValue("@categoryid", ddl_Category.SelectedValue);
+            command.Parameters.AddWithValue("@subcategoryid", ddlSubCategory.SelectedValue);
+            command.Parameters.AddWithValue("@status", ddl_Status.SelectedValue);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+        }
+    }
+   
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        ReportViewer1.Visible = true;
+        string strcon = ConfigurationManager.ConnectionStrings["STOREConnectionString"].ConnectionString;
+        SqlConnection con = new SqlConnection(strcon);
+        SqlCommand cmd = new SqlCommand("usp_SerachItemsNarcoticsReport", con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+        cmd.Parameters.AddWithValue("@ItemName", txtItemName.Text);
+        cmd.Parameters.AddWithValue("@categoryid", ddl_Category.SelectedValue);
+        cmd.Parameters.AddWithValue("@subcategoryid", ddlSubCategory.SelectedValue);
+        cmd.Parameters.AddWithValue("@status", ddl_Status.SelectedValue);
+        DataTable dt = new DataTable();
+        sda.Fill(dt);
+
+        ReportViewer1.ProcessingMode = ProcessingMode.Local;
+        ReportViewer1.LocalReport.ReportPath = Server.MapPath("SearchItemsNarcoticsReport.rdlc");
+        //ReportDataSource datasource = new ReportDataSource("CRUDProjectDBDataSet", dt);
+        ReportDataSource datasource = new ReportDataSource("DataSet1", dt);
+        ReportViewer1.LocalReport.DataSources.Clear();
+        ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(subReports);
+        ReportViewer1.LocalReport.DataSources.Add(datasource);
+    }
+    public void subReports(object sender, SubreportProcessingEventArgs e)
+    {
+        try
+        {
+            e.DataSources.Clear();
+            DataTable dt = (DataTable)Session["DynamicHeader"];
+            e.DataSources.Add(new ReportDataSource("DataSet1", dt));
+            e.DataSources.Add(new ReportDataSource("DataSetFooter", dt));
+        }
+        catch (Exception)
+        {
+
+        }
+
+
+    }
+    protected void bind_Categories()
+    {
+        SqlCommand cmd;
+        try
+        {
+            con.Open();
+            try
+            {
+
+            
+                cmd = new SqlCommand("SELECT  0 as Item_Type_Id, '--- All ---' as Item_Type union select Item_Type_Id, Item_Type FROM Store_Item_Types where IS_Pharmacy = 0", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                ddl_Category.DataSource = dt;
+                ddl_Category.DataTextField = "Item_Type";
+                ddl_Category.DataValueField = "Item_Type_Id";
+                ddl_Category.DataSource = dt;
+                ddl_Category.DataBind();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+                con.Close();
+            }
+
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    protected void ddl_Category_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        bindSubCategory();
+    }
+}

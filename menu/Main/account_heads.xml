@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<shortagemedicine>
+	
+
+<item type="head" >
+			<head>Doctor Salaries</head>
+			<amount>260,000</amount>
+</item>
+
+
+<item type="head" >
+			<head>Building</head>
+			<amount>60,000</amount>
+</item>
+
+<item type="head" >
+			<head>Dialysis</head>
+			<amount>30,000</amount>
+</item>
+
+<item type="head" >
+			<head>PG Student</head>
+			<amount>10,000</amount>
+</item>
+
+
+
+
+
+
+</shortagemedicine>
+
+
+
+
+   

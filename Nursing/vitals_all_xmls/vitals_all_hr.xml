@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<chart caption='Heart Rate'  subcaption='(from 10:30 am to 11:00 am)' formatNumberScale='0' lineThickness='3' xAxisName='Time' yAxisName='Range ' numberPrefix='' animation='1' divLineAlpha='20'  bgSWFAlpha='1' showValues='1' rotateValues='0' bgAlpha='0' placeValuesInside='1' border='0'  bgColor='ff0000' borderColor='ffffff'  anchorRadius='6' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridColor='CC3300' shadowAlpha='40' numvdivlines='5' bgColor='FFFFFF,CC3300'   divLineColor='CC3300' anchorBgColor='f14b4b' >
+ 
+  <set label='10:35' value='80' color='f14b4b' />
+  <set label='10:40' value='83' color='f14b4b'/>
+  <set label='10:40' value='78' color='f14b4b' />
+  <set label='14:36' value='78' color='f14b4b'/>
+  <set label='14:36' value='67' color='f14b4b' anchorBgColor='000000'/>
+  <set label='16:10' value='83'  color='f14b4b'/>
+  <set label='16:10' value='66' color='f14b4b'/>
+  
+ 
+	
+  
+</chart>

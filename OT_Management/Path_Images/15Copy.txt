@@ -1,0 +1,36 @@
+SELECT     Patient_Services.RegNo, Patient_Services.YearlyNo, CONVERT(varchar, Patient_Services.sdatetime, 107) AS Date, CONVERT(varchar, Patient_Services.sdatetime, 
+                      108) AS time, Patient_Services.Amount, Admin_Services.S_Name, Admin_Services.S_ID, Patient_Services.ID, Patient_Services.Payment_Status, 
+                      Patient_Services.Order_Id, Admin_Services.S_Amount, Test_Booking.TB_ID,  ((CASE WHEN isnull
+                          ((SELECT DISTINCT Party_Ins_Services.Rate_Charge
+                              FROM         Party_Medical_Services_Group INNER JOIN
+                                                    Party_Ins_Services ON Party_Medical_Services_Group.Party_Id = Party_Ins_Services.Party_Id
+                              WHERE     (Party_Medical_Services_Group.Reg_No = Patient_Services.RegNo) AND (Party_Medical_Services_Group.YearlyNo = Patient_Services.YearlyNo) AND 
+                                                    (Party_Ins_Services.Service_Status = 1) AND Party_Ins_Services.S_Id = Admin_Services.S_ID), 0) <> 0 THEN
+                          isnull((SELECT DISTINCT Party_Ins_Services.Rate_Charge
+                            FROM          Party_Medical_Services_Group INNER JOIN
+                                                   Party_Ins_Services ON Party_Medical_Services_Group.Party_Id = Party_Ins_Services.Party_Id
+                            WHERE      (Party_Medical_Services_Group.Reg_No = Patient_Services.RegNo) AND (Party_Medical_Services_Group.YearlyNo = Patient_Services.YearlyNo) AND 
+                                                   (Party_Ins_Services.Service_Status = 1) AND Party_Ins_Services.S_Id = Admin_Services.S_ID),0) ELSE
+                          isnull((SELECT DISTINCT Patient_Billing_Party.Percentage
+                            FROM          Party_Medical_Services_Group INNER JOIN
+                                                   Patient_Billing_Party ON Party_Medical_Services_Group.Party_Id = Patient_Billing_Party.Billing_Party_Id INNER JOIN
+                                                   Party_Ins_Services ON Party_Medical_Services_Group.Party_Id = Party_Ins_Services.Party_Id
+                            WHERE      Party_Medical_Services_Group.Reg_No = Patient_Services.RegNo AND Party_Medical_Services_Group.YearlyNo = Patient_Services.YearlyNo AND 
+                                                   Admin_Services.S_ID NOT IN
+                                                       (SELECT     Party_Ins_Services.S_Id
+                                                         FROM          Party_Medical_Services_Group LEFT OUTER JOIN
+                                                                                Party_Ins_Services ON Party_Medical_Services_Group.Party_Id = Party_Ins_Services.Party_Id
+                                                         WHERE      (Party_Medical_Services_Group.Reg_No = Patient_Services.RegNo) AND 
+                                                                                (Party_Medical_Services_Group.YearlyNo = Patient_Services.YearlyNo) AND (Party_Ins_Services.Service_Status = 0))),0) 
+                      END)* Patient_Services.Amount )/100 AS perset
+
+FROM         Party_Ins_Services RIGHT OUTER JOIN
+                      Party_Medical_Services_Group LEFT OUTER JOIN
+                      Patient_Billing_Party ON Party_Medical_Services_Group.Party_Id = Patient_Billing_Party.Billing_Party_Id ON 
+                      Party_Ins_Services.Party_Id = Party_Medical_Services_Group.Party_Id RIGHT OUTER JOIN
+                      Admin_Services INNER JOIN
+                      Patient_Services ON Admin_Services.S_ID = Patient_Services.S_ID ON Party_Medical_Services_Group.Reg_No = Patient_Services.RegNo AND 
+                      Party_Medical_Services_Group.YearlyNo = Patient_Services.YearlyNo AND Party_Ins_Services.S_Id = Admin_Services.S_ID LEFT OUTER JOIN
+                      Test_Booking ON Admin_Services.S_ID = Test_Booking.S_Id
+WHERE     (Patient_Services.RegNo = '225211204029050099036057050036043043036036071092') AND (Patient_Services.YearlyNo = 701399) AND 
+                      (Patient_Services.Payment_Status = 0) 

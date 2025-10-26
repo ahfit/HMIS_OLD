@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<shortagemedicine>
+	
+
+<item type="bank" >
+			<name>Habib Bank</name>
+			<ac>02349-2</ac>
+			<time>10:10 am</time>
+			<deposit>10000</deposit>
+			<withdraw>12000</withdraw>
+			<balance>200000</balance>
+			<branch>Alflah</branch>
+</item>
+
+
+<item type="bank" >
+			<name>National Bank</name>
+			<ac>33328-1</ac>
+			<time>10:10 am</time>
+			<deposit> 80000</deposit>
+			<withdraw>10000</withdraw>
+			<balance>300000</balance>
+			<branch>Main Market</branch>
+</item>
+ 
+
+
+
+
+
+</shortagemedicine>
+
+
+
+
+   

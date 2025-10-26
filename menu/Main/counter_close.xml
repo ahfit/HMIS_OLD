@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+
+<patients>
+
+
+<item type="total"  >
+			<opd>[7/20] - 2000</opd>
+			<female>[3/20] - 2000</female>
+			<icu>[7/20] - 12000</icu>
+			<icu>12 July 2009  -  Recieved : 452510</icu>
+		
+</item>
+
+
+
+<item type="morning"  >
+			<name>OPD</name>
+			<amount>2000</amount>			
+</item>
+
+<item type="morning"  >
+			<name>Urology</name>
+			<amount>1000</amount>			
+</item>
+
+<item type="morning"  >
+			<name>Private Ward</name>
+			<amount>12000</amount>			
+</item>
+
+
+
+<item type="evening"  >
+			<name>OPD</name>
+			<amount>2000</amount>			
+</item>
+
+<item type="evening"  >
+			<name>Urology</name>
+			<amount>1000</amount>			
+</item>
+
+<item type="evening"  >
+			<name>Private Ward</name>
+			<amount>12000</amount>			
+</item>
+
+
+
+
+<item type="night"  >
+			<name>OPD</name>
+			<amount>2000</amount>			
+</item>
+
+<item type="night"  >
+			<name>Urology</name>
+			<amount>1000</amount>			
+</item>
+
+<item type="night"  >
+			<name>Private Ward</name>
+			<amount>12000</amount>			
+</item>
+
+
+<item type="night"  >
+			<name>Private Ward2</name>
+			<amount>11000</amount>			
+</item>
+
+
+
+</patients>
+
+
+
+
+   

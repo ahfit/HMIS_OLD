@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<medicineusage>
+	
+
+<item type="current" >
+			<name>Dr. Azmat Ali</name>
+			<dueto>Professor (Medicine)</dueto>
+			<dueto>Payment of Doctor Share</dueto>
+			<date>10 July 2009</date>
+			</item>
+
+<item type="current" >
+			<name>Dr. Altaf Khan</name>
+			<dueto>Professor (Urology)</dueto>
+			<dueto>Payment of Doctor Share </dueto>
+			<date>10 July 2009</date>
+			</item>
+
+
+<item type="pending" >
+			<name>Dr. Ahmed ALi</name>
+			<dueto>PG Student (Urology)</dueto>
+			<dueto>Salary not paid</dueto>
+			<date>08 July 2009</date>
+			</item>
+
+
+<item type="pending" >
+			<name>Dr. Asif</name>
+			<dueto>PG Student (Urology)</dueto>
+			<dueto>Salary not paid </dueto>
+			<date>08 July 2009</date>
+			</item>
+
+
+</medicineusage>

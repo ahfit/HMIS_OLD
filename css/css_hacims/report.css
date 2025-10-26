@@ -1,0 +1,18 @@
+ 
+
+
+body { font-family:Calibri, Arial, sans-serif;  color:#000;  }  
+
+ 
+.rpt_title {font-size:14px; font-weight:bold; text-decoration:underline; text-align:center; }
+.rpt_title_small { color:#000; font-weight:bold; font-size:13px;}
+.rpt_tstnames {color:#000; font-weight:bold; font-size:12px;}
+.rpt_lbl {color:#000; font-weight:bold; font-size:13px;}
+.rpt_testvaluebold {color:#000; font-weight:bold; font-size:12px;} 
+.rpt_testvaluenormal {color:#000; font-weight:normal; font-size:12px;}
+.rpt_font {font-family:Calibri, Arial, sans-serif;}
+
+.rpt_smalltxt {color:#000; font-weight:normal; font-size:12px;}
+.rpt_exsmalltxt {color:#000; font-weight:normal; font-size:11px;}
+.rpt_medtxt {color:#000; font-weight:bold; font-size:12px;}
+.rpt_largetxt {color:#000; font-weight:bold; font-size:14px;}

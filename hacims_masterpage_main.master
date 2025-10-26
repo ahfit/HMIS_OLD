@@ -1,0 +1,208 @@
+﻿<%@ Master Language="VB" CodeFile="hacims_masterpage_main.master.vb" Inherits="hacims_masterpage_main" %>
+
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>HACIMS </title>
+    
+     <!--Styles -->
+    <link href="~/css_hacims/class_reset.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/class_content.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/colorbox.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/jquery_ui/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+
+    <link rel="shortcut icon" href="images_hacims/favicon.ico" />
+    <!--Scripts-->
+   
+     <script src="<%# Page.ResolveClientUrl("~/Scripts/jquery.min.js") %>" type="text/javascript" language="javascript"></script>
+    <script src="<%# Page.ResolveClientUrl("~/Scripts/bootstrap.min.js") %>" type="text/javascript" language="javascript"></script>
+<%--    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery.cookie.js")%>"></script>    --%>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery.colorbox-min.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery.floatobject-1.0.js") %>"></script>
+
+    
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.core.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.widget.js") %>"></script>
+    <%--<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.mouse.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.draggable.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.position.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.resizable.js") %>"></script>--%>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.dialog.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.datepicker.js")%>"></script>
+    <%--<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/validate.js")%>"></script>--%>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $('.Grid_1 tr').click(function () {
+                $('.Grid_1 tr').removeClass('gridedit');
+                $(this).addClass('gridedit');
+            });
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            $(".box").dialog({
+                autoOpen: false,
+                modal: true
+            });
+
+            $(".openbox").click(function () {
+                $(".box").dialog("open");
+
+                return false;
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript" language="javascript">
+
+        $(document).ready(function () {
+            $('.captxt').bind('keyup', function () {
+                var val = $(this).val().toUpperCase()
+                $(this).val(val);
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+            $(".intdata").keydown(function (event) {
+
+
+
+                if (!(event.keyCode == 8
+            || event.keyCode == 46
+            || event.keyCode == 9
+             || event.keyCode == 190
+            || (event.keyCode >= 35 && event.keyCode <= 40)
+            || (event.keyCode >= 48 && event.keyCode <= 57)
+
+            || (event.keyCode >= 96 && event.keyCode <= 105))
+            ) {
+                    event.preventDefault();
+                }
+
+
+
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+
+        $(function () {
+            $(".datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd/mm/yy',
+                currentText: 'Now'
+
+            });
+
+            $(".datepicker").datepicker('setDate', new Date());
+        });
+
+
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>--%>
+        <div class="hinfo" style="display: none;">
+            <asp:Image ID="Image1" runat="server" CssClass="hslogo" />
+            <asp:Label ID="hospital" runat="server" Text="Label" CssClass="hsname"></asp:Label>
+        </div>
+        <div id="container">
+            <div id="feedb" style="display: none;"><a id="A1" href="~/administrator/feedback.aspx" runat="server" class="feed"></a></div>
+            <div id="header">
+
+
+
+                <div class="logo">
+                    <span>
+                        <asp:Label ID="Hospital_Name" runat="server" Text="Hospital_Name" Visible="false"></asp:Label></span>
+                </div>
+
+                <div id="logininfo">
+                    <ul>
+                        <li class="welcome">Welcome!<span class="dname"><asp:Label ID="LabelDoctorName" runat="server" ToolTip="User Name"></asp:Label></span><span class="spltr">|<asp:Label
+                            ID="Label_Designation" runat="server" ToolTip="User Designation" ForeColor="DarkGray"></asp:Label>
+                        </span><span class="designation"></span><span class="spltr">|</span><span class="dept">
+                            <asp:Label ID="Label_SubDepartment" runat="server" ToolTip="User Deprartment" Style="color: #97ba3a;"
+                                Text="Label_SubDepartment"></asp:Label></span><span class="spltr">|&nbsp;</span>
+                            <a id="AB" href="~/change_password.aspx" class="cpass" runat="server">Change Password</a>
+                            <%--<span class="spltr">|&nbsp;</span><asp:HyperLink ID="hlnkDemoPage" CssClass="cpass" runat="server" 
+            NavigateUrl="~/DemoHome.aspx" Text="Demo"></asp:HyperLink>--%>
+                            <asp:Literal ID="ltrDemo" runat="server" Text=""></asp:Literal>
+                            <span class="spltr">|&nbsp;</span><a id="A2" href="~/login.aspx" title="Logout" runat="server">Logout</a>
+                        </li>
+
+                        <li class="datet">
+                            <asp:Label ID="LabelDate" runat="server" ToolTip="Current Date" Style="color: #0155a6;"></asp:Label></li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <!--header END-->
+
+            <div id="content">
+
+                <div id="inner-content">
+                    <h1 class="mh1"><span>
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server" CurrentNodeStyle-ForeColor="#000" RenderCurrentNodeAsLink="false" PathSeparator="&nbsp;&nbsp;&raquo;&nbsp;&nbsp;" RootNodeStyle-ForeColor="#999999" PathDirection="RootToCurrent"></asp:SiteMapPath>
+                    </span>
+                    </h1>
+
+                </div>
+
+
+                <div id="navigation" style="margin-right: 12px; float:left;width:200px;">
+                    <asp:Panel ID="Panel1" CssClass="posmenu" runat="server"></asp:Panel>
+                </div>
+                <div id="forms_items" style="min-height: 400px; float:left;width:200px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+                </div>
+                <asp:Label ID="label_i_f" runat="server" Visible="false"></asp:Label>
+                <br />
+                <br />
+
+                <asp:HiddenField ID="HiddenFieldPage_Name" runat="server" />
+                <asp:HiddenField ID="HiddenFieldPage" runat="server" />
+
+
+            </div>
+            <!--inner-content END-->
+        </div>
+        <!--content END-->
+        <div id="footer"><span><a href="#" title="HACIMS - Design &amp; Developed by MegaPlus Technologies" target="_blank">&copy; 2012  -  All rights reserved - MegaPlus Technologies</a></span></div>
+
+        <!--container END-->
+
+
+
+
+
+
+    </form>
+</body>
+</html>

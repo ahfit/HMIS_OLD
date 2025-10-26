@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+
+<patients>
+  <item type="total"  >
+			<opd>5</opd>
+			<female>3</female>
+			<icu>2</icu>
+			<private>2</private>
+  </item>
+
+  <item type="opd"  >
+			<name>Adil Hafeez</name>
+			<des>LUTS</des>
+  </item>
+
+  <item type="opd" >
+			<name>Mr. Imran</name>
+			<des>FEVER</des>
+  </item>
+
+  <item type="opd" >
+			<name>Hassan Tariq</name>
+			<des>Humaturia</des>
+  </item>
+
+  <item type="female" >
+			<name>Miss Adila</name>
+			<des>LUTS</des>
+  </item>
+
+  <item type="female" >
+			<name>Miss Naseem</name>
+			<des>FEVER</des>
+  </item>
+  
+  <item type="female" >
+  		<name>Zeenat</name>
+			<des>FEVER</des>
+  </item>
+
+  <item type="icu" >
+			<name>Noman</name>
+			<des>LUTS</des>
+  </item>
+  
+  <item type="icu" >
+			<name>Akhtar ALi</name>
+			<des>FEVER</des>
+  </item>
+
+  <item type="private" >
+			<name>Noman Hassan</name>
+			<des>LUTS</des>
+  </item>
+
+  <item type="private" >
+			<name>Ziaqat Shehzad</name>
+			<des>FEVER</des>
+  </item>
+</patients>
+
+
+
+
+   

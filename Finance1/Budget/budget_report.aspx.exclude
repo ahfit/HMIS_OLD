@@ -1,0 +1,130 @@
+<%@ Page Language="VB" AutoEventWireup="false" CodeFile="budget_report.aspx.vb" Inherits="Finance_budget_report" %>
+
+<%@ Register Assembly="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+
+ 
+   
+
+
+
+
+ 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+ <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<div class="form_items">
+  <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%"   DataSourceID="SqlDataSource1" DataKeyNames="E_ID">
+              <footerstyle BorderColor="#C0C0FF" CssClass="GridPager" />            
+              <RowStyle CssClass="GridItem" />
+              <headerstyle CssClass="GridHeader" />            
+              <AlternatingRowStyle CssClass="GridAltItem" />
+              <columns>
+              <asp:BoundField DataField="Estimated_Amount" HeaderText="Estimated Amount" SortExpression="Estimated_Amount" />
+              <asp:BoundField DataField="Revise_Amount" HeaderText="Revise Amount" SortExpression="Revise_Amount" />
+              <asp:BoundField DataField="Actual_Amount" HeaderText="Actual Amount" SortExpression="Actual_Amount" />
+                  <asp:TemplateField ShowHeader="False">
+                      <ItemTemplate>
+                          <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Select"
+                              Text='<%# Eval("E_Name") %>'></asp:LinkButton>
+                      </ItemTemplate>
+                  </asp:TemplateField>
+              </columns>
+            </asp:GridView>
+              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FinanceConnectionString %>"
+                    SelectCommand="SELECT Budget_Detail.Estimated_Amount, Budget_Detail.Revise_Amount, Budget_Detail.Actual_Amount, Expenditure.E_Name, Expenditure.E_ID FROM Expenditure_Heading INNER JOIN Expenditure_Sub_Heading ON Expenditure_Heading.EH_Code = Expenditure_Sub_Heading.EH_Code INNER JOIN Expenditure ON Expenditure_Sub_Heading.ESH_Code = Expenditure.ESH_Code INNER JOIN Budget_Detail ON Expenditure.E_ID = Budget_Detail.E_ID INNER JOIN Budget ON Budget_Detail.B_ID = Budget.B_ID WHERE (YEAR(Budget.Date_Start) = @year) AND (Expenditure_Heading.EH_Code LIKE '%' + ISNULL(@eh_code, 'A') + '%') OR (YEAR(Budget.Date_Start) = @year) AND (Expenditure_Sub_Heading.ESH_Code LIKE '%' + ISNULL(@ESH_Code, 'A') + '%') OR (YEAR(Budget.Date_Start) = @year) AND (Expenditure.E_ID LIKE @E_ID)">
+                  <SelectParameters>
+                    <asp:QueryStringParameter Name="year" QueryStringField="year" />
+                    <asp:ControlParameter ControlID="Menu1" DefaultValue="A" Name="eh_code" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="Menu1" DefaultValue="A" Name="ESH_Code" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="Menu1" DefaultValue="'%'" Name="E_ID" PropertyName="SelectedValue" />
+                  </SelectParameters>
+                </asp:SqlDataSource>
+                
+                
+                
+                
+                  <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="True"
+                    DisplayToolbar="False"  ReportSourceID="CrystalReportSource2" Width="917px" Visible="True" />
+                <CR:CrystalReportSource ID="CrystalReportSource1" runat="server" Visible="True">
+                  <Report FileName="budget_report.rpt">
+                    <Parameters>
+                        <CR:ControlParameter ControlID="HiddenField_year" ConvertEmptyStringToNull="False"
+                            DefaultValue="" Name="@year" PropertyName="Value" ReportName="" />
+                        <CR:ControlParameter ControlID="Menu1" ConvertEmptyStringToNull="False" DefaultValue="A"
+                            Name="@eh_code" PropertyName="SelectedValue" ReportName="" />
+                        <CR:ControlParameter ControlID="Menu1" ConvertEmptyStringToNull="False" DefaultValue="A"
+                            Name="@ESH_Code" PropertyName="SelectedValue" ReportName="" />
+                        <CR:ControlParameter ControlID="HiddenField_E_ID" ConvertEmptyStringToNull="False"
+                            DefaultValue="" Name="@E_ID" PropertyName="Value" ReportName="" />
+                      </Parameters>
+                    </Report>
+                </CR:CrystalReportSource>
+                <CR:CrystalReportSource ID="CrystalReportSource3" runat="server">
+                    <Report FileName="budget_report_Subheadwise.rpt">
+                        <Parameters>
+                            <CR:ControlParameter ControlID="HiddenField_year" ConvertEmptyStringToNull="False"
+                                DefaultValue="" Name="@year" PropertyName="Value" ReportName="" />
+                            <CR:ControlParameter ControlID="Menu1" ConvertEmptyStringToNull="False" DefaultValue=""
+                                Name="@eh_code" PropertyName="SelectedValue" ReportName="" />
+                            <CR:ControlParameter ControlID="Menu1" ConvertEmptyStringToNull="False" DefaultValue=""
+                                Name="@ESH_Code" PropertyName="SelectedValue" ReportName="" />
+                        </Parameters>
+                    </Report>
+                </CR:CrystalReportSource>
+                <CR:CrystalReportSource ID="CrystalReportSource4" runat="server">
+                    <Report FileName="budget_report_Ewise.rpt">
+                        <Parameters>
+                            <CR:ControlParameter ControlID="HiddenField_year" ConvertEmptyStringToNull="False"
+                                DefaultValue="" Name="@year" PropertyName="Value" ReportName="" />
+                            <CR:ControlParameter ControlID="GridView1" ConvertEmptyStringToNull="False" DefaultValue=""
+                                Name="@E_ID" PropertyName="SelectedValue" ReportName="" />
+                        </Parameters>
+                    </Report>
+                </CR:CrystalReportSource>
+                <br />
+                <CR:CrystalReportSource ID="CrystalReportSource2" runat="server">
+                    <Report FileName="budget_report_headwise.rpt">
+                        <Parameters>
+                            <CR:ControlParameter ControlID="HiddenField_year" ConvertEmptyStringToNull="False"
+                                DefaultValue="" Name="@year" PropertyName="Value" ReportName="" />
+                            <CR:ControlParameter ControlID="Menu1" ConvertEmptyStringToNull="False" DefaultValue=""
+                                Name="@eh_code" PropertyName="SelectedValue" ReportName="" />
+                        </Parameters>
+                    </Report>
+                </CR:CrystalReportSource>
+
+                <asp:HiddenField ID="HiddenField_year" runat="server" />
+                <asp:HiddenField ID="HiddenField_E_ID" runat="server" />        
+          
+          
+          
+
+          
+          
+           </div>
+
+
+
+
+</asp:Content>

@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+ 
+.leftnav {width:208px; background:url(../images_hacims/img_dots_ver.png) 199px 0 repeat-y;  }
+.open { display:none;}
+.close { display:inline-block; background:url(../images_hacims/toleft.png) 0 0 no-repeat; height:21px; width:17px; cursor:pointer; }

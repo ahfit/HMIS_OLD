@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+
+<doctorshare>
+	
+<item type="share" >
+			<doctor>Maratib</doctor>
+			<status>V</status>
+			<amount>1000</amount>
+			<date>16 July 2009</date>
+</item>
+
+<item type="share" >
+			<doctor>Saif Shehzad</doctor>
+			<status>V</status>
+			<amount>1100</amount>
+			<date>16 July 2009</date>
+</item>
+
+<item type="share" >
+			<doctor>Nadeem Ahmed</doctor>
+			<status>V</status>
+			<amount>400</amount>
+			<date>16 July 2009</date>
+</item>
+
+<item type="share" >
+			<doctor>Rana jee</doctor>
+			<status>V</status>
+			<amount>1000</amount>
+			<date>16 July 2009</date>
+</item>
+
+<item type="share" >
+			<doctor>Tariq Kamboh</doctor>
+			<status>V</status>
+			<amount>800</amount>
+			<date>16 July 2009</date>
+</item>
+
+
+
+
+</doctorshare>
+
+
+
+
+   

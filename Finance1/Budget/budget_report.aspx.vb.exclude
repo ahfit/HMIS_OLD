@@ -1,0 +1,172 @@
+Imports System.Data.SqlClient
+Partial Class Finance_budget_report
+    Inherits System.Web.UI.Page
+    Dim val As Int32 = 0
+    ''Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+    ''    Dim reader As SqlDataReader
+    ''    Dim con As New SqlConnection
+    ''    Dim command As SqlCommand
+    ''    TreeView1.Nodes.Clear()
+    ''    con.ConnectionString = ConfigurationManager.ConnectionStrings("FinanceConnectionString").ConnectionString
+    ''    con.Open()
+    ''    command = con.CreateCommand
+    ''    command.CommandText = "SELECT Expenditure_Heading.EH_Code, Expenditure_Heading.EH_Name FROM Expenditure_Heading "
+    ''    reader = command.ExecuteReader()
+    ''    While reader.Read
+
+    ''        Dim obj As New TreeNode(reader.Item(1), reader.Item(0))
+    ''        TreeView1.Nodes.Add(obj)
+    ''        getchild(obj, reader.Item(0))
+
+    ''    End While
+    ''    reader.Close()
+    ''    con.Close()
+    ''End Sub
+    ''Protected Sub getchild(ByVal obj As TreeNode, ByVal str As String)
+
+    ''    Dim reader1 As SqlDataReader
+    ''    Dim con As New SqlConnection
+    ''    Dim command As SqlCommand
+
+    ''    con.ConnectionString = ConfigurationManager.ConnectionStrings("FinanceConnectionString").ConnectionString
+    ''    con.Open()
+    ''    command = con.CreateCommand
+    ''    command.CommandText = "SELECT Expenditure_Sub_Heading.ESH_Code, Expenditure_Sub_Heading.ESH_Name FROM  Expenditure_Sub_Heading where  Expenditure_Sub_Heading.EH_Code ='" + str.ToString + "'"
+    ''    reader1 = command.ExecuteReader()
+    ''    While reader1.Read
+    ''        Dim child As New TreeNode(reader1.Item(1), reader1.Item(0))
+    ''        obj.ChildNodes.Add(child)
+    ''        getSubchild(child, reader1.Item(0))
+    ''    End While
+    ''    reader1.Close()
+    ''    con.Close()
+
+
+    ''End Sub
+
+    ''Protected Sub getSubchild(ByVal child As TreeNode, ByVal str As String)
+
+    ''    Dim reader2 As SqlDataReader
+    ''    Dim con As New SqlConnection
+    ''    Dim command As SqlCommand
+    ''    con.ConnectionString = ConfigurationManager.ConnectionStrings("FinanceConnectionString").ConnectionString
+    ''    con.Open()
+    ''    command = con.CreateCommand
+    ''    command.CommandText = "SELECT E_ID, E_Code, E_Name  FROM    dbo.Expenditure where ESH_Code ='" + str.ToString + "'"
+    ''    reader2 = command.ExecuteReader()
+    ''    While reader2.Read
+    ''        Dim subchild As New TreeNode(reader2.Item(2), reader2.Item(0))
+    ''        child.ChildNodes.Add(subchild)
+    ''    End While
+    ''    reader2.Close()
+    ''    con.Close()
+
+    ''End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        Dim reader As SqlDataReader
+        Dim con As New SqlConnection
+        Dim command As SqlCommand
+        Menu1.Items.Clear()
+        con.ConnectionString = ConfigurationManager.ConnectionStrings("FinanceConnectionString").ConnectionString
+        con.Open()
+        command = con.CreateCommand
+        command.CommandText = "SELECT Expenditure_Heading.EH_Code, Expenditure_Heading.EH_Name FROM Expenditure_Heading "
+        reader = command.ExecuteReader()
+        Dim i As Int32 = 1
+        While reader.Read
+            Dim obj As New MenuItem(reader.Item(1), reader.Item(0))
+            Menu1.Items.Add(obj)
+            getchild(obj, reader.Item(0))
+        End While
+        reader.Close()
+        con.Close()
+    End Sub
+    Protected Sub getchild(ByVal obj As MenuItem, ByVal str As String)
+
+        Dim reader1 As SqlDataReader
+        Dim con As New SqlConnection
+        Dim command As SqlCommand
+
+        con.ConnectionString = ConfigurationManager.ConnectionStrings("FinanceConnectionString").ConnectionString
+        con.Open()
+        command = con.CreateCommand
+        command.CommandText = "SELECT Expenditure_Sub_Heading.ESH_Code, Expenditure_Sub_Heading.ESH_Name FROM  Expenditure_Sub_Heading where  Expenditure_Sub_Heading.EH_Code ='" + str.ToString + "'"
+        reader1 = command.ExecuteReader()
+        While reader1.Read
+            Dim child As New MenuItem(reader1.Item(1), reader1.Item(0))
+            obj.ChildItems.Add(child)
+            getSubchild(child, reader1.Item(0))
+        End While
+        reader1.Close()
+        con.Close()
+
+
+    End Sub
+
+    Protected Sub getSubchild(ByVal child As MenuItem, ByVal str As String)
+
+        Dim reader2 As SqlDataReader
+        Dim con As New SqlConnection
+        Dim command As SqlCommand
+        con.ConnectionString = ConfigurationManager.ConnectionStrings("FinanceConnectionString").ConnectionString
+        con.Open()
+        command = con.CreateCommand
+        command.CommandText = "SELECT E_ID, E_Code, E_Name  FROM    dbo.Expenditure where ESH_Code ='" + str.ToString + "'"
+        reader2 = command.ExecuteReader()
+        While reader2.Read
+            Dim subchild As New MenuItem(reader2.Item(2), reader2.Item(0))
+            child.ChildItems.Add(subchild)
+            '        Dim subchild As New TreeNode(reader2.Item(2), reader2.Item(0))
+            '        child.ChildNodes.Add(subchild)
+        End While
+        reader2.Close()
+        con.Close()
+
+    End Sub
+
+    Protected Sub Page_PreInit(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreInit
+
+    End Sub
+
+
+
+    Protected Sub Page_PreRender(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreRender
+        CrystalReportViewer1.LogOnInfo.Item(0).ConnectionInfo.Password = "123"
+        HiddenField_year.Value = Request.QueryString("year")
+        If Not IsPostBack Then
+            HiddenField_E_ID.Value = 0
+        ElseIf HiddenField_E_ID.Value.Length = 3 Then
+            CrystalReportViewer1.ReportSourceID = "CrystalReportSource3"
+            CrystalReportViewer1.LogOnInfo.Item(0).ConnectionInfo.Password = "123"
+            CrystalReportViewer1.RefreshReport()
+        ElseIf val = 0 Then
+
+
+            CrystalReportViewer1.ReportSourceID = "CrystalReportSource1"
+            CrystalReportViewer1.LogOnInfo.Item(0).ConnectionInfo.Password = "123"
+            CrystalReportViewer1.RefreshReport()
+        End If
+
+    End Sub
+
+    Protected Sub Menu1_MenuItemClick(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu1.MenuItemClick
+        HiddenField_E_ID.Value = Menu1.SelectedValue
+    End Sub
+
+ 
+
+    Protected Sub GridView1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView1.SelectedIndexChanged
+        CrystalReportViewer1.ReportSourceID = "CrystalReportSource4"
+        ' HiddenField_E_ID.Value = GridView1.SelectedValue
+        CrystalReportViewer1.LogOnInfo.Item(0).ConnectionInfo.Password = "123"
+        CrystalReportViewer1.RefreshReport()
+        val = 1
+    End Sub
+
+    Protected Sub LinkButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+End Class

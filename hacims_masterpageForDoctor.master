@@ -1,0 +1,902 @@
+﻿<%@ Master Language="VB" CodeFile="hacims_masterpageForDoctor.master.vb" Inherits="hacims_masterpageForDoctor" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+ <!doctype html>
+<html>
+
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>HACIMS - Hospital Automation &amp; Clinical Information Management System</title>
+    <link rel="icon" type="image/png" href="resources/images/favicon.png" />
+
+    <link href="resources/css/hacimsnew_styles.css???????????????????????????????????????????????" rel="stylesheet" type="text/css" />
+    <script src="<%# Page.ResolveClientUrl("~/resources/js/jquery-3.4.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/resources/js/rt.min.js")%>"></script>
+	
+	
+     <link rel="stylesheet" href="<%# Page.ResolveClientUrl("~/resources/css/jodit.min.css")%>" /> 
+    <script src="<%# Page.ResolveClientUrl("~/resources/js/jodit.min.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/resources/js/js.cookie.js")%>"></script>
+    <!--<link href="css_hacims/class_content.css" rel="stylesheet" type="text/css" media="screen, projection" />-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--<script src="<%# Page.ResolveClientUrl("~/css_hacims/jquery.floatobject-1.0.js") %>" type="text/javascript" language="javascript">-->
+	  
+	 
+	</script>
+	 
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+		 
+            function getTemplateForm(elem) {
+                var templateId = $(elem).parent().find("input[id$='hdnTemplateId']").val();
+                window.location = "../Pt_EMR/Pt_Presenting_Complaint.aspx?TemplateId=" + templateId + "";
+                return false;
+            }
+
+            $(document).on("click", ".toggle_open", function(e) {
+
+                e.preventDefault();
+                $("#patient_info_small").hide();
+                $(".patient_info").show();
+
+                //$("#patient_info_small").fadeOut(0);
+                //$(".patient_info").slideDown(300);
+
+
+            });
+
+            $(document).on("click", ".toggle_close", function(e) {
+
+                e.preventDefault();
+
+                $("#patient_info_small").show();
+                $(".patient_info").hide();
+                // $("#patient_info_small").slideDown(200);
+                // $("#patient_info").fadeOut(0);
+
+
+
+            });
+
+            ////////////////////
+
+            //$(document).on("click",".mainpage_tabs li a",function(e){
+            //		  
+            //		  	e.preventDefault();
+            //			$('.mainpage_tabs li a').removeClass('active');
+            //			$(this).addClass('active');
+            //			var thistxt = $(this).text();
+            //			$('.hideall').hide();
+            //			$('.'+thistxt+'_content').show();
+            //			 
+            //		 
+            //		     });
+
+
+
+
+
+            function toggle_visibility(id) {
+                var e = document.getElementById(id);
+                if (e.style.display == 'block' || e.style.display == '') {
+                    e.style.display = 'none';
+                } else {
+                    e.style.display = 'block';
+                }
+            }
+
+
+            $('.Grid_1 tr').click(function() {
+                $('.Grid_1 tr').removeClass('gridedit');
+                $(this).addClass('gridedit');
+            });
+        });
+    </script>
+
+
+    <!-- jQuery library -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="~/css_hacims/jquery_ui/themes/base/jquery.ui.all.css" />
+    <link rel="stylesheet" href="~/css_hacims/jquery_ui/themes/ui-lightness/jquery.ui.all.css" />
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery-1.12.4.min.js")%>"></script>
+
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.core.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.widget.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.mouse.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.draggable.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.position.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.resizable.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.dialog.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.datepicker.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/validate.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css/jquery.min.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css/bootstrap.min.js")%>"></script>
+	
+
+	
+
+    <script type="text/javascript" language="javascript">
+        $(function() {
+            // $(".box").dialog({
+            //            autoOpen: false,
+            //            modal: true
+            //        });
+            //
+            //        $(".openbox").click(function () {
+            //            $(".box").dialog("open");
+            //
+            //            return false;
+            //        });
+        });
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $('.captxt').bind('keyup', function() {
+                var val = $(this).val().toUpperCase()
+                $(this).val(val);
+            });
+
+            $("#basic_mrNumber").html($("#ctl00_FormView2_RegistrationNo").html());
+            $("#basic_pInfo").html($("#ctl00_FormView2_PatientNameLabel").html() + ' ' + '<span style="color:#0091c6;">' + $("#ctl00_FormView2_RelationLabel").html() + '</span>' + ' ' + $("#ctl00_FormView2_RelationNameLabel").html());
+            $("#basic_age").html('Age : ' + $("#ctl00_FormView2_AgeLabel").html() + ' Year(s)');
+            $("#basic_yearlyNo").html('100218');
+            $("#basic_address").html($("#ctl00_FormView2_Label_Address").html());
+
+
+
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var cdate = new Date();
+            var cyear = cdate.getFullYear();
+            $("#cyear").html(cyear);
+
+
+            $(".intdata").keydown(function(event) {
+
+
+
+                if (!(event.keyCode == 8 ||
+                        event.keyCode == 46 ||
+                        event.keyCode == 9 ||
+                        event.keyCode == 190 ||
+                        (event.keyCode >= 35 && event.keyCode <= 40) ||
+                        (event.keyCode >= 48 && event.keyCode <= 57)
+
+                        ||
+                        (event.keyCode >= 96 && event.keyCode <= 105))) {
+                    event.preventDefault();
+                }
+ 
+            });
+			
+			/////////////////
+			
+			$(document).on("click",".right_usermenu1",function(e){
+		  
+		  	e.preventDefault();
+		  
+		 
+					$(".right_usermenu_cnt").fadeToggle(); 
+
+		             var pos_menu = $(this).position();
+					 console.log(pos_menu);
+		 $(".right_usermenu_cnt").css( "left", pos_menu.left - 148);   
+		 $(".right_usermenu_cnt").css( "top", pos_menu.top + 80);
+		 
+			
+	    });
+	  
+			
+			/////////////////
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#button").click(function() {
+                $("#hide").toggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#button2").click(function() {
+                $("#hide2").toggle();
+            });
+			
+				/////////LeftSideMenu
+				
+				  var tabhtml=""; var contentHtml ="";
+	   $('.CollapsiblePanelTab').each(function(index, element) {
+		  
+        
+				    tabhtml += "<li><div>"+$(this).html()+"</div>";
+				    tabhtml +="<ul>"; 
+				   
+				   $(this).parent().find('a').each(function(index, element) {  
+				   						
+				   				   var href =  $(this).attr('href');
+								   var thisClass =  $(this).html().replace(' ','').replace(' ','').replace(' ','');
+				   				   tabhtml += '<li><a href="'+href+'" class="'+thisClass+'">'+$(this).html()+'</a></li>';
+				   });
+		 		  tabhtml +="</ul>"; 
+				  tabhtml +="</li>"; 	
+      });
+		
+		$("#menuScroll").html("");
+		$("#menuScroll,.leftMenu_divcnt").append("<ul class='tabs_left'>"+tabhtml+"</ul>");	
+		
+			 $(document).on("click",".tabs_left li a",function(e){
+		  
+		    // e.preventDefault();
+			 $('.tabs_left a,.tabs_left div').removeClass('active');
+			 
+			 var thisClass = $(this).attr('class');			  		
+			 Cookies.set('activeLink', thisClass); 	
+			 
+			 $(this).addClass('active');
+			 $(this).parent().parent().prev('div').addClass('active');
+		 	
+            
+		      });   
+	
+			  var activeLink = Cookies.get('activeLink');			  
+			  $('.'+activeLink).addClass('active');
+			  $('.'+activeLink).parent().parent().prev('div').addClass('active');
+                  
+             
+			  $('.pageTitle').html("<span>"+$('.'+activeLink).parent().parent().prev('div').html()+'</span> &rsaquo; '+$('.'+activeLink).html()); 
+	  
+			
+				///////////
+				
+				 
+			
+	  
+			//	$(".leftMenu_Divcnt").mCustomScrollbar({ axis:"y",theme:"minimal-dark" });
+       	 
+				 //////
+			
+				var desk = true;
+		 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  				
+							 desk = false;  $('.leftMenu_div').hide();
+						$(".pageContent").css("padding-left","15px");
+						$(".mainpage_tabs").css("padding-left","0px"); }else {  desk = true;  } 	
+		 	
+				$(document).on("click",".left_usermenu,#lightbox_bgm",function(e){
+		  
+		  	e.preventDefault();
+			    
+					   if(desk){
+						   
+						 var mld = $('.leftMenu_div').css('display');   
+						
+						if(mld=="none"){  
+						
+						$('.leftMenu_div').show();
+						$(".pageContent").css("padding-left","230px");
+						$(".mainpage_tabs").css("padding-left","218px");
+						
+						 	 
+						}else { 
+						
+						$('.leftMenu_div').hide();
+						$(".pageContent").css("padding-left","15px");
+						$(".mainpage_tabs").css("padding-left","0px");
+						 
+					  
+					    }	  
+				 		
+					   }else {
+						   
+						   
+						 
+					   $('.slideLeftMenu').animate({width: 'toggle'},300);
+					  
+					    var ml = $('#lightbox_bgm').css('display');
+						  
+						if(ml=="none"){  $('#lightbox_bgm').fadeIn(300,function(){  });
+						 	 
+						}else {  $('#lightbox_bgm').fadeOut(300,function(){ }); 
+					  
+					    }	  
+						   
+						     }
+						
+						
+										 
+		    });
+		  
+		  
+				var pHeight = $('.pageContent').outerHeight()+25;
+	  			 console.log(pHeight);
+				 if(pHeight>300){
+	  			 $(".leftMenu_Div").height(pHeight+"px");
+				 }else {  $(".leftMenu_Div").height("520px"); }	
+							
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        $(function() {
+            //      $(".datepicker").datepicker({
+            //            changeMonth: true,
+            //            changeYear: true,
+            //            dateFormat: 'dd/mm/yy',
+            //            currentText: 'Now'
+            //
+            //        });
+            //
+            //        $(".datepicker").datepicker('setDate', new Date());
+        });
+    </script>
+
+
+
+
+
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    <style>
+        body {
+            background: #f4f4f4;
+        }
+
+        .header_right li a.hs_logoutt {
+            color: #b40b25;
+            border-right: #ccc solid 0px;
+            padding-left: 10px;
+            background: url(../resources/images/img_bullet_1.png) left 8px no-repeat;
+            background-size: 4px;
+        }
+
+        .main_bx {
+            margin-top: 35px;
+        }
+
+        .footer_txt {
+            position: relative;
+            height: 30px;
+            text-align: centr;
+            width: 100%;
+            line-height: 30px;
+            box-sizing: border-box;
+            font-size: 13px;
+            float: left1;
+            display: inline-block;
+        }
+
+        .footer_txt a {
+            color: #000c7b;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .footer_txt a:hover {
+            text-decoration: underline;
+        }
+
+        .content_main {
+            margin-top: 40px;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <form id="form1" runat="server">
+        <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>--%>
+
+
+
+        <header>
+            <a href="#" class="left_usermenu" style="display:block;"></a>
+            <div id="logo_vendor_main"></div>
+			 <a href="#" class="right_usermenu"></a>
+            <ul class="header_right">
+                <li>
+                    <span class="hs_doc">Welcome! <asp:Label ID="LabelDoctorName" runat="server" ToolTip="User Name" style="font-weight:bold;"></asp:Label></span>
+                    <span class="hs_dpt">
+                        <asp:Label ID="Label_Designation" runat="server" ToolTip="User Designation"></asp:Label>
+                    </span>
+                    <span class="hs_logout" style="padding-right:3px;">
+                        <asp:Label ID="Label_SubDepartment" runat="server" ToolTip="User Deprartment" Text="Label_SubDepartment"></asp:Label>
+                    </span>
+                    <a id="A2" href="~/login.aspx" title="Logout" runat="server" class="hs_logoutt">Logout</a>
+
+                </li>
+                <li class="datetext">
+                    <asp:Label ID="LabelDate" runat="server" ToolTip="Current Date"></asp:Label>
+                </li>
+            </ul>
+			
+			<div class="right_usermenu_cnt" style="display:none; margin-top:150px; margin-left:550px;">
+  <span></span>
+  	<ul>
+    <li>Dr. Furkan Ahmad<div>Director Surgeries Urology (Urology)</div></li>
+  	<li><a href="#">Log Out</a></li>
+    <li><a href="#">Settings</a></li>
+    </ul>
+			
+        </header>
+
+        <div id="patient_info_small">
+
+            <ul class="basic_info_short">
+                <li>Mr # <span style="color:#d90000; font-weight:bold;" id="basic_mrNumber"></span></li>
+                <li style="font-weight:bold;" id="basic_pInfo"></li>
+                <li id="basic_age"></li>
+                <li>Yearly No : <span style="font-weight:bold;" id="basic_yearlyNo"></span></li>
+                <li style="border:0px;" id="basic_address"></li>
+
+                <div class='cl_vitals'>
+                    <li>BP (140/180)</li>
+                    <li>BMI (38.7)</li>
+                    <li>BSR (147)</li>
+                    <li>BSF (11)</li>
+                </div>
+            </ul>
+
+            <a href="#" class="toggle_open"></a>
+        </div>
+        <!--patient_info_small-->
+
+         <asp:HyperLink ID="hlk_D_P1" runat="server" CssClass="btn_hacims pull-right " Target="_blank"  style="margin-bottom: -23px; padding: 3px  float: right!important;"></asp:HyperLink>
+            
+        <div id="patient_info" class="patient_info" runat="server" style="display:none;">
+            <asp:FormView ID="FormView2" runat="server" HorizontalAlign="Left" Width="100%">
+                <EditItemTemplate>
+                    PayID:
+                    <asp:TextBox ID="PayIDTextBox" runat="server" Text='<%# Bind("PayID") %>'> </asp:TextBox>
+                    PatientName:
+                    <asp:TextBox ID="PatientNameTextBox" runat="server" Text='<%# Bind("PatientName") %>'> </asp:TextBox>
+                    Relation:
+                    <asp:TextBox ID="RelationTextBox" runat="server" Text='<%# Bind("Relation") %>'> </asp:TextBox>
+                    RelationName:
+                    <asp:TextBox ID="RelationNameTextBox" runat="server" Text='<%# Bind("RelationName") %>'> </asp:TextBox>
+                    Age:
+                    <asp:TextBox ID="AgeTextBox" runat="server" Text='<%# Bind("Age") %>'> </asp:TextBox>
+                    PatientType:
+                    <asp:TextBox ID="PatientTypeTextBox" runat="server" Text='<%# Bind("PatientType") %>'> </asp:TextBox>
+                    BPHigh:
+                    <asp:TextBox ID="BPHighTextBox" runat="server" Text='<%# Bind("BPHigh") %>'> </asp:TextBox>
+                    BPLow:
+                    <asp:TextBox ID="BPLowTextBox" runat="server" Text='<%# Bind("BPLow") %>'> </asp:TextBox>
+                    Pulse:
+                    <asp:TextBox ID="PulseTextBox" runat="server" Text='<%# Bind("Pulse") %>'> </asp:TextBox>
+                    Temperature:
+                    <asp:TextBox ID="TemperatureTextBox" runat="server" Text='<%# Bind("Temperature") %>'> </asp:TextBox>
+                    RR:
+                    <asp:TextBox ID="RRTextBox" runat="server" Text='<%# Bind("RR") %>'> </asp:TextBox>
+                    StreetAddress:
+                    <asp:TextBox ID="StreetAddressTextBox" runat="server" Text='<%# Bind("StreetAddress") %>'> </asp:TextBox>
+                    HomePhone:
+                    <asp:TextBox ID="HomePhoneTextBox" runat="server" Text='<%# Bind("HomePhone") %>'> </asp:TextBox>
+                    MobilePhone:
+                    <asp:TextBox ID="MobilePhoneTextBox" runat="server" Text='<%# Bind("MobilePhone") %>'> </asp:TextBox>
+                    CNIC:
+                    <asp:TextBox ID="CNICTextBox" runat="server" Text='<%# Bind("CNIC") %>'> </asp:TextBox>
+                    Year:
+                    <asp:TextBox ID="YearTextBox" runat="server" Text='<%# Bind("Year") %>'> </asp:TextBox>
+                    AgeType:
+                    <asp:TextBox ID="AgeTypeTextBox" runat="server" Text='<%# Bind("AgeType") %>'> </asp:TextBox>
+                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update"> </asp:LinkButton>
+                    <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"> </asp:LinkButton>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    PayID:
+                    <asp:TextBox ID="PayIDTextBox" runat="server" Text='<%# Bind("PayID") %>'> </asp:TextBox>
+                    PatientName:
+                    <asp:TextBox ID="PatientNameTextBox" runat="server" Text='<%# Bind("PatientName") %>'> </asp:TextBox>
+                    Relation:
+                    <asp:TextBox ID="RelationTextBox" runat="server" Text='<%# Bind("Relation") %>'> </asp:TextBox>
+                    RelationName:
+                    <asp:TextBox ID="RelationNameTextBox" runat="server" Text='<%# Bind("RelationName") %>'> </asp:TextBox>
+                    Age:
+                    <asp:TextBox ID="AgeTextBox" runat="server" Text='<%# Bind("Age") %>'> </asp:TextBox>
+                    PatientType:
+                    <asp:TextBox ID="PatientTypeTextBox" runat="server" Text='<%# Bind("PatientType") %>'> </asp:TextBox>
+                    BPHigh:
+                    <asp:TextBox ID="BPHighTextBox" runat="server" Text='<%# Bind("BPHigh") %>'> </asp:TextBox>
+                    BPLow:
+                    <asp:TextBox ID="BPLowTextBox" runat="server" Text='<%# Bind("BPLow") %>'> </asp:TextBox>
+                    Pulse:
+                    <asp:TextBox ID="PulseTextBox" runat="server" Text='<%# Bind("Pulse") %>'> </asp:TextBox>
+                    Temperature:
+                    <asp:TextBox ID="TemperatureTextBox" runat="server" Text='<%# Bind("Temperature") %>'> </asp:TextBox>
+                    RR:
+                    <asp:TextBox ID="RRTextBox" runat="server" Text='<%# Bind("RR") %>'> </asp:TextBox>
+                    StreetAddress:
+                    <asp:TextBox ID="StreetAddressTextBox" runat="server" Text='<%# Bind("StreetAddress") %>'> </asp:TextBox>
+                    HomePhone:
+                    <asp:TextBox ID="HomePhoneTextBox" runat="server" Text='<%# Bind("HomePhone") %>'> </asp:TextBox>
+                    MobilePhone:
+                    <asp:TextBox ID="MobilePhoneTextBox" runat="server" Text='<%# Bind("MobilePhone") %>'> </asp:TextBox>
+                    CNIC:
+                    <asp:TextBox ID="CNICTextBox" runat="server" Text='<%# Bind("CNIC") %>'> </asp:TextBox>
+                    Year:
+                    <asp:TextBox ID="YearTextBox" runat="server" Text='<%# Bind("Year") %>'> </asp:TextBox>
+                    AgeType:
+                    <asp:TextBox ID="AgeTypeTextBox" runat="server" Text='<%# Bind("AgeType") %>'> </asp:TextBox>
+                    <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert"> </asp:LinkButton>
+                    <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"> </asp:LinkButton>
+                </InsertItemTemplate>
+                <ItemTemplate>
+
+                    <ul class="basic_info">
+                        <li>Mr # <span style="color:#d90000; font-weight:bold;">
+                                <asp:Label ID="RegistrationNo" runat="server" Text='<%# Eval("RegNo") %>'></asp:Label>
+                            </span></li>
+                        <li>
+                            <asp:Label ID="PatientNameLabel" runat="server" Text='<%# Eval("prefix", "{0}") %>'></asp:Label> <span style="color:#0091c6;">
+                                <asp:Label ID="RelationLabel" runat="server" Text='<%# Bind("Relation", "{0}") %>'></asp:Label>
+                            </span>
+                            <asp:Label ID="RelationNameLabel" runat="server" Text='<%# Eval("RELATIONNAME", "{0}") %>'></asp:Label>
+                        </li>
+                        <li>Age : <asp:Label ID="AgeLabel" runat="server" Text='<%# Bind("Age") %>'></asp:Label> Year(s)</li>
+                        <li>Gender : <asp:Label ID="LabelGender" runat="server" Text='<%# Eval("Gender", "{0}") %>'></asp:Label>
+                            <asp:Label ID="LabelDateofBirth" Visible="false" runat="server" Text='<%# Eval("DateOfBirth") %>'></asp:Label>
+                        </li>
+                        <li>Yearly No : <span style="font-weight:bold;">
+                                <asp:Label Visible="false" ID="Label_PayID" runat="server" Text='<%# Eval("PayID") %>'></asp:Label>
+                            </span></li>
+                        <li>Address : <asp:Label ID="Label_Address" runat="server" Text='<%# Bind("Address", "{0}") %>'></asp:Label>
+                        </li>
+                    </ul>
+                    <a href="#" class="toggle_close"></a>
+
+
+                    <ul class="mis_info">
+                        <li> Alert(s)</li>
+                        <li>
+                            <asp:Label ID="Label_Alert1" runat="server" Text='<%# Bind("Alert1", "{0}") %>'></asp:Label>&nbsp;
+                            <a id="A1" href="~/DoctorModule/Targets.aspx" visible="false" runat="server" style="font-size: 10px; float: right; margin-right: 2px;" class="add_vitals">Add Targets</a>
+                        </li>
+                        <li>
+                            <asp:Label ID="Label_Alert2" runat="server" Text='<%# Bind("Alert2", "{0}") %>'></asp:Label>
+
+                            <span onclick="return showTargets()" style="color: #d71635;display:none; font-size: 10px;text-align:right;text-decoration: underline;float: right;cursor:pointer;">Patient Targets</span>
+                        </li>
+                        <li>
+                            <asp:Label ID="Label_Alert3" runat="server" Text='<%# Bind("Alert3", "{0}") %>'></asp:Label>
+                            <a id="A2" href="~/Pt_EMR/addalert.aspx" runat="server" style="font-size: 10px; float: right; margin-right: 2px;" class="add_vitals">Add Alert(s)</a>
+                        </li>
+                    </ul>
+
+
+
+                    <ul class="mis_info50">
+                        <li> Temp (F) : <span class="red">
+                                <asp:Label ID="Label_Temp" runat="server" Text='<%# Bind("Temp", "{0}") %>'></asp:Label>
+                            </span></li>
+                        <li>Weight (kg) :<span class="red">
+                                <asp:Label ID="Label_Weight" runat="server" Text='<%# Eval("Weight") %>'></asp:Label>
+                            </span> </li>
+                        <li> Pulse : <span class="green">
+                                <asp:Label ID="Label_Pulse" runat="server" Text='<%# Bind("Pulse", "{0}") %>'></asp:Label>
+                            </span></li>
+                        <li>Height (cm) :<span class="green">
+                                <asp:Label ID="Label_Height" runat="server" Text='<%# Eval("Height") %>'></asp:Label>
+                            </span></li>
+                        <li> BP : <span class="red">
+                                <asp:Label ID="Label_BP" runat="server" Text='<%# Bind("BP", "{0}") %>'></asp:Label>
+                            </span></li>
+
+                        <%--<li> BMI :<span class="red">
+                                <asp:Label ID="Label_BMI" runat="server" Text='<%# Bind("BMI", "{0}") %>'></asp:Label>
+                            </span></li>--%>
+                        <li style="border-bottom:0px;"> RR : <span class="green">
+                                <asp:Label ID="Label_RR" runat="server" Text='<%# Bind("RR", "{0}") %>'></asp:Label>
+                            </span></li>
+                       <%-- <li> Blood Sugar :<span class="red">
+                                <asp:Label ID="Label_Blood_Sugar" runat="server" Text='<%# Bind("BloodSugar", "{0}") %>'></asp:Label>
+                            </span></li>--%>
+                    </ul>
+
+
+                    <ul class="mis_info">
+                        <li>
+                            <asp:Label ID="Label_Department" runat="server" Text='<%# Eval("Dept_Name") %>'></asp:Label>
+                            <asp:Label ID="Label_SubDept" runat="server" Text='<%# Eval("SubDept_Name") %>'></asp:Label>
+                        </li>
+                        <li><span class="docname" title="Doctor Name">
+                                <asp:Label ID="Label_DoctorName" runat="server" Text='<%# Bind("DoctorName", "{0}") %>'></asp:Label>
+                            </span></li>
+                        <li><strong title="Ward/Bed Number">
+                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("BedNo", "{0}") %>'></asp:Label>
+                            </strong> </li>
+                        <li><span class="age red" title="Diagnosis">
+                                <asp:Label ID="Label_Diagnosis" runat="server" Visible="false" Text='<%# Bind("Diagonosis", "{0}") %>'></asp:Label>
+                            </span> <strong title="Payment">
+                                <asp:Label ID="Label_Bill" runat="server" Text='<%# Eval("Bill") %>'></asp:Label>
+                            </strong></li>
+                    </ul>
+
+                    <asp:HiddenField ID="HiddenField_Pfname" runat="server" Value='<%# Eval("pfname", "{0}") %>' />
+                    <asp:HiddenField ID="HiddenField_Pmname" runat="server" Value='<%# Eval("pmname", "{0}") %>' />
+                    <asp:HiddenField ID="HiddenField_Plname" runat="server" Value='<%# Eval("plname", "{0}") %>' />
+        </div>
+        </ItemTemplate>
+        </asp:FormView>
+        </div>
+        <!--patient_info-->
+
+
+
+        <asp:SqlDataSource ID="patient_detail" runat="server" ConnectionString="<%$ ConnectionStrings:Reg_ConnectionString %>" SelectCommand="pt_basic_info" SelectCommandType="StoredProcedure" ProviderName="<%$ ConnectionStrings:Reg_ConnectionString.ProviderName %>">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="HiddenField_regNo" Name="regno" PropertyName="Value" Type="String" />
+                <asp:ControlParameter ControlID="HiddenField_Payis" Name="payid" PropertyName="Value" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:HiddenField ID="HiddenField_regNo" runat="server" />
+        <asp:HiddenField ID="HiddenField_Payis" runat="server" />
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
+
+
+
+
+
+
+
+
+        <div class="hinfo" Style="display:none;">
+            <asp:Image ID="Image1" runat="server" CssClass="hslogo" />
+            <asp:Label ID="hospital" runat="server" Text="Label" CssClass="hsname"></asp:Label>
+
+        </div>
+
+
+        <div class="logo">
+            <span>
+                <asp:Label ID="Hospital_Name" runat="server" Text="Hospital_Name" Visible="false"></asp:Label>
+            </span>
+        </div>
+
+        <asp:HyperLink ID="hlHome" runat="server" Text="Home" Visible="false" CssClass="cpass"></asp:HyperLink>
+        <a id="AB" href="~/change_password.aspx" class="cpass" runat="server" style="display:none;">Change Password</a>
+        <asp:Literal ID="ltrDemo" runat="server" Text=""></asp:Literal>
+
+
+
+        <nav style="display:none;">
+
+            <asp:Menu ID="menuBarr" runat="server" Orientation="Horizontal" MaximumDynamicDisplayLevels="10" RenderingMode="List" StaticEnableDefaultPopOutImage="false">
+                <StaticMenuItemStyle CssClass="StaticMenuItemStyle2" />
+                <StaticHoverStyle CssClass="StaticHoverStyle22" />
+                <StaticSelectedStyle CssClass="StaticSelectedStyle" />
+
+                <DynamicMenuItemStyle CssClass="StaticMenuItemStyle3" />
+                <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+            </asp:Menu>
+        </nav>
+
+
+
+        <asp:Menu ID="menuBarr2" runat="server" Orientation="Horizontal" Visible="false" CssClass="" MaximumDynamicDisplayLevels="10">
+
+            <StaticMenuItemStyle CssClass="StaticMenuItemStyle" />
+            <StaticHoverStyle CssClass="StaticHoverStyle" />
+            <StaticSelectedStyle CssClass="StaticSelectedStyle" />
+
+            <DynamicHoverStyle CssClass="StaticMenuItemStyle4" />
+
+            <DynamicMenuItemStyle CssClass="StaticMenuItemStyle3" />
+
+        </asp:Menu>
+
+
+
+        <asp:Menu ID="menuBarr3" Visible="false" runat="server" Orientation="Vertical" CssClass="" MaximumDynamicDisplayLevels="10">
+
+            <StaticMenuItemStyle CssClass="menuXs" />
+            <StaticHoverStyle CssClass="menuXsHover" />
+            <StaticSelectedStyle CssClass="" />
+
+            <DynamicHoverStyle CssClass="menuXsHoverDynamic2" />
+            <DynamicMenuItemStyle CssClass="menuXsHoverDynamic" />
+        </asp:Menu>
+
+        <asp:SiteMapPath Visible="false" ID="SiteMapPath1" runat="server" CurrentNodeStyle-ForeColor="#000" RenderCurrentNodeAsLink="false" PathSeparator="&nbsp;&nbsp;&raquo;&nbsp;&nbsp;" RootNodeStyle-ForeColor="#999999" PathDirection="RootToCurrent"></asp:SiteMapPath>
+
+
+
+        <%-- <asp:Panel ID="Panel1"  CssClass="posmenu" runat="server"></asp:Panel> --%>
+
+
+        <div class="content_main">
+            <div class="pageTitle"></div>
+            <!-- <div class="main_bx">
+         <ul class="mainpage_tabs">
+         <li><a href="#" class="active" >Form</a></li>
+         <li><a href="#">Remarks</a></li>
+         </ul>
+     <div class="pageContent">-->
+
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+
+           
+              <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/PatientFaceSheet.aspx"
+                        CssClass="rpt_link"></asp:HyperLink>
+            <asp:DataList ID="dLTemplates" runat="server" RepeatDirection="Horizontal" Visible="false">
+                <ItemTemplate>
+                    <asp:Label ID="lblTemplate" runat="server" Text='<%# Bind("Template_Name") %>' onclick="getTemplateForm(this)" Style="color: darkmagenta; font-size: 13px; font-weight: bold; cursor: pointer; padding-right: 20px;"></asp:Label>
+                    <asp:HiddenField ID="hdnTemplateId" runat="server" Value='<%# Bind("Template_Id") %>' />
+                </ItemTemplate>
+            </asp:DataList>
+
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/PatientFaceSheet.aspx" CssClass="rpt_link" Visible="false"></asp:HyperLink>
+
+
+
+            <div id="divTargets" style="width:500px;position: absolute;top: 25%; right: 10%;border: solid 1px #ccc;border-radius: 5px;background-color:#f5f5f5; display:none;">
+                <div style="margin:0 1%;width:99%;height:auto;">
+                    <table cellpadding="0" cellspacing="0" style="width:100%;">
+                        <thead>
+                            <tr style="background-color:lightgreen;line-height:20px;">
+                                <th style="width:40%">Target</th>
+                                <th style="width:16%">Range</th>
+                                <th style="width:22%">
+                                    Target Value
+                                </th>
+                                <th style="width:22%">Patient Values</th>
+                            </tr>
+                        </thead>
+                        <tbody id="TRP">
+                            <asp:Repeater ID="PatientRecord" runat="server">
+                                <ItemTemplate>
+                                    <tr style="line-height:20px;">
+                                        <td>
+                                            <asp:Label ID="lblTarget" Text='<%# Eval("T_Name") %>' runat="server"></asp:Label>
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <asp:Label ID="Label2" Text='<%# Eval("Range") %>' runat="server"></asp:Label>
+                                        </td>
+
+                                        <td style="text-align:center;">
+                                            <asp:Label ID="Label3" Text='<%# Eval("TargetValue") %>' runat="server"></asp:Label>
+                                        </td>
+                                        <td class="<%# Eval("ValueStatus") %>" style="text-align:center;">
+                                            <asp:Label ID="Label1" Text='<%# Eval("PatientValue") %>' runat="server"></asp:Label>
+                                        </td>
+
+                                    </tr>
+
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </tbody>
+                    </table>
+
+
+                    <!-- </div>				
+			</div>-->
+
+
+
+
+
+
+
+
+
+
+                    <asp:Label ID="label_i_f" runat="server" Visible="false"></asp:Label>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="copyright">&copy; <span id="cyear"></span> - All rights reserved - <a href="#" target="_blank">Megaplus Technologies</a></div>
+
+
+        <br />
+        <br />
+
+        <asp:HiddenField ID="HiddenFieldPage_Name" runat="server" />
+        <asp:HiddenField ID="HiddenFieldPage" runat="server" />
+
+
+
+
+    </form>
+
+
+
+    <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/jquery.maskedinput.js")%>"></script>
+
+    <script type="text/javascript">
+        <!-- 
+        //-->
+        $(function() {
+            //Define your mask (using 9 to denote any digit)
+            $('#ctl00_ContentPlaceHolder1_txtRegNo').mask('99-99-99');
+        });
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_txtRegistrationNo').mask('99-99-99');
+        });
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_TextBoxRegNo').mask('99-99-99');
+        });
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_TextBox_CNIC_No').mask('99999-9999999-9');
+        });
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_txtCNIC').mask('99999-9999999-9');
+
+            $('#ctl00_ContentPlaceHolder1_TextBoxCNIC').mask('99999-9999999-9');
+        });
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_txtMobileNo').mask('9999-9999999');
+        });
+
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_txtKinContact').mask('9999-9999999');
+        });
+
+        function txtChangeMR() {
+
+            //var txt = document.getElementById("ctl00_ContentPlaceHolder1_txtRegNo");
+
+            //if (txt.value.length == 2 || txt.value.length == 5) {
+            //    txt.value = txt.value + "-";
+            //}
+
+
+        }
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_txtRegNo').keydown(function(e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 9) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+
+
+        $(document).ready(function() {
+            $("#ctl00_ContentPlaceHolder1_txtOPDNo").attr('maxlength', '6');
+
+        });
+        $(function() {
+            $('#ctl00_ContentPlaceHolder1_txtOPDNo').keydown(function(e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 9) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+    </script>
+</body></html>

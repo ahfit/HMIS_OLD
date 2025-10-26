@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+
+<shortagemedicine>
+	
+
+<item type="paidpayments" >
+			<company>Medipak (Pvt.) Ltd</company>
+			<invoiceno>0154287</invoiceno>
+			<amount>20</amount>
+</item>
+
+<item type="paidpayments" >
+			<company>S Ijaz ud Din       </company>
+			<invoiceno>0154222</invoiceno>
+			<amount>10</amount>
+</item>
+
+<item type="paidpayments" >
+			<company>Oratier Technologies (Pvt). Ltd.</company>
+			<invoiceno>210005</invoiceno>
+			<amount>30</amount>
+</item>
+
+<item type="paidpayments" >
+			<company>Medipak (Pvt.) Ltd</company>
+			<invoiceno>0154287</invoiceno>
+			<amount>100</amount>
+</item>
+
+
+
+
+
+</shortagemedicine>
+
+
+
+
+   

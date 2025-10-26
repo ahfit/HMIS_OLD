@@ -1,0 +1,71 @@
+﻿<%@ page title="" language="C#" masterpagefile="~/hacims_masterpage_admin.master" autoeventwireup="true" inherits="Radiology_MapRadiologyServices, App_Web_44exovlo" enableEventValidation="false" theme="theme_hacims" viewStateEncryptionMode="Never" maintainScrollPositionOnPostBack="true" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        tr {
+            line-height:2;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="bxmain inner_content" style="width:100%;"><span><h2>Map Admin Services</h2></span>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="tbl_form" >
+      
+        <tr>
+            <td align="right" style="width:40%;" >
+                Test Group :</td>
+            <td >
+                <asp:DropDownList ID="ddlCatageory" runat="server"   AutoPostBack="true"
+                     OnSelectedIndexChanged="ddlCatageory_SelectedIndexChanged" >
+                </asp:DropDownList></td>
+        </tr>     
+      <tr>
+            <td align="right" style="width:40%;" >
+                Test Name :</td>
+            <td >
+                <asp:TextBox ID="txtboxTBName" runat="server"></asp:TextBox>
+        </tr>            
+        <tr>
+            <td >
+            </td>
+            <td >
+                <asp:Button ID="Button_Search" OnClick="Button_Search_Click"   runat="server" Text="Search" /> 
+                </td>        
+        </tr>
+    </table> 
+
+        <div>
+            <asp:GridView ID="gvdServices" CssClass="Grid_1" AutoGenerateColumns="false" runat="server" OnRowDataBound="gvdServices_RowDataBound">
+               <Columns>
+                   <asp:TemplateField HeaderText="Name">
+                       <ItemTemplate>
+                           <asp:Label ID="lblServceCatageory" Text='<%# Eval("TB_Name") %>' runat="server"></asp:Label>
+
+                       </ItemTemplate>
+                   </asp:TemplateField>
+                   
+                   <asp:TemplateField HeaderText="Map Service">
+                       <ItemTemplate>
+                            <asp:DropDownList ID="ddl" runat="server" ></asp:DropDownList>          
+                           <asp:HiddenField ID="hfTB_ID" Value='<%# Eval("TB_ID ") %>' runat="server" />
+                           <asp:HiddenField ID="hdSid" Value='<%# Eval("S_id ") %>' runat="server" />
+                       </ItemTemplate>
+                   </asp:TemplateField>     
+                   <asp:TemplateField HeaderText="Update Service">
+                       <ItemTemplate>
+                           <asp:Button ID="btnUpdate" OnClick="btnUpdate_Click" runat="server" Text="Update" />
+                       </ItemTemplate>
+                   </asp:TemplateField>                   
+
+
+               </Columns>
+            </asp:GridView>
+        </div>
+
+
+
+    </div>
+
+</asp:Content>
+

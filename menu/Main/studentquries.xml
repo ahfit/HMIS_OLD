@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+
+<schedular>
+
+  <item type="assignment" >
+			<message>Please Check Patient Muhammad Ammar’s Profile</message>
+			<date>03 July 2009</date>
+			<time>9:00 am</time>
+			</item>
+  
+  <item type="assignment" >
+			<message>Please Check Patient Asif Khan Profile </message>
+			<date>03 July 2009</date>
+			<time>11:00 am</time>
+			</item>
+  
+  <item type="thesisreport" >
+			<message>Lorem ipsum dolor sit amet</message>
+			<date>01 July 2009</date>
+			<time>11:00 am</time>
+			</item>
+  
+  <item type="thesisreport" >
+			<message>Lorem ipsum dolor ipsum lormem</message>
+			<date>02 July 2009</date>
+			<time>11:20 am</time>
+			</item>
+  
+  <item type="thesisreport" >
+			<message>Lorem ipsum dolor sit</message>
+			<date>03 July 2009</date>
+			<time>02:30 pm</time>
+			</item>
+  
+  <item type="lecture" >
+			<message>Lorem ipsum mmsit</message>
+			<date>03 July 2009</date>
+			<time>02:30 pm</time>
+			</item>
+  
+  <item type="lecture" >
+			<message>Duis velit magna, sagittis sit amet</message>
+			<date>01 July 2009</date>
+			<time>07:00 am</time>
+			</item>
+
+</schedular>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

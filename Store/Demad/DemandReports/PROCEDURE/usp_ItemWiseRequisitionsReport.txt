@@ -1,0 +1,53 @@
+USE [STORE]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_ItemWiseRequisitionsReport] author: Waqar     Script Date: 12/12/2018 10:35:09 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE Procedure [dbo].[usp_ItemWiseRequisitionsReport]
+@Demand_RequisitionNo varchar(200),
+@From_Dept_ID Int,
+@FromDate DateTime,
+@ToDate DateTime,
+@itemcode varchar(100)
+
+
+As
+Begin
+
+	
+SELECT Store_Items.Item_Name,   ISNULL(emp.EFName,'')+' '+isnull(emp.EMName,'')+' '+ISNULL(emp.ELName,'') as   EmployeeName,   Demand_Requisition_Main.Demand_RQ_ID, Demand_Requisition_Main.Date_Time, Demand_Requisition_Main.Reg_No, Demand_Requisition_Main.Yearly_NO, Demand_Requisition_Main.Description, 
+                         Demand_Requisition_Main.Is_Approved,    Demand_Requisition_Main.Remarks, SubDepartment_1.SubDept_Name AS To_Sub_Dept, 
+                         SubDepartment.SubDept_Name AS From_Sub_Dept, Department.Dept_Name, 
+						 Demand_Requisition_Main.Workflow_Process, 
+						 Demand_Requisition_Main.Company_ID, parties.Party_Name AS Customer_Name, 
+                         Demand_Requisition_Main.Delivery_Site AS End_User
+						 , (Sub.Item_Qty) Qty, (Sub.Item_Qty*Sub.Item_Rate) TotalAmount 
+FROM            Demand_Requisition_Main INNER JOIN
+                         Department ON Demand_Requisition_Main.From_Dept_ID = Department.Dept_ID INNER JOIN
+                         SubDepartment ON Demand_Requisition_Main.From_Sub_Dept_ID = SubDepartment.SubDept_Id INNER JOIN
+                         SubDepartment AS SubDepartment_1 ON Demand_Requisition_Main.To_Sub_Dept_ID = SubDepartment_1.SubDept_Id LEFT OUTER JOIN
+                         parties ON Demand_Requisition_Main.Company_ID = parties.Party_Id inner Join
+						 Demand_Requisition_Sub Sub on Demand_Requisition_Main.Demand_RQ_ID=Sub.Demand_RQ_ID inner join
+						 Employee emp on emp.empid = Demand_Requisition_Main.Emp_ID inner join Store_Items on sub.Item_Code= Store_Items.Item_Code
+
+WHERE        (Demand_Requisition_Main.From_Dept_ID = @From_Dept_ID or @From_Dept_ID=0) AND  (CONVERT(Varchar, Demand_Requisition_Main.Date_Time, 112) BETWEEN 
+                         CONVERT(Varchar, @FromDate, 112) AND CONVERT(Varchar, @ToDate, 112))   AND (Demand_Requisition_Main.Demand_RQ_ID LIKE '%' + @Demand_RequisitionNo + '%') AND  (Store_Items.Item_Name like '%' + @itemcode + '%') and 
+                         (Demand_Requisition_Main.Is_Completed IS NOT NULL)
+		
+														OR 
+		
+		( (Demand_Requisition_Main.From_Dept_ID = @From_Dept_ID or @From_Dept_ID=0 )  
+		AND (Convert(Varchar,Demand_Requisition_Main.Date_Time,112) BETWEEN Convert(Varchar,@FromDate,112) AND Convert(Varchar,@ToDate,112) )
+		AND (Demand_Requisition_Main.Demand_RQ_ID like '%'+@Demand_RequisitionNo+'%') and  (Store_Items.Item_Name like '%' + @itemcode + '%')
+		AND (Demand_Requisition_Main.Is_Completed is not NULL)) 
+  
+
+end
+GO
+
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<shortagemedicine>
+	
+
+<item type="shortage" >
+			<name>Peracetamol</name>
+			<type>Tab</type>
+			<qty>100</qty>
+</item>
+
+<item type="shortage" >
+			<name>Insuline Plain</name>
+			<type>Inj</type>
+			<qty>12</qty>
+</item>
+
+<item type="shortage" >
+			<name>Peracetamol</name>
+			<type>Tab</type>
+			<qty>3</qty>
+</item>
+
+
+
+
+
+</shortagemedicine>
+
+
+
+
+   

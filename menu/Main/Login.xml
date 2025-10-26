@@ -1,0 +1,171 @@
+﻿<?xml version="1.0"?>
+<root>
+<login UserName="Tariq" Password="043050057" EmpID="9" EmpType="CMO" MainPage_Id="2" id="1" />
+<login UserName="Registrationlab" Password="043050057" EmpID="11" EmpType="Operator" MainPage_Id="29" id="2" />
+<login UserName="Noshi" Password="043050057" EmpID="15" EmpType="Nursep" MainPage_Id="133" id="5" ShiftID="1" />
+<login UserName="Jhangir" Password="043050057" EmpID="34" EmpType="EMO" MainPage_Id="15" id="8" />
+<login UserName="ot" Password="043050057" EmpID="37" EmpType="Nurse" MainPage_Id="28" id="9" />
+<login UserName="Nurse2" Password="043050057" EmpID="38" EmpType="Nurse" MainPage_Id="13" id="10" />
+<login UserName="MLC" Password="043050057" EmpID="60" EmpType="EMO" MainPage_Id="22" id="11" />
+<login UserName="Saqib" Password="043050057" EmpID="72" EmpType="Store Incharge" MainPage_Id="42" id="20" />
+<login UserName="safdar" Password="043050057" EmpID="84" EmpType="OTDoc" MainPage_Id="23" id="21" />
+<login UserName="Iqbal" Password="043050057" EmpID="71" EmpType="Doctor" MainPage_Id="21" id="22" />
+<login UserName="Xray" Password="043050057" EmpID="137" EmpType="xray" MainPage_Id="35" id="26" />
+<login UserName="Hassan" Password="043050057" EmpID="34" EmpType="Emo" MainPage_Id="9" id="27" />
+<login UserName="Saif" Password="043050057" EmpID="181" EmpType="MS" MainPage_Id="133" id="28" />
+<login UserName="Akbar" Password="043050057" EmpID="186" EmpType="receptionist" MainPage_Id="38" id="33" />
+<login UserName="lab" Password="043050057" EmpID="174" EmpType="Lab Incharge" MainPage_Id="133" id="36" />
+<login UserName="Shazia" Password="043050057" EmpID="167" EmpType="Staff Nurse" MainPage_Id="2" id="37" />
+<login UserName="Registration" Password="043050057" EmpID="203" EmpType="Doctor" MainPage_Id="133" id="51" />
+<login UserName="History1" Password="043050057" EmpID="207" EmpType="Doctor" MainPage_Id="10" id="52" />
+<login UserName="Doctor" Password="043050057" EmpID="209" EmpType="clerk" MainPage_Id="24" id="54" />
+<login UserName="Salman" Password="043050057" EmpID="210" EmpType="Clerk" MainPage_Id="12" id="55" />
+<login UserName="Delivery" Password="043050057" EmpID="208" EmpType="Clerck" MainPage_Id="12" id="56" />
+<login UserName="Payment" Password="043050057" EmpID="211" EmpType="Clerk" MainPage_Id="8" id="57" />
+<login UserName="asif" Password="043050057" EmpID="212" EmpType="Doctor" MainPage_Id="11" id="58" />
+<login UserName="ali" Password="043050057" EmpID="213" EmpType="Doctor" MainPage_Id="27" id="59" />
+<login UserName="ENT" Password="043050057" EmpID="214" EmpType="Doctor" MainPage_Id="2" id="60" />
+<login UserName="Nurse" Password="043050057" EmpID="186" EmpType="Nurse" MainPage_Id="26" id="62" />
+<login UserName="farhat" Password="043050057" EmpID="215" EmpType="Contract" MainPage_Id="46" id="63" />
+<login UserName="usman" Password="043050057" EmpID="216" EmpType="Contract" MainPage_Id="27" id="64" />
+<login UserName="afzal" Password="043050057" EmpID="217" EmpType="Doctor" MainPage_Id="14" id="65" />
+<login UserName="medical" Password="043050057" EmpID="218" EmpType="Contract" MainPage_Id="14" id="67" />
+<login UserName="admin" Password="043050057" EmpID="220" EmpType="admin" MainPage_Id="4" id="69" />
+<login UserName="Techlab" Password="043050057" EmpID="221" EmpType="doctor" MainPage_Id="32" id="70" />
+<login UserName="raza" Password="043050057" EmpID="222" EmpType="Receptionist" MainPage_Id="31" id="71" />
+<login UserName="Reportlab" Password="043050057" EmpID="223" EmpType="Receptionist" MainPage_Id="33" id="72" />
+<login UserName="nawaz" Password="043050057" EmpID="224" EmpType="Anesthesia" MainPage_Id="0" id="73" />
+<login UserName="rizwan" Password="043050057" EmpID="225" EmpType="Doctor" MainPage_Id="14" id="74" />
+<login UserName="qamar" Password="043050057" EmpID="226" EmpType="Contract" MainPage_Id="33" id="75" />
+<login UserName="umer" Password="043050057" EmpID="227" EmpType="Contract" MainPage_Id="3" id="76" />
+<login UserName="ahmed" Password="043050057" EmpID="228" EmpType="Doctor" MainPage_Id="14" id="77" />
+<login UserName="Ziaqat" Password="043050057" EmpID="229" EmpType="Contract" MainPage_Id="14" id="78" />
+<login UserName="muzamil" Password="043050057" EmpID="230" EmpType="Administrator" MainPage_Id="14" id="79" />
+<login UserName="AdilHafeez" Password="043050057" EmpID="232" EmpType="Contract" MainPage_Id="14" id="80" />
+<login UserName="Nasir" Password="043050057" EmpID="233" EmpType="emp" MainPage_Id="29" id="81" />
+<login UserName="ESWL" Password="043050057" EmpID="237" EmpType="emp" MainPage_Id="39" id="82" />
+<login UserName="Khurshid" Password="043050057" EmpID="236" EmpType="Contract" MainPage_Id="13" id="83" />
+<login UserName="Minhas" Password="043050057" EmpID="237" EmpType="Contract" MainPage_Id="14" id="84" />
+<login UserName="Sheraz" Password="043050057" EmpID="236" EmpType="Contract" MainPage_Id="14" id="85" />
+<login UserName="Dialysis" Password="043050057" EmpID="238" EmpType="receptionist" MainPage_Id="40" id="86" />
+<login UserName="Manan" Password="043050057" EmpID="239" EmpType="Contract" MainPage_Id="14" id="87" />
+<login UserName="ortho" Password="043050057" EmpID="240" EmpType="Contract" MainPage_Id="14" id="88" />
+<login UserName="viewxray" Password="043050057" EmpID="242" EmpType="emp" MainPage_Id="41" id="89" />
+<login UserName="Yousaf" Password="043050057" EmpID="243" EmpType="Contract" MainPage_Id="14" id="90" />
+<login UserName="altaf" Password="043050057" EmpID="244" EmpType="Contract" MainPage_Id="14" id="91" />
+<login UserName="Atta" Password="043050057" EmpID="245" EmpType="Doctor" MainPage_Id="14" id="92" />
+<login UserName="Ali12" Password="043050057" EmpID="188" EmpType="Store Officer" MainPage_Id="42" id="93" />
+<login UserName="atif" Password="043050057" EmpID="195" EmpType="Store Officer" MainPage_Id="133" id="94" />
+<login UserName="Fahad" Password="043050057" EmpID="92" EmpType="Store Officer" MainPage_Id="42" id="95" />
+<login UserName="Fahmida" Password="043050057" EmpID="123" EmpType="Store Officer" MainPage_Id="42" id="96" />
+<login UserName="Ibrahim" Password="043050057" EmpID="93" EmpType="Store Officer" MainPage_Id="42" id="97" />
+<login UserName="Mehmood" Password="043050057" EmpID="73" EmpType="Store Officer" MainPage_Id="43" id="98" />
+<login UserName="noman" Password="043050057" EmpID="197" EmpType="Store Officer" MainPage_Id="42" id="99" />
+<login UserName="safda" Password="043050057" EmpID="99" EmpType="Store Officer" MainPage_Id="42" id="100" />
+<login UserName="umair" Password="043050057" EmpID="196" EmpType="Store Officer" MainPage_Id="42" id="101" />
+<login UserName="yasir" Password="043050057" EmpID="198" EmpType="Store Officer" MainPage_Id="42" id="102" />
+<login UserName="Zarina" Password="043050057" EmpID="144" EmpType="Store Officer" MainPage_Id="42" id="103" />
+<login UserName="Hayat" Password="043050057" EmpID="97" EmpType="AMS Equipment Management Store" MainPage_Id="44" id="109" />
+<login UserName="kashif" Password="043050057" EmpID="200" EmpType="AMS Building Store" MainPage_Id="44" id="110" />
+<login UserName="mudasar" Password="043050057" EmpID="199" EmpType="AMS General Store" MainPage_Id="44" id="111" />
+<login UserName="naeem" Password="043050057" EmpID="201" EmpType="AMS Gas Store" MainPage_Id="44" id="112" />
+<login UserName="shahbaz" Password="043050057" EmpID="203" EmpType="AMS Pharmacy Store" MainPage_Id="133" id="113" />
+<login UserName="Qabbas" Password="043050057" EmpID="94" EmpType="AMS Linen Store" MainPage_Id="44" id="114" />
+<login UserName="Aamir" Password="043050057" EmpID="247" EmpType="Receptionist" MainPage_Id="47" id="115" />
+<login UserName="anwer" Password="043050057" EmpID="248" EmpType="Contract" MainPage_Id="48" id="116" />
+<login UserName="asad" Password="043050057" EmpID="249" EmpType="Dentist" MainPage_Id="14" id="117" />
+<login UserName="XrayPayment" Password="043050057" EmpID="250" EmpType="Doctor" MainPage_Id="49" id="118" />
+<login UserName="naseem" Password="043050057" EmpID="251" EmpType="Laundry Officer" MainPage_Id="50" id="122" />
+<login UserName="Ijaz" Password="043050057" EmpID="252" EmpType="Laundry Officer" MainPage_Id="54" id="123" />
+<login UserName="usman1" Password="043050057" EmpID="253" EmpType="Laundry Officer" MainPage_Id="51" id="124" />
+<login UserName="ali ahmad" Password="043050057" EmpID="254" EmpType="Laundry Officer" MainPage_Id="50" id="125" />
+<login UserName="numan" Password="043050057" EmpID="255" EmpType="Laundry Officer" MainPage_Id="53" id="126" />
+<login UserName="sajjad" Password="043050057" EmpID="256" EmpType="Laundry Officer" MainPage_Id="52" id="127" />
+<login UserName="XrayReport" Password="043050057" EmpID="257" EmpType="Doctor" MainPage_Id="55" id="128" />
+<login UserName="akhter" Password="043050057" EmpID="258" EmpType="contract" MainPage_Id="2" id="129" />
+<login UserName="Ultrasound" Password="043050057" EmpID="259" EmpType="doctor" MainPage_Id="29" id="130" />
+<login UserName="committee" Password="043050057" EmpID="260" EmpType="Committee" MainPage_Id="56" id="132" />
+<login UserName="awais" Password="043050057" EmpID="261" EmpType="Store Inspection" MainPage_Id="59" id="133" />
+<login UserName="Niamat" Password="043050057" EmpID="262" EmpType="AMS Repair Store" MainPage_Id="44" id="134" />
+<login UserName="administrator" Password="043050057" EmpID="263" EmpType="Store Adminiatrator" MainPage_Id="60" id="135" />
+<login UserName="Nadeem" Password="043050057" EmpID="264" EmpType="Director Finance" MainPage_Id="65" id="136" />
+<login UserName="najam" Password="043050057" EmpID="265" EmpType="Permanent" MainPage_Id="66" id="137" />
+<login UserName="fiaz" Password="043050057" EmpID="266" EmpType="Account Head Managment" MainPage_Id="67" id="138" />
+<login UserName="hamid" Password="043050057" EmpID="267" EmpType="Regular" MainPage_Id="44" id="139" />
+<login UserName="Bashir" Password="043050057" EmpID="268" EmpType="Finance Officer" MainPage_Id="64" id="140" />
+<login UserName="adil" Password="043050057" EmpID="269" EmpType="Finance Officer" MainPage_Id="62" id="141" />
+<login UserName="ghias" Password="043050057" EmpID="276" EmpType="Principal" MainPage_Id="62" id="142" />
+<login UserName="raiz" Password="043050057" EmpID="271" EmpType="Audit Officer" MainPage_Id="62" id="143" />
+<login UserName="taha" Password="043050057" EmpID="273" EmpType="Directory Pharmacy" MainPage_Id="62" id="144" />
+<login UserName="Haider" Password="043050057" EmpID="274" EmpType="Medical Superintendent" MainPage_Id="62" id="145" />
+<login UserName="cashier" Password="043050057" EmpID="277" EmpType="Cashier" MainPage_Id="68" id="146" />
+<login UserName="moazam" Password="043050057" EmpID="281" EmpType="repair" MainPage_Id="69" id="148" />
+<login UserName="imranali" Password="043050057" EmpID="293" EmpType="Requester" MainPage_Id="73" id="150" />
+<login UserName="tahir" Password="043050057" EmpID="294" EmpType="princilple" MainPage_Id="74" id="151" />
+<login UserName="ahsan" Password="043050057" EmpID="295" EmpType="Requester" MainPage_Id="75" id="152" />
+<login UserName="aslam" Password="043050057" EmpID="296" EmpType="Registrar" MainPage_Id="76" id="153" />
+<login UserName="ahmad" Password="043050057" EmpID="297" EmpType="Admin" MainPage_Id="77" id="154" />
+<login UserName="akram" Password="043050057" EmpID="298" EmpType="Repair Admin" MainPage_Id="78" id="155" />
+<login UserName="zaman" Password="043050057" EmpID="301" EmpType="admin" MainPage_Id="79" id="159" />
+<login UserName="MRIPayment" Password="043050057" EmpID="303" EmpType="MRI Payment Clerk" MainPage_Id="8" id="160" />
+<login UserName="UMQROsxgt7FGKO" Password="043050057" EmpID="11" EmpType="clerk" MainPage_Id="8" id="232" />
+<login UserName="Ishfaq" Password="043050057" EmpID="316" EmpType="Clerk" MainPage_Id="102" id="233" />
+<login UserName="crp" Password="043050057" EmpID="319" EmpType="Clerk" MainPage_Id="103" id="235" />
+<login UserName="Nazer" Password="043050057" EmpID="317" EmpType="Almoner" MainPage_Id="103" id="236" />
+<login UserName="Saima" Password="043050057" EmpID="324" EmpType="Clerk" MainPage_Id="104" id="237" />
+<login UserName="HODAssistance" Password="043050057" EmpID="325" EmpType="HRM HOD Assistance" MainPage_Id="84" id="238" />
+<login UserName="HeadClerk" Password="043050057" EmpID="326" EmpType="Head Clerk" MainPage_Id="100" id="239" />
+<login UserName="Hs" Password="043050057" EmpID="327" EmpType="Head Superitendent" MainPage_Id="88" id="240" />
+<login UserName="cao" Password="043050057" EmpID="328" EmpType="Competent Authority Officer" MainPage_Id="98" id="241" />
+<login UserName="Advertiser" Password="043050057" EmpID="329" EmpType="Advertiser Clerk" MainPage_Id="85" id="242" />
+<login UserName="Transferin" Password="043050057" EmpID="330" EmpType="Transfer In Clerk" MainPage_Id="105" id="243" />
+<login UserName="Transferout" Password="043050057" EmpID="336" EmpType="Transfer Out Clerk" MainPage_Id="106" id="244" />
+<login UserName="asifakbar" Password="043050057" EmpID="335" EmpType="Professor" MainPage_Id="14" id="245" />
+<login UserName="leavequota" Password="043050057" EmpID="338" EmpType="Define Leave Quota" MainPage_Id="95" id="246" />
+<login UserName="leavemanager" Password="043050057" EmpID="339" EmpType="Leave Manager" MainPage_Id="92" id="247" />
+<login UserName="bill" Password="043050057" EmpID="346" EmpType="Diary No. Clerk" MainPage_Id="87" id="248" />
+<login UserName="Nabeel" Password="043050057" EmpID="347" EmpType="Medical Attendent" MainPage_Id="96" id="249" />
+<login UserName="Sharjeel" Password="043050057" EmpID="348" EmpType="Hospital Pharmacist" MainPage_Id="99" id="250" />
+<login UserName="Rafique" Password="043050057" EmpID="349" EmpType="Inquiry" MainPage_Id="97" id="251" />
+<login UserName="anwar" Password="043050057" EmpID="350" EmpType="Inquiry" MainPage_Id="107" id="252" />
+<login UserName="adeel" Password="043050057" EmpID="351" EmpType="CounterSigned" MainPage_Id="82" id="253" />
+<login UserName="clerk" Password="043050057" EmpID="352" EmpType="Dispatcher Clerk" MainPage_Id="86" id="254" />
+<login UserName="waseem" Password="043050057" EmpID="354" EmpType="Admin" MainPage_Id="94" id="256" />
+<login UserName="Account" Password="043050057" EmpID="355" EmpType="Incentive Account" MainPage_Id="109" id="257" />
+<login UserName="rahat" Password="043050057" EmpID="356" EmpType="AMS Stationary Store" MainPage_Id="44" id="258" />
+<login UserName="rahool" Password="043050057" EmpID="357" EmpType="AMS Printing Store" MainPage_Id="44" id="259" />
+<login UserName="naveed" Password="043050057" EmpID="358" EmpType="AMS Chemical Store" MainPage_Id="44" id="260" />
+<login UserName="Zabair" Password="043050057" EmpID="359" EmpType="AMS Disposable Store" MainPage_Id="44" id="261" />
+<login UserName="HRCommittee" Password="043050057" EmpID="360" EmpType="HR Committee" MainPage_Id="110" id="262" />
+<login UserName="promotingofficer" Password="043050057" EmpID="361" EmpType="Promoting Officer" MainPage_Id="111" id="263" />
+<login UserName="hameed" Password="043050057" EmpID="362" EmpType="Retirement Clerk" MainPage_Id="112" id="264" />
+<login UserName="hadi" Password="043050057" EmpID="364" EmpType="Surgery Department Clerk " MainPage_Id="84" id="265" />
+<login UserName="Yameen" Password="043050057" EmpID="367" EmpType="Payroll Clerk" MainPage_Id="104" id="266" />
+<login UserName="sanaullah" Password="043050057" EmpID="389" EmpType="Requester" MainPage_Id="113" id="267" />
+<login UserName="budget" Password="043050057" EmpID="390" EmpType="Budget Calerk" MainPage_Id="114" id="268" />
+<login UserName="sikandar" Password="043050057" EmpID="391" EmpType="Professor" MainPage_Id="74" id="269" />
+<login UserName="financereport" Password="043050057" EmpID="393" EmpType="FinanceReports" MainPage_Id="117" id="270" />
+<login UserName="jamal" Password="043050057" EmpID="395" EmpType="Driver" MainPage_Id="118" id="271" />
+<login UserName="najamali" Password="043050057" EmpID="396" EmpType="Head Driver" MainPage_Id="119" id="272" />
+<login UserName="fareed" Password="043050057" EmpID="398" EmpType="Admin" MainPage_Id="120" id="273" />
+<login UserName="kamaran" Password="043050057" EmpID="399" EmpType="Store Officer" MainPage_Id="61" id="274" />
+<login UserName="principal" Password="043050057" EmpID="400" EmpType="Principal" MainPage_Id="4" id="275" />
+<login UserName="reportingofficer" Password="043050057" EmpID="404" EmpType="clerk" MainPage_Id="123" id="276" />
+<login UserName="alishah" Password="043050057" EmpID="405" EmpType="head clerk" MainPage_Id="124" id="277" />
+<login UserName="disciplinarycommitte" Password="043050057" EmpID="345" EmpType="Doctor" MainPage_Id="125" id="278" />
+<login UserName="SaifLab" Password="043050057" EmpID="181" EmpType="Admin" MainPage_Id="133" id="279" />
+<login UserName="usman" Password="043050057" EmpID="417" EmpType="Clerk" MainPage_Id="128" id="280" />
+<login UserName="EC1" Password="043050057" EmpID="417" EmpType="Clerk" MainPage_Id="128" id="281" />
+<login UserName="EC2" Password="043050057" EmpID="419" EmpType="Clerk" MainPage_Id="128" id="282" />
+<login UserName="EC3" Password="043050057" EmpID="420" EmpType="Clerk" MainPage_Id="128" id="283" />
+<login UserName="EC4" Password="043050057" EmpID="510" EmpType="Clerk" MainPage_Id="128" id="284" />
+<login UserName="ech" Password="043050057" EmpID="506" EmpType="Clerk" MainPage_Id="128" id="285" />
+<login UserName="ecpgr" Password="043050057" EmpID="434" EmpType="clerk" MainPage_Id="128" id="286" />
+<login UserName="test" Password="043050057" EmpID="459" EmpType="clerk" MainPage_Id="129" id="287" />
+<login UserName="IDCard" Password="043050057" EmpID="523" EmpType="Clerk" MainPage_Id="130" id="288" />
+<login UserName="librarian" Password="043050057" EmpID="546" EmpType="Librarian" MainPage_Id="131" id="289" />
+<login UserName="mirza" Password="043050057" EmpID="561" EmpType="PG Student" MainPage_Id="14" id="290" />
+<login UserName="saad" Password="03467044143" EmpID="567" EmpType="student" MainPage_Id="138" id="291" />
+<login UserName="bakar" Password="043050057" EmpID="568" EmpType="Contractual" MainPage_Id="134" id="292" />
+<login UserName="sher" Password="043050057" EmpID="570" EmpType="Dispenser" MainPage_Id="133" id="293" ShiftID="2" />
+</root>

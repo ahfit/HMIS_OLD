@@ -1,0 +1,19 @@
+
+
+<asp:button  runat="server"  CssClass="btn_hacims" />
+<asp:button  runat="server"  CssClass="btn_grid"  SkinID="btn_grid"/>
+<asp:button  runat="server"  SkinID="print_btn" CssClass="print_btn" />
+<asp:button  runat="server"  SkinID="remove_btn" CssClass="remove_btn" />
+<asp:button  runat="server"  SkinID="Edit_btn" CssClass="Edit_btn" />
+<asp:GridView CssClass="Grid_1"  runat="server"></asp:GridView>
+<asp:GridView CssClass="grid_dash"  SkinID="grid_dash" runat="server"></asp:GridView>
+<asp:GridView CssClass="Grid_wpad"   SkinID="Grid_wpad" runat="server"></asp:GridView>
+<asp:DropDownList CssClass="drop_down" runat="server"></asp:DropDownList>
+<asp:TextBox CssClass="input_txt" runat="server"></asp:TextBox>
+
+<asp:TextBox CssClass="captxt" SkinID="captxt" runat="server"></asp:TextBox>
+<asp:TextBox CssClass="datepicker input_txt" SkinID="datepicker" runat="server"></asp:TextBox>
+<asp:TextBox CssClass="input_webeditor notprint" SkinID="input_webeditor" runat="server"></asp:TextBox>
+
+<asp:TextBox CssClass="intdata input_txt" SkinID="intdata" runat="server"></asp:TextBox>
+

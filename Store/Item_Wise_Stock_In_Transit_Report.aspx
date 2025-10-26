@@ -1,0 +1,101 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Item_Wise_Stock_In_Transit_Report.aspx.cs" Inherits="Store_Item_Wise_Stock_In_Transit_Report" MasterPageFile="~/hacims_masterpage_admin.master" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<%@ Register Assembly="Infragistics2.WebUI.WebDateChooser.v6.1, Version=6.1.20061.28, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" Namespace="Infragistics.WebUI.WebSchedule" TagPrefix="igsch" %>
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .style1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .style2 {
+            width: 50%;
+            text-align: right;
+        }
+
+        .style3 {
+            width: 50%;
+            text-align: left;
+        }
+    </style>
+    <script type="text/javascript">
+        function ClientItemSelected2(sender, e) {
+            $get("<%=hfItemCode.ClientID %>").value = e.get_value();
+         }
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+
+    <div class="bxmain inner_content" style="width: 100%;">
+        <h2><span>Stock in Transit</span></h2>
+        <table class="style1">
+            <tr>
+                <td class="style2">Hospital :</td>
+                <td class="style3">
+                    <asp:DropDownList ID="DDLbranch" runat="server"></asp:DropDownList></td>
+            </tr>
+            <tr>
+                <td class="style2">Sub Department :</td>
+                <td class="style3">
+                    <asp:DropDownList ID="ddlSubDepartment" runat="server"></asp:DropDownList></td>
+            </tr>
+            <tr>
+                <td class="style2" align="right">Manufacturer:
+                </td>
+                <td class="style3">
+                    <asp:DropDownList ID="DropDownList_Manufacturer" runat="server"
+                        DataTextField="Manufacturer_Name" DataValueField="ID"
+                        Width="200px" AutoPostBack="false">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2" align="right">Item Name:
+                </td>
+                <td class="style3">
+                    <asp:TextBox ID="txtItemName" runat="server"></asp:TextBox>
+                    <asp:AutoCompleteExtender ID="aceItems" runat="server" ServiceMethod="SearchItems"
+                        MinimumPrefixLength="1" CompletionInterval="100" EnableCaching="false" CompletionSetCount="10"
+                        TargetControlID="txtItemName" FirstRowSelected="true" OnClientItemSelected="ClientItemSelected2">
+                    </asp:AutoCompleteExtender>
+                    <asp:HiddenField ID="hfItemCode" runat="server" />
+
+                </td>
+            </tr>
+            <tr style="visibility:hidden;">
+                <td class="style2">Part #<strong> :</strong></td>
+                <td class="style3">
+                    <asp:TextBox ID="txtPartno" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr style="visibility:hidden;">
+                <td class="style2">Order No<strong> :</strong></td>
+                <td class="style3">
+                    <asp:TextBox ID="txtOrderNo" runat="server"></asp:TextBox>
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" align="center">
+                    <asp:Button ID="Button_report" runat="server" Text="View Report"
+                        OnClick="Button_Report_Click" CssClass="btn_1" />
+                </td>
+
+
+            </tr>
+
+        </table>
+    </div>
+    <div>
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Width="90%">
+        </rsweb:ReportViewer>
+    </div>
+</asp:Content>

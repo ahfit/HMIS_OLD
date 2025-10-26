@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+
+<medicineusage>
+	
+
+<item type="current" >
+			<name>Medipak (Pvt.) Ltd</name>
+			<dueto>Medicine Supply Invoice</dueto>
+			<date>10 July 2009</date>
+			</item>
+
+<item type="current" >
+			<name>S Ijaz ud Din (Pvt.) Ltd</name>
+			<dueto>Medicine Supply Invoice</dueto>
+			<date>10 July 2009</date>
+			</item>
+
+
+<item type="pending" >
+			<name>S Ijaz ud Din (Pvt.) Ltd.</name>
+			<dueto>Sysmax Machine Payment</dueto>
+			<date>12 June 2009</date>
+			</item>
+
+<item type="pending" >
+			<name>Medipak (Pvt.) Ltd</name>
+			<dueto>Medicine Supply Invoice</dueto>
+			<date>11 June 2009</date>
+			</item>
+
+
+</medicineusage>

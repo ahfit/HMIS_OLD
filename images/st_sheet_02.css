@@ -1,0 +1,227 @@
+
+/* -------------------
+
+.bt_admin1up { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_1up.gif); font-family:tahoma; text-align:center;
+		font-size:11px;  font-weight:bold; line-height:110pt; color:#000000; height:84px; width:81px; cursor:hand; }
+
+.bt_admin1over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_1over.gif); font-family:tahoma;
+	font-size:11px; font-weight:bold; line-height:110pt; color:#0066CC;	height:84px; width:81px; text-align:center;	cursor:hand; }
+
+.bt_admin1down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_1up.gif); font-family:tahoma;
+		font-size:11px; font-weight:bold; line-height:110pt; color:#000000; height:84px; width:81px; text-align:center; 
+		cursor:hand; }
+		
+-------------------*/
+
+
+.bt_admin16up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_16up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin16over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_16over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin16down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_16up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+
+
+.bt_admin13up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_13up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin13over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_13over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin13down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_13up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+.bt_admin18up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_18up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin18over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_18over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin18down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_18up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+.bt_admin20up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_20up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin20over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_20over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin20down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_20up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+.bt_admin19up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_19up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin19over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_19over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin19down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_19up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+		
+		.bt_admin12up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_12up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin12over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_12over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin12down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_12up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+.bt_admin26up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_26up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin26over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_26over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin26down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_26up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+		
+		
+.bt_admin15up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_15up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin15over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_15over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin15down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_15up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+		
+.bt_admin21up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_21up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin21over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_21over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin21down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_21up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+		
+.bt_admin27up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_27up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin27over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_27over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin27down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_27up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}
+		
+		
+		
+.bt_admin28up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_28up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin28over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_28over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin28down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_28up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}	
+		
+		
+.bt_admin29up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_29up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin29over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_29over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin29down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_29up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+		
+.bt_admin30up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_30up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin30over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_30over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin30down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_30up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+.bt_admin31up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_31up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin31over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_31over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin31down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_31up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+.bt_admin7up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_7up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin7over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_7over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA73C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin7down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_7up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+		
+		
+.bt_admin32up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_32up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin32over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_32over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA323C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin32down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_32up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+				
+		
+.bt_admin33up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_33up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin33over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_33over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA323C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin33down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_33up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+.bt_admin34up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_34up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin34over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_34over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA323C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin34down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_34up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+.bt_admin35up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_35up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin35over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_35over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA323C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin35down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_35up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+.loginnewbg{background-image:url(loginnewbts/img_loginnew.jpg); background-position:bottom right; background-repeat:no-repeat;}
+		
+.bt_admin36up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_36up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin36over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_36over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA323C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+.bt_admin36down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_36up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+.bt_admin37up  { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_37up.gif); font-family:tahoma; text-align:center; background-repeat:no-repeat;
+font-size:11px;  font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; cursor:hand; background-color:#FFFFFF; background-position:center;}
+
+.bt_admin37over { border:0px  solid #e6f1f2; background-image:url(loginnewbts/imgbt_37over.gif); font-family:tahoma; background-repeat:no-repeat; background-position:center;
+	font-size:11px; font-weight:normal; line-height:125pt; color:#EEA323C; height:94px; width:90px; text-align:center;	cursor:hand; background-color:#FFFFFF;}
+
+.bt_admin37down { border:0px solid #e6f1f2; background-image:url(loginnewbts/imgbt_37up.gif); font-family:tahoma; background-position:center;
+		font-size:11px; font-weight:normal; line-height:125pt; color:#000000; height:94px; width:90px; text-align:center; cursor:hand; background-repeat:no-repeat; background-color:#FFFFFF;}		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		

@@ -1,0 +1,130 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/hacims_masterpage_admin.master" CodeFile="DoctorSharePaid.aspx.cs" Inherits="DoctorShare_DoctorSharePaid" %>
+
+<%@ Register Assembly="Infragistics2.WebUI.WebDateChooser.v6.1, Version=6.1.20061.28, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb"
+    Namespace="Infragistics.WebUI.WebSchedule" TagPrefix="igsch" %>
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+    Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .left
+        {
+            display: inline-block;
+            width: 49%;
+
+            float: left;
+            text-align: right;
+        }
+        .right
+        {
+            display: inline-block;
+            text-align: right;
+            padding-left: 4px;
+        }
+        .auto-style1 {
+            width: 627px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="bxmain inner_content" style="width: 100%;">
+        <h2>
+            <span>Doctor Share Paid</span></h2>
+         <div  style="line-height: 1.5; padding-bottom: 4px;">
+            
+            </div>
+      <fieldset>
+    <legend>Search Criteria</legend>
+        <table width="100%">
+            <tr>
+                <td align="right" style="width:100px;">
+                    Category :
+
+                </td>
+                <td style="width: 250px;">
+                    <asp:DropDownList ID="DropDownListCategory" runat="server" DataValueField="Dept_ID" DataTextField="Dept_Name"
+                        AutoPostBack="true" OnSelectedIndexChanged="ddlDepartment_SelectedIndexChanged">
+                    </asp:DropDownList>
+                </td>
+                <td align="right" style="width:100px;">
+                    Services :
+
+                </td>
+                <td style="width: 250px;">
+                    <asp:DropDownList ID="DropDownListServices" runat="server" DataValueField="" DataTextField="Dept_Name"
+                        AutoPostBack="true" >
+                    </asp:DropDownList>
+                </td>
+                  <td align="right" style="width: 100px;">
+                    
+                      Patient Type:
+                    
+                </td>
+                <td style="width: 150px;">
+                   
+                    <asp:DropDownList ID="DropDownTypeWise" runat="server" AutoPostBack="true">
+                        <asp:ListItem Selected="True">All</asp:ListItem>
+                        <asp:ListItem>OPD</asp:ListItem>
+                        <asp:ListItem>IPD</asp:ListItem>
+                    </asp:DropDownList>
+                   
+                </td>
+                <td align="right" style="width: 100px;">
+                   
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td align="right" style="width: 100px;">
+                    Departments :
+                </td>
+                <td style="width: 250px;">
+                    <asp:DropDownList ID="ddlDepartment" runat="server" DataValueField="Dept_ID" DataTextField="Dept_Name"
+                        AutoPostBack="true" OnSelectedIndexChanged="ddlDepartment_SelectedIndexChanged">
+                    </asp:DropDownList>
+                </td>
+                <td align="right" style="width: 100px;">
+                    Select Consultant :
+                </td>
+                <td style="width: 150px;">
+                    <asp:DropDownList ID="ddldoctor" runat="server" DataTextField="Name" DataValueField="EmpID">
+                    </asp:DropDownList>
+                </td>
+                <td align="right" style="width: 100px;">
+                    Start Date:
+                </td>
+                <td style="width: 150px;">
+                    <asp:TextBox ID="wdcDateFrom" runat="server" Value="2010-06-18" Width="122px" TextMode="Date"></asp:TextBox>
+                    
+                </td>
+                <td align="right" style="width: 100px;">
+                    End Date :
+                </td>
+                <td>
+                    <asp:TextBox ID="WebDateDateTo" runat="server" Value="2010-06-18" Width="122px" TextMode="Date"></asp:TextBox>
+                    
+                    
+                </td>
+            </tr>           
+            <tr>
+                <td align="center" colspan="8">
+                                    </td>
+            </tr>
+           
+            <tr>               
+                <td>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+        <div style="text-align:center;"><asp:Button ID="btnSearch" runat="server" 
+                Text="Search" onclick="btnSearch_Click" /></div>
+    </div>
+     <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+           
+          <rsweb:ReportViewer ID="ReportViewer1" runat="server" Width="100%" 
+        Height="500px">
+    </rsweb:ReportViewer>
+</asp:Content>

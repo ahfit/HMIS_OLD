@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<shortagemedicine>
+  
+  <item type="recieveables" >
+			<company>Adam Jee Insurance</company>
+			<duto>Private Patient Bill</duto>
+			<date>125,000</date>
+    </item>
+  <item type="recieveables" >
+			<company>OMC Hospital </company>
+			<duto>Lab Consultency Share</duto>
+			<date>2500</date>
+  </item>
+
+</shortagemedicine>
+
+
+
+
+   

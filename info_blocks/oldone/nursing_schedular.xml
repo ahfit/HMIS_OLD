@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+
+<item type="meeting" >
+			<message>Please Check Patient Muhammad Ammar’s Profile</message>
+			<date>03 July 2009</date>
+			<time>9:00 am</time>
+			</item>
+
+  <row tpye="meeting">
+  <element0>Meeting for Deployment of SZH</element0>
+  <element1>Jun 25, 2009</element1>
+  </row>
+
+</root>

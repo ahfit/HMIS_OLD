@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart caption='Temperature'  subcaption='(from 10:30 am to 11:00 am)' formatNumberScale='0'  lineThickness='3' xAxisName='Time' yAxisName='Temperature - F ' numberPrefix='' animation='1' divLineAlpha='20'  bgSWFAlpha='1' showValues='1' rotateValues='0' bgAlpha='0' placeValuesInside='1' border='0'  bgColor='ff0000' borderColor='ffffff' yAxisMinValue='90' yAxisMaxValue='98'  anchorRadius='6' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridColor='CC3300' shadowAlpha='40' numvdivlines='5' bgColor='FFFFFF,CC3300'   divLineColor='CC3300' anchorBgColor='000000'>
+ 
+  <set label='10:35' value='97'/>
+  <set label='10:40' value='97'/>
+  <set label='10:40' value='98'/>
+  <set label='14:36' value='96'/>
+  <set label='14:36' value='103' styles='myGlow' anchorBgColor='ff0033'/>
+  <set label='16:10' value='100'/>
+  <set label='16:10' value='100'/>
+   <styles>
+        <definition>
+            <style name='myGlow' type='glow' color='ff0033' />
+        </definition>
+       
+    </styles>
+  
+</chart>

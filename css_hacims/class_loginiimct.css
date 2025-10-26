@@ -1,0 +1,102 @@
+ 
+html, body { 
+margin:0 0 0 0; margin:0; padding:0; font: normal 12px/12px "Segoe UI", Arial, sans-serif; color:#333333; background:#e3e3e3 url(../images_hacims/iimct_pgbg.png) top left repeat-x; height:100%;    }
+  
+ 
+/* Login_page-----iimct_A-------------------------------------------------------------------------------------------------------------- */ 
+ 
+#container_login {	 width:96%; position:relative; min-width:944px; margin: 0 auto; height:auto;   }
+ 
+#header_login { height:107px; display:block;  width:100%;  background:url(../images_hacims/iimct_hbg.png) 0 0 repeat-x;  border:#e6eaec solid 1px; -webkit-border-radius: 8px; -moz-border-radius:8px; border-radius: 8px; margin-top:10px; box-shadow:1px 0px   2px #c0c0c0;  }
+
+
+
+#header_login .logoiimct {	float:left; clear:right; height:97px; width:75px; display:inline-block;  background:url(../images_hacims/iimct_logo.png) 5px 5px no-repeat; margin-left:10px; }
+
+
+
+#header_login .orgname {  float:left; clear:right; display:inline-block; height:31px;   margin-left:15px; width:602px; background:url(../images_hacims/iimct_name.png) 0px 0px no-repeat; margin-top:25px;    }
+#header_login .hname { color:#477f16;  height:auto;   font-size:25px; font-weight:normal; font-family:"Univers Condensed"; margin-top:15px; text-shadow:1px 1px 0px #fff;      }
+
+
+
+#header_login #logininfo    { float:right; clear:right; width:200px; height:auto; display:block;  margin-top:10px; margin-right:10px; }
+#header_login #logininfo ul { text-align:right; float:right; clear:right; width:100%;   }
+#header_login #logininfo li { text-align:right; margin-top:3px;  }
+#header_login #logininfo .datet {color:#0155a6; font-size:10px; float:right; clear:right; background:url(../imasges_hacims/img_cal.png) 0 1px no-repeat; padding-left:13px; margin-top:6px;    }
+#header_login #logininfo .welcome {color:#d71635; font-size:11px;   } 
+#user_login   { width:400px; margin-top:75px; border:#a5b9c6 solid 1px; -webkit-border-radius: 6px; -moz-border-radius:6px; 
+border-radius: 6px;  -webkit-box-shadow: 0px 0px 6px #fff; -moz-box-shadow: 0px 0px 6px #fff; box-shadow:0px 0px 6px #fff; }
+.user_login_inner {  border:#e6eaec solid 1px; -webkit-border-radius: 6px;  -moz-border-radius:6px; border-radius: 6px; margin:10px; margin-top:10px;   }
+
+#user_login a { color:#d71635; text-decoration:underline; font-size:11px; }
+#user_login a:hover  { color:#333; }
+#user_login .errmsg  { color:#ed1c00; font-size:12px; font-weight:bold; background:url(../images_hacims/img_error.png) 0 2px no-repeat; padding-left:15px;  }
+#user_login table    { border:0px; border-collapse:collapse; width:100%; margin-top:25px; margin-bottom:20px;  }
+#user_login table tr { border:0px; border-collapse:collapse; text-align:left; }
+#user_login table td { border:0px; border-collapse:collapse; padding-left:5px; padding-top:2px; padding-bottom:2px; height:18px;
+		  			   font-weight:bold; font-size:12px; font-family:Calibri; }   
+ 
+ 
+ .tabs_navigation { margin-top:-27px; margin-right:25px; float:right;  }
+ .tabs_navigation ul  { margin:0; list-style:none; padding:0;  }
+ .tabs_navigation ul li  { display:inline-block; height:30px; background-color:#fff;  -webkit-border-radius:5px; -moz-border-radius:5px; border-radius: 5px;  padding-left:10px; padding-right:10px; line-height:28px; 
+ border-bottom-right-radius :0px; border-bottom-left-radius :0px; background:url(../images_hacims/iimct_tabnormal.png) top left  repeat-x; margin-left:5px; box-shadow:1px 0px 0px 0px #c0c0c0;  cursor:pointer; font-weight:bold;  } 
+  .tabs_navigation ul li:hover {background:url(../images_hacims/iimct_tabactive.png) top left  repeat-x; color:#0a91b6; } 
+ .tabs_navigation ul li.selcted {background:url(../images_hacims/iimct_tabactive.png) top left  repeat-x; color:#0a91b6; }
+ 
+ .tabs_navigation ul li  a { font-size:12px; color:#333333; text-decoration:none;  }
+ .tabs_navigation ul li  a:hover { font-size:12px;   text-decoration:none; }
+
+.images_slider { height:423px; width:100%; display:inline-block; background-color:#bbd3da;  -webkit-border-radius:5px; -moz-border-radius:5px; border-radius: 5px;  border:#aeccd5 solid 1px; margin-top:5px; position:relative; z-index:0;     }
+
+
+.logos { position:absolute; height:94px; width:100%; display:inline-block;    background:url(../images_hacims/iimct_oratier-.png) top right no-repeat; margin-top:-115px; margin-right:-2px;  }
+
+#footer_logina {  		width:100%;  position:absolute; bottom:0; height:25px;            }
+#footer_logina span {   color:#fff; display:block; text-align:center; font-size:11px; margin-top:32px; margin-bottom:5px;     }
+#footer_logina span a {   color:#959595; text-decoration:none;       }
+#footer_logina span a:hover {   color:#bcbcbc; text-decoration:underline;       }
+ 
+ 
+ .login_form { position:absolute; background:url(../images_hacims/iimct_loginbg.png) top left  no-repeat; width:346px; height:250px; display:inline-block; margin-top:35px; margin-left:35px; z-index:2;}
+
+.input_txt {border:0px; border-bottom:#e4e4e4 solid 1px; border-left:#bebebe solid 1px; 
+            border-right:#e4e4e4 solid 1px; border-top:#bebebe solid 1px; height:22px;
+width:200px;  font-size:12px;  behavior: url(PIEq.htc); -webkit-border-radius: 2px;
+			 -moz-border-radius: 2px;
+			  border-radius: 2px;
+}
+.fpass {background:url(../images_hacims/hacims_iimct_img5.png) 0px 2px no-repeat; padding-left:12px;}
+.tbl_form{border:0px; border-collapse:collapse; margin-top:0px; width:100%;   }
+.tbl_form th {border:0px; border-collapse:collapse; height:24px; font-weight:bold; padding-right:3px;  }
+.tbl_form tr {border:0px; border-collapse:collapse; text-align:left;  }
+.tbl_form td {border:0px; border-collapse:collapse; padding-left:2px; padding-top:2px;  padding-bottom:2px;  height:18px;  font-weight:normal; font-size:12px;  color:#333; }
+
+.btn_hacims { background:url(../images_hacims/img_btn_bg.png) bottom left repeat-x; 
+              height:22px; width:auto; cursor:pointer; outline:none; margin:0px; font-size:12px; line-height:17pt; 
+              font-weight:bold; color:#0048a0; padding-bottom:2px; font-family:Calibri; border:#e5e9ec solid 1px; 
+               
+              -webkit-border-radius: 4px;
+			 -moz-border-radius: 4px;
+			  border-radius: 4px;
+			 -webkit-box-shadow: #a8a8a8 0px 1px 1px;
+			  -moz-box-shadow: #a8a8a8 0px 1px 1px;
+			  box-shadow: #a8a8a8 0px 1px 1px;
+              padding-left:20px; 
+              padding-right:20px;  
+              behavior: url(PIEq.htc); text-shadow:1px 1px 0px #fff; }
+              
+.btn_hacims:hover {color:#d71635; background:url(../images_hacims/img_btn_bgh.png) bottom left repeat-x;}
+.input_txt:focus { border:0px; border-bottom:#e4e4e4 solid 1px; border-left:#bebebe solid 1px; border-right:#e4e4e4 solid 1px; border-top:#bebebe solid 1px; height:22px;
+	width:200px; background-color:#ffffc0; 	font-size:12px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; behavior: url(PIEq.htc); }
+ 
+ 
+ a {  font-size:12px; color:#d71635;}
+a:hover {color:#333; }
+ .otherins  { font-family:"Segoe UI";   position:absolute; z-index:3; margin-top:330PX; margin-left:35px; line-height:26px; font-weight:normal; font-size:16px;  }
+ .otherins li {background:url(../images_hacims/img_bullet_b.png) 0 12px no-repeat; padding-left:12px; color:#364b9e; text-shadow:1px 1px 0px #cae0e7;  }
+/*-------End Login Page---------------------------------------------------------------------------------------------------------------------- */ 
+
+ 
+ 

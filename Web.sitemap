@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode   title="Main User Area"  description="">
+    <siteMapNode url="~/Dash_Board.aspx" title="Dash Board" />
+    <siteMapNode url="~/Dash_board_administration.aspx" title="Dash Board Administrator" />
+    <siteMapNode url="~/Dash_BoardNew.aspx" title="Dash Board New" />
+    <siteMapNode url="~/administrator/feedback.aspx" title="Feed Back" />
+    <siteMapNode url="~/Pt_EMR/xray.aspx" title="X-ray" />
+    <siteMapNode url="~/Pt_EMR/pt_AssignRadiology_tests.aspx" title="Radiology" />
+    <siteMapNode url="~/Pt_EMR/pt_path_test_new.aspx" title="Pathology" />
+    <siteMapNode url="~/Pt_EMR/path_template.aspx" title="Template" />
+    <siteMapNode url="~/Patient Registration/PatientRegistration_out.aspx" title="Patient Registration" />
+    <siteMapNode url="~/Radiology/PatientRegistration.aspx" title="Patient Registration" />
+    <siteMapNode url="~/Pharmacy/pharmacy.aspx" title="Pharmacy" />
+    <siteMapNode url="~/Pharmacy/Issue_Medicine.aspx" title="Issue Medicine" />
+    <siteMapNode url="~/pathology/PatientRegistration.aspx" title="Pathology Patient Registration" />
+    <siteMapNode url="~/pathology/Patient_Registration_New.aspx" title="Pathology Manual Patient Registration" />
+    <siteMapNode url="~/pathology/Search_Patient_For_Update.aspx" title="Pathology Edit Patient Information" />
+    <siteMapNode url="~/pathology/HospitalPatientSearch.aspx" title="Pathology Hospital Patient Booking" />
+    <siteMapNode url="~/Pharmacy/Medicine_IndentBook.aspx" title="Medicine Request" />
+    <siteMapNode url="~/Pharmacy/ToDayRecieveOrders.aspx" title="Recieve Order" />
+    <siteMapNode url="~/Pharmacy/Medicine_Previous_Order.aspx" title="Previous Order" />
+    <siteMapNode url="~/Pharmacy/Medicine_Shortage.aspx" title="Medicine Shortage" />
+    <siteMapNode url="~/Pharmacy/Update_Stock.aspx" title="Update Stock" />
+    <siteMapNode url="~/pathology/Patient_Search.aspx" title="Patient Search" />
+    <siteMapNode url="~/Pharmacy/PharmacyMedicineStock.aspx" title="Medicine Stock" />
+    <siteMapNode url="~/Pharmacy/Fast_Moving_Medicine.aspx" title="Fast Moving Medicines" />
+    <siteMapNode url="~/Pharmacy/Slow_Moving_Items.aspx" title="Slow Moving Medicines" />
+    <siteMapNode url="~/pathology/Pathology Reports/Annual_Tests_Data.aspx" title="Pathology Annual Test Data" />
+    <siteMapNode url="~/pathology/Pathology Reports/Today_Patient_report.aspx" title="Pathology Daily Report" />
+    <siteMapNode url="~/pathology/Pathology Reports/Pt_Today_Report_With_Test.aspx" title="Pathology Testwise Report" />
+    <siteMapNode url="~/pathology/Pathology Reports/pathology_summary.aspx" title="Pathology Test Booking Summary" />
+    <siteMapNode url="~/pathology/View_Work_List.aspx" title="Pathology Working List" />
+    <siteMapNode url="~/Radiology/Pathology Reports/Pt_Today_Report_With_Test.aspx" title="Radiology Testwise Report" />
+    <siteMapNode url="~/Radiology/Pathology Reports/pathology_summary.aspx" title="Radiology Test Booking Summary" />
+    <siteMapNode url="~/Radiology/View_Work_List.aspx" title="Radiology Working List" />
+    <siteMapNode url="~/Radiology/Pathology Reports/Today_Patient_report.aspx" title="Radiology Daily Report" />
+    <siteMapNode url="~/Patient billing/Services_Page_Display.aspx" title="Service Charges" />
+    <siteMapNode url="~/Patient Registration/AdmittedPatient.aspx" title="Admitted Patients" />
+    <siteMapNode url="~/Patient Registration/Discharge_Patient.aspx" title="Discharged Patients" />
+    <siteMapNode url="~/Patient Registration/viewPatientAppointment_box.aspx" title="Patient Appointment" />
+    <siteMapNode url="~/Administrator/Admin_Doctor_Time_Slice.aspx" title="Doctor Schedule" />
+    <siteMapNode url="~/Patient Registration/Patient_Appointment_Search.aspx" title="Patient Appointment Search" />
+	
+	
+	 <siteMapNode url="~/Administrator/Basic Data Management/Hospital.aspx" title="Add Hospital" />
+	 <siteMapNode url="~/dashboard/Today_PatientInfo.aspx" title="DashBoard" /> 
+	
+	 
+	 <siteMapNode title="Patient Treatment" url="">
+        <siteMapNode url="~/Pt_EMR/OPD_Encounter_Form.aspx" title="Patient Encounter Form" />
+		  <siteMapNode url="~/Pt_EMR/Call_To_Doctor.aspx" title="Doctor Call" />
+    </siteMapNode>
+	 <siteMapNode url="~/Administrator/Admin_User_Role.aspx" title="User Role" /> 
+	 <siteMapNode url="~/Administrator/Admin_Employee_Role_pages.aspx" title="Assign Role" /> 
+	
+	 <siteMapNode url="~/Administrator/Admin_Assign_Examination_To_Department.aspx" title="Transfer Exam to Department" /> 
+	 
+	 <siteMapNode url="~/Administrator/Admin_Template_phy_Elements.aspx" title="Assign Template" /> 
+	 <siteMapNode url="~/Administrator/Admin_Physical_Examination_Main.aspx" title="Main Page" /> 
+	<siteMapNode url="~/Administrator/Admin_Phy_ElementValues_Transfer.aspx" title="Element Value Transfer" /> 
+	
+	<siteMapNode url="~/Administrator/admin_dmc_phy_maingroup.aspx" title="Main Group" />  
+	 	<siteMapNode url="~/Administrator/admin_phy_exam_Element_Tooltip.aspx" title="Add Element Tooltip" />  
+		<siteMapNode url="~/Administrator/Admin_Phy_exam_Elements_Assign_To_Group.aspx" title="Assign Element" /> 
+		<siteMapNode url="~/Administrator/Admin_General_Examination_Languages.aspx" title="Examination Element Narrative" /> 
+		<siteMapNode url="~/Reports_For_UAT/Physical_Exam_UAT_Template.aspx" title="Physical Exam Element Report" /> 
+		
+			<siteMapNode url="~/Administrator/Admin_Template_Presenting_Complaint.aspx" title="Assign Template" /> 
+		
+			<siteMapNode url="~/Administrator/Admin_Assign_phy_Group_to_Heading.aspx" title="Main Heading" /> 
+			<siteMapNode url="~/Administrator/Admin_Presenting_Complaint.aspx" title="Main Group" /> 
+			<siteMapNode url="~/Administrator/Admin_Complaint_ElementValues_Transfer.aspx" title="Element Value Transfer" /> 
+			
+			<siteMapNode url="~/Administrator/Admin_Presenting_Complaint_Main.aspx" title="Main Page" /> 
+			<siteMapNode url="~/Administrator/Admin_SubType_Complaint.aspx" title="Element" /> 
+			
+			
+			<siteMapNode url="~/Administrator/Admin_Sub_Type_Components.aspx" title="Element Values" /> 
+					<siteMapNode url="~/Administrator/Admin_Presenting_Comp_Ele_Assign_to_Group.aspx" title="Assign Element" /> 
+			 	
+				 <siteMapNode url="~/Reports_For_UAT/Complaint_Value_Template_report.aspx" title="Template Report" /> 	
+				<siteMapNode url="~/Reports_For_UAT/Presenting_Complaint_report.aspx" title="History Element Report" /> 		
+ 
+ <siteMapNode url="~/Administrator/Admin_Assign_History_To_Department.aspx" title="Transfer Histtory to Department" /> 		
+<siteMapNode url="~/Administrator/Admin_Template_History_Elements.aspx" title="Assign Template" /> 		
+ <siteMapNode url="~/Administrator/Admin_History_Main.aspx" title="Main Page" /> 		
+ <siteMapNode url="~/Administrator/Admin_History_elementvalue_transfer.aspx" title="Element value Transfer" /> 	
+  <siteMapNode url="~/Administrator/Admin_history_MainGroup.aspx" title="Main Group" /> 
+  
+  <siteMapNode url="~/Administrator/Admin_History_Elements.aspx" title="Add Element" /> 		
+  <siteMapNode url="~/Administrator/Admin_History_ElementValues.aspx" title="Add Element Value" /> 	
+  <siteMapNode url="~/Administrator/Admin_History_element_ToolTip.aspx" title="Add Element Tooltip" /> 	
+ <siteMapNode url="~/Administrator/Admin_History_Ele_Assign_To_Group.aspx" title="Assign Element" /> 	
+ <siteMapNode url="~/Administrator/Admin_Assign_History_Group_to_Heading.aspx" title="Main Heading" /> 	
+ <siteMapNode url="~/Administrator/Admin_History_Element_Language.aspx" title="History Element Narration" /> 	
+ <siteMapNode url="~/Reports_For_UAT/History_Value_report.aspx" title="History Element Report" /> 	
+ <siteMapNode url="~/Duty_Roster.aspx" title="Duty Roster" /> 
+ 
+ 
+
+ 
+ 
+    <siteMapNode url="~/Patient Registration/Total_Ward_Addmission.aspx" title="Ward Bed Status" />
+    <siteMapNode url="~/Patient Registration/Doctor_Wise_Admission.aspx" title="Doctor wise Admission" />
+    <siteMapNode url="~/Patient Registration/ViewBedStatusReport.aspx" title="Bed Status Report" />
+    <siteMapNode url="~/Patient Billing/View_Room_Bed_Status.aspx" title="Room Status" />
+    <siteMapNode url="~/Nursing/Nurse_Reception_main.aspx" title="Nurse Reception" />
+    <siteMapNode url="~/Nursing/issue_chit.aspx" title="Issue Chit" />
+    <siteMapNode url="~/Nursing/SeeOrderDays.aspx" title="Order Completed" />
+    <siteMapNode url="~/Nursing/AddPatientCondition.aspx" title="Add Status" />
+    <siteMapNode url="~/Nursing/Nursing_Notes.aspx" title="Nursing Notes" />
+    <siteMapNode url="~/Nursing/NursingLabOrder.aspx" title="Lab Orders" />
+    <siteMapNode url="~/Nursing/Pt_Physical_Examination_Main_Head_Nurse.aspx" title="Physical Examination" />
+    <siteMapNode url="~/Nursing/Nursing_General_Order.aspx" title="Nursing General Orders" />
+    <siteMapNode url="~/Nursing/WardMedicineUse.aspx" title="Medication" />
+    <siteMapNode url="~/Nursing/WardIntakeOutputSheet.aspx" title="Fluid Balance Sheet" />
+    <siteMapNode url="~/Patient Billing/AdmitPatient.aspx" title="Patient Discharge" />
+    <siteMapNode url="~/Nursing/nurse_reception.aspx" title="Nurse Reception" />
+    <siteMapNode url="~/Nursing/nursingorderreception.aspx" title="Nursing Orders" />
+    <siteMapNode url="~/Nursing/Transfusion_Detaills.aspx" title="Transfusion Details" />
+    <siteMapNode url="~/Nursing/nursevitals.aspx" title="Vitals Signs" />
+    <siteMapNode url="~/Doctor_Main_Page.aspx" title="Doctor Main Area" />
+    <siteMapNode url="~/Pt_EMR/Pt_Diagnosis.aspx" title="Diagnosis" />
+    <siteMapNode url="~/Nursing/Pt_Blood_Sugar_Chart.aspx" title="Blood Sugar Chart " />
+    <siteMapNode url="~/Pt_EMR/BloodRequestForm.aspx" title="Blood Request " />
+    <siteMapNode url="~/pt_Emr/Anthropometric.aspx" title="Anthropometric" />
+    <siteMapNode url="~/Pt_EMR/Pt_Physical_Examination_Main_Head.aspx" title="Physical Examination" />
+    <siteMapNode url="~/Pt_EMR/pt_History_Main_Heading.aspx" title="History" />
+    <siteMapNode url="~/Pt_EMR/Pt_Presenting_Complaint.aspx" title="Presenting Complaints" />
+    <siteMapNode url="~/Pt_EMR/Pt_Medication.aspx" title="Medication" />
+    <siteMapNode url="~/Pt_EMR/Pt_Medicines.aspx" title="Treatment" />
+    <siteMapNode url="~/Pt_EMR/Pt_Plan.aspx" title="Physician Notes" />
+    <siteMapNode url="~/Pt_EMR/Pt_Physician_Order.aspx" title="Physician Order" />
+    <siteMapNode url="~/Pt_EMR/Pt_Info.aspx" title="Patient Chart" />
+    <siteMapNode url="~/Pt_EMR/Patient_Past_Visit_Chart.aspx" title="Patient Past Visit Chart" />
+    <siteMapNode url="~/Pt_EMR/Patient_Discharge.aspx" title="Discharge/Refer" />
+    <siteMapNode url="~/Operation_Theater/Pt_Operation_Recommended.aspx" title="Operation Recomended" />
+    <siteMapNode url="~/Patient Registration/PatientRegistration.aspx" title="Patient Registration" />
+    <siteMapNode url="~/Administrator/Admin_Template.aspx" title="New Template" />
+    <siteMapNode url="~/Administrator/Admin_Assingtemplate.aspx" title="Assign Template" />
+    <siteMapNode url="~/Administrator/Admin_Emp_Temp_Info.aspx" title="Employee Template Information" />
+    <siteMapNode url="~/Administrator/Admin_shift.aspx" title="Shift" />
+    <siteMapNode url="~/Administrator/Admin_Duty_Rouster.aspx" title="Duty Roster" />
+    <siteMapNode url="~/Administrator/Assign_Duty_To_Employee.aspx" title="Assign Duty to Employee" />
+    <siteMapNode url="~/Administrator/admin_user_module.aspx" title="Module Name" />
+    <siteMapNode url="~/Administrator/Admin_user_module_pages.aspx" title="Page Name" />
+    <siteMapNode url="~/Administrator/Admin_employee_module_pages.aspx" title="Assign Pages" />
+    <siteMapNode url="~/Administrator/Admin_Vital_MainGroup.aspx" title="Vital Main Group" />
+    <siteMapNode url="~/Administrator/Admin_Vital_Elements.aspx" title="Vital Element" />
+    <siteMapNode url="~/Administrator/Admin_Vital_ElementValues.aspx" title="Vital Element Value" />
+    <siteMapNode url="~/Administrator/Admin_Template_Vital_Elements.aspx" title="Assign Template" />
+    <siteMapNode url="~/Administrator/Admin_Template_OT_Elements.aspx" title="Add Template" />
+    <siteMapNode url="~/Administrator/Admin_OT_Main_Group.aspx" title="Main Group" />
+    <siteMapNode url="~/Administrator/Admin_OT_Elements.aspx" title="Element" />
+    <siteMapNode url="~/Administrator/Admin_OT_ElementValues.aspx" title="Element Values" />
+    <siteMapNode url="~/Administrator/Admin_Emp_Details.aspx" title="Edit Employee Main Page" />
+    <siteMapNode url="~/Administrator/Employee_Portal_SubDepartment.aspx" title="Employee Portal Department" />
+    <siteMapNode url="~/Administrator/Basic Data Management/department.aspx" title="Department" />
+    <siteMapNode url="~/Administrator/Basic Data Management/SubDept.aspx" title="Sub-Department" />
+    <siteMapNode url="~/Administrator/Basic Data Management/designation.aspx" title="Designation" />
+    <siteMapNode url="~/Administrator/Basic Data Management/Admin_Profession.aspx" title="Profession" />
+    <siteMapNode url="~/Administrator/Basic Data Management/country.aspx" title="Country" />
+    <siteMapNode url="~/Administrator/Basic Data Management/province.aspx" title="Province" />
+    <siteMapNode url="~/Administrator/Basic Data Management/District.aspx" title="District" />
+    <siteMapNode url="~/Administrator/Basic Data Management/Tehsil.aspx" title="Tehsil" />
+    <siteMapNode url="~/Administrator/Admin_Hospital_Ward.aspx	" title="Hospital Ward" />
+    <siteMapNode url="~/Administrator/Admin_Services.aspx" title="Admin Services" />
+    <siteMapNode url="~/Administrator/Doctor_Services.aspx" title="Doctor Services" />
+    <siteMapNode url="~/Administrator/Admin_Assign_Medicine_to_Department.aspx" title="Medicine for Department" />
+    <siteMapNode url="~/Administrator/Doctor_Main_Page_Link.aspx" title="Assign Doctor Sub-Department" />
+    <siteMapNode url="~/Administrator/Employee.aspx" title="Employee" />
+    <siteMapNode url="~/Administrator/createlogin.aspx" title="Create Login" />
+    <siteMapNode url="~/Administrator/Admin_MainPage.aspx" title="Add Main Page" />
+    <siteMapNode url="~/Administrator/Admin_Emp_Posting.aspx" title="Employee Posting" />
+    <siteMapNode url="~/Hr/Leave_Management/Add_Employee_Leave.aspx" title="Add Employeee Leave" />
+    <siteMapNode url="~/change_password.aspx" title="Change Password" />
+    <siteMapNode url="~/pathology/Administrator/Admin_ComponentValue_Transfer.aspx" title="Pathology Component Values" />
+    <siteMapNode url="~/pathology/Administrator/AdminService_TestBooking.aspx" title="Admin Services vs Test Booking" />
+    <siteMapNode url="~/pathology/Administrator/TestGroup.aspx" title="Pathology Main Group" />
+    <siteMapNode url="~/pathology/Administrator/TestSubGroup.aspx" title="Pathology Sub-Group" />
+    <siteMapNode url="~/pathology/Administrator/groupname.aspx" title="Pathology Test Name" />
+    <siteMapNode url="~/pathology/Administrator/Admin_TestComponent.aspx" title="Pathology Component" />
+    <siteMapNode url="~/pathology/Administrator/Admin_Test_rangevalues.aspx" title="Pathology Test Range" />
+    <siteMapNode url="~/pathology/Administrator/Update_Component_Max_length.aspx" title="Pathology Component Value Length" />
+    <siteMapNode url="~/pathology/Administrator/Admin_Test_Services.aspx" title="Pathology Test Booking" />
+    <siteMapNode url="~/machines.aspx" title="Machine Results" />
+    <siteMapNode url="~/pathology/WorkList_For_Machine.aspx" title="Work List" />
+    <siteMapNode url="~/pathology/Work_List_Update.aspx" title="Upload List" />
+    <siteMapNode url="~/Patient Billing/IndoorPayment.aspx" title="Payment" />
+	<siteMapNode url="~/diary/daily_mail_Search.aspx" title="Search Daily Mail" />
+	<siteMapNode url="~/diary/Receipt_Register.aspx" title="Daily Mail" />
+	<siteMapNode url="~/diary/track.aspx" title="Track" />
+	<siteMapNode url="~/diary/add_Diary_No.aspx" title="Add Diary Number" />
+	<siteMapNode url="~/diary/add_file.aspx" title="Add Files" />
+	<siteMapNode url="~/diary/add_request.aspx" title="Add Request" />
+	<siteMapNode url="~/diary/inbox.aspx" title="In Box" />
+	<siteMapNode url="~/diary/Add_Department.aspx" title="Basic Data Management" />
+	<siteMapNode url="~/Pathology/lab_status_Record.aspx" title="Test Status Report" />
+		<siteMapNode url="~/Patient Registration/Reception_Dept.aspx" title="Reception Department" />
+    
+    <siteMapNode url="~/store/StoreItemReport.aspx" title="Item List" />
+    <siteMapNode url="~/Pharmacy/MedicineStock.aspx" title="Pharmacy Stock" />
+    <siteMapNode url="~/store/Admin_Pharmacy/Admin_Medicine.aspx" title="Register Item" >
+      <siteMapNode url="~/store/Admin_Pharmacy/Change_Item_Code.aspx" title="Update Item Code" />
+    </siteMapNode> 
+      
+    <siteMapNode url="~/store/Assign_Items_To_Department.aspx" title="Assign Item for Department" />
+    <siteMapNode url="~/store/PurchaseOrder.aspx" title="Purchase Order" />
+    <siteMapNode url="~/store/UpdatePurchaseOrder.aspx" title="Purchase Order Status" />
+    <siteMapNode url="~/store/CPlist.aspx" title="This Year Purchase" >
+      <siteMapNode url="~/store/CPDetail.aspx" title="Detail" />
+    </siteMapNode>
+      
+    <siteMapNode url="~/store/Search_Purchase_Order.aspx" title="Search Purchase Order" />
+    <siteMapNode url="~/store/Purchase_Order_Item_Summary_ItemWise.aspx" title="Rate List" />
+
+
+    <siteMapNode url="~/store/Receive_Medicine.aspx" title="Receive Medicine" >
+      <siteMapNode url="~/store/PurchaseRecieving.aspx" title="Purchase Receiving" />
+    </siteMapNode> 
+    <siteMapNode title="Patient Search" url="~/Patient Registration/PatientSearch.aspx">
+      <siteMapNode url="~/Patient Registration/PatientHistory.aspx" title="Patient History" />
+      <siteMapNode url="~/Patient Registration/Update_Patient.aspx" title="Edit Patient Information" />
+      <siteMapNode url="~/Patient Registration/View_PatientDetail.aspx" title="Patient Information" />
+      <siteMapNode url="~/Patient Billing/Patient_Assign_Bed.aspx" title="Assign Bed to Patient" />
+      <siteMapNode url="~/Patient Registration/PatientVisit.aspx" title="Patient New Visit" />
+    </siteMapNode>
+    
+    <siteMapNode title="Patient Search" url="~/pathology/Advance_Search.aspx">
+      <siteMapNode url="~/pathology/Test_Booking.aspx" title="Test Booking" />
+    </siteMapNode>
+
+    <siteMapNode title="Payroll">
+      <siteMapNode url="~/payroll/AllowancesDeductionEntry.aspx" title="Allowances / Deductions Entry"></siteMapNode>
+      <siteMapNode url="~/payroll/ArrearDeduction.aspx" title="Arrear Allowance"></siteMapNode>
+      <siteMapNode url="~/Payroll/NewMakeSalaryPermananet.aspx" title="Make new Salary"></siteMapNode>
+      <siteMapNode url="~/Payroll/HeadPermission.aspx" title="Head Permission"></siteMapNode>
+      <siteMapNode url="~/Payroll/ApproveAllowDeductions.aspx" title="Approve Allowance Deductions"></siteMapNode>
+      <siteMapNode url="~/Payroll/AllowancesDeductionHourlyBases.aspx" title="Allowances Deduction Hourly Bases"></siteMapNode>
+      <siteMapNode url="~/Payroll/AttendenceList.aspx" title="Attendance List"></siteMapNode>
+      <siteMapNode url="~/Payroll/OvertimeReport.aspx" title="Over Time Report"></siteMapNode>
+      <siteMapNode url="~/hr/search_employee.aspx" title="Search Employee"></siteMapNode>
+
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=9" title="Allowance Deduction Year Wise Break Down"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=10" title="Allowance Deduction Month Wise Break Down"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=11" title="Allowance Deduction Detail Monthly Wise Break Down"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=13" title="Allowance Deduction Summary"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=14" title="Monthly Allowance Chart"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=15" title="Monthly Wise Allowance Deduction Trends"></siteMapNode>
+
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=17" title="Department Designation Salary Detail"></siteMapNode>
+      <siteMapNode url="~/payroll/Employee_Allow_Deduction.aspx" title="Allowance Deduction Report"></siteMapNode>
+
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=1" title="Account Head Report"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=2" title="Account Head Detail"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=3" title="Department wise Summary"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=4" title="Department Wise Detail"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=5" title="Designation Wise Summary"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=6" title="Designation Wise Detail"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=7" title="Department And Designation wise Summary"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=8" title="Department And Designation wise Detail"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=12" title="Employee Month Salary Chart"></siteMapNode>
+      <siteMapNode url="~/payroll/ViewSalaryReports.aspx?RepId=16" title="Salary Payable"></siteMapNode>
+      <siteMapNode url="~/payroll/payroll/Bank_Payment.aspx" title="Salary Bank Payment"></siteMapNode>
+
+      <siteMapNode url="~/payroll/EmployeeSalaryApprove.aspx" title="Bank Letter"></siteMapNode>
+      <siteMapNode url="~/payroll/AllBankCoverLettersList.aspx" title="All Month Salary"></siteMapNode>
+      <siteMapNode url="~/payroll/EmployeesForCheckDelivery.aspx" title="Cheque Salary Transfer"></siteMapNode>
+      <siteMapNode url="~/payroll/AllSalariesChequesIssued.aspx" title="All Salaries Cheque Issued"></siteMapNode>
+ </siteMapNode>
+
+    <siteMapNode title="Human Resource">
+      <siteMapNode url="~/hr/SearchEmployeeDetail.aspx" title="Search Employee Detail"></siteMapNode>
+     
+      
+    </siteMapNode>
+
+    <siteMapNode title="Requisition">
+      <siteMapNode url="~/Pharmacy/Medicine_Unsent_Request.aspx"  title="Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/Item_IndentBook.aspx" title="Internal Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/RecievedRequisitionList.aspx" title="Receive Inventory by Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/ReceivedRequisitionWaitingList.aspx" title="Received Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/RequisitionWaitingList.aspx" title="Approved Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/RequisitionAllRecord.aspx" title="Search Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/Demand_Requisition.aspx" title="Demand Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/Demand_Requisition_Qutation.aspx" title="Demand Requisition Quotation"></siteMapNode>
+
+      <siteMapNode url="~/Store/DemandRequisitionSearch.aspx" title="Search Demand Requisition"></siteMapNode>
+      <siteMapNode url="~/Store/ApprovalAuthoritiesDemandReq.aspx" title="Approval Authorities Demand (Req)"></siteMapNode>
+      <siteMapNode url="~/Store/DemandReqMinimumAuthorityLevel.aspx" title="Min Approval Authorities Demand (Req)"></siteMapNode>
+      <siteMapNode url="~/Store/MyPendingDemandReqApprovalRequests.aspx" title="My Pending Demand Req Approval Authorities Request"></siteMapNode>
+      <siteMapNode url="~/Store/IndentBookSearch.aspx" title="Search Requisition (Approval)"></siteMapNode>
+      <siteMapNode url="~/Store/MyPendingApprovalRequests.aspx" title="My Pending (Approvals)"></siteMapNode>
+      <siteMapNode url="~/Store/ApprovalAuthorities.aspx" title="Approval Authorities"></siteMapNode>
+      <siteMapNode url="~/Store/MinimumAuthorityLevel.aspx" title="Min Approval Authorities"></siteMapNode>
+
+
+
+    </siteMapNode>
+
+
+    </siteMapNode>
+</siteMap>

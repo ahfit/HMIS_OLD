@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+<Pt_Presenting_Complaint Complaint_Name="Pain" Complaint_ID="1" />
+<Pt_Presenting_Complaint Complaint_Name="Fever" Complaint_ID="2" />
+<Pt_Presenting_Complaint Complaint_Name="Mass" Complaint_ID="4" />
+<Pt_Presenting_Complaint Complaint_Name="Edema" Complaint_ID="5" />
+<Pt_Presenting_Complaint Complaint_Name="Shortness Of Breath" Complaint_ID="6" />
+<Pt_Presenting_Complaint Complaint_Name="Vomiting" Complaint_ID="9" />
+<Pt_Presenting_Complaint Complaint_Name="Hematuria" Complaint_ID="15" />
+<Pt_Presenting_Complaint Complaint_Name="Retention" Complaint_ID="9" />
+<Pt_Presenting_Complaint Complaint_Name="LUTS" Complaint_ID="15" />
+</root>

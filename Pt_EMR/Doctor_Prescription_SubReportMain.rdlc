@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Speciality Doctor 's Comments :</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.33782in</Top>
+        <Left>0.03953in</Left>
+        <Height>0.25in</Height>
+        <Width>1.94882in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox38">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Instructions:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox37</rd:DefaultName>
+        <Top>0.81944in</Top>
+        <Left>0.03953in</Left>
+        <Height>0.20833in</Height>
+        <Width>1in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix2">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>5.77673in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.37153in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="MedicineName1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!MedicineName.Value &amp;" "&amp; Fields!Para.Value &amp;" "&amp; Fields!para_Urdu.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>MedicineName1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details1" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet_DischargeMedicine</DataSetName>
+        <Top>0.37847in</Top>
+        <Left>0.36458in</Left>
+        <Height>0.37153in</Height>
+        <Width>5.77673in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Tablix Name="Tablix3">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>5.81131in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.16667in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Plan_Detail">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!RefDoctor_Notes.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Plan_Detail</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details2" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet_PhysianNotes</DataSetName>
+        <Top>1.60764in</Top>
+        <Left>0.33in</Left>
+        <Height>0.16667in</Height>
+        <Width>5.81131in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Tablix Name="Tablix4">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>5.81131in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.16667in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Plan_Detail2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Physician_Notes.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Plan_Detail</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details3" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet_PhysianNotes</DataSetName>
+        <Top>1.06943in</Top>
+        <Left>0.33in</Left>
+        <Height>0.16667in</Height>
+        <Width>5.81131in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!ReferDoc_Name.Value, "DataSet_PhysianNotes")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>1.61561in</Top>
+        <Left>2.05779in</Left>
+        <Height>0.20037in</Height>
+        <Width>1.97798in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!RefDept_Name.Value, "DataSet_PhysianNotes")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>1.60172in</Top>
+        <Left>4.16333in</Left>
+        <Height>0.21426in</Height>
+        <Width>1.97798in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox39">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Prescription:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox37</rd:DefaultName>
+        <Top>0.125in</Top>
+        <Left>0.03953in</Left>
+        <Height>0.20833in</Height>
+        <Width>1.08547in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>3.67708in</Height>
+    <Style />
+  </Body>
+  <Width>6.16923in</Width>
+  <Page>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="TreatmentDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>cc9f856e-b823-4ab3-8675-3fedf174ff3a</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_EmergencyMedicine">
+      <Query>
+        <DataSourceName>TreatmentDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="MedicineType">
+          <DataField>MedicineType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MedicineName">
+          <DataField>MedicineName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Potency">
+          <DataField>Potency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Unit">
+          <DataField>Unit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Meal">
+          <DataField>Meal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Qty">
+          <DataField>Qty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Doze">
+          <DataField>Doze</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="days">
+          <DataField>days</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dosage">
+          <DataField>Dosage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Occasion">
+          <DataField>Occasion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CT">
+          <DataField>CT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="priscription_id">
+          <DataField>priscription_id</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Para">
+          <DataField>Para</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="para_Urdu">
+          <DataField>para_Urdu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MedicineCategory_Type">
+          <DataField>MedicineCategory_Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>TreatmentDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Nazim Nawaz\Documents\Visual Studio 2010\WebSites\WebSite1\App_Code\TreatmentDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>usp_getPrescription</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>usp_getPrescriptionTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet_DischargeMedicine">
+      <Query>
+        <DataSourceName>TreatmentDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="MedicineType">
+          <DataField>MedicineType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MedicineName">
+          <DataField>MedicineName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Potency">
+          <DataField>Potency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Unit">
+          <DataField>Unit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Meal">
+          <DataField>Meal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Qty">
+          <DataField>Qty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Doze">
+          <DataField>Doze</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="days">
+          <DataField>days</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dosage">
+          <DataField>Dosage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Occasion">
+          <DataField>Occasion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CT">
+          <DataField>CT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="priscription_id">
+          <DataField>priscription_id</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Para">
+          <DataField>Para</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="para_Urdu">
+          <DataField>para_Urdu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MedicineCategory_Type">
+          <DataField>MedicineCategory_Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>TreatmentDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Nazim Nawaz\Documents\Visual Studio 2010\WebSites\WebSite1\App_Code\TreatmentDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>usp_getPrescription</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>usp_getPrescriptionTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet_PhysianNotes">
+      <Query>
+        <DataSourceName>TreatmentDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RefDoctor_Notes">
+          <DataField>RefDoctor_Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReferDoc_Name">
+          <DataField>ReferDoc_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Physician_Notes">
+          <DataField>Physician_Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RefDept_Name">
+          <DataField>RefDept_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>TreatmentDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Nazim Nawaz\Documents\Visual Studio 2010\WebSites\WebSite1\App_Code\TreatmentDataSet9.xsd</rd:SchemaPath>
+        <rd:TableName>usp_congifureReport</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>usp_congifureReportTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet_Refer_Doc">
+      <Query>
+        <DataSourceName>TreatmentDataSet</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="DOC_Name">
+          <DataField>DOC_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DOC_Reply">
+          <DataField>DOC_Reply</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Reply_Date">
+          <DataField>Reply_Date</DataField>
+          <rd:TypeName>System.</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="RxPad">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>6129b3e4-f849-4072-bec6-7a7cd17b5d68</rd:ReportID>
+</Report>

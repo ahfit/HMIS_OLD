@@ -1,0 +1,371 @@
+﻿<%@ master language="VB" inherits="hacims_masterpagePatient, App_Web_uj03ztnp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>HACIMS</title>
+      <!--Styles -->
+    <link href="~/css_hacims/class_reset.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/class_content.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/colorbox.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="~/css_hacims/jquery_ui/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+
+    <link rel="shortcut icon" href="images_hacims/favicon.ico" />
+    <!--Scripts-->
+   
+     <script src="<%# Page.ResolveClientUrl("~/Scripts/jquery.min.js") %>" type="text/javascript" language="javascript"></script>
+    <script src="<%# Page.ResolveClientUrl("~/Scripts/bootstrap.min.js") %>" type="text/javascript" language="javascript"></script>
+<%--    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery.cookie.js")%>"></script>    --%>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery.colorbox-min.js")%>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery.floatobject-1.0.js") %>"></script>
+
+    
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.core.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.widget.js") %>"></script>
+    <%--<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.mouse.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.draggable.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.position.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.resizable.js") %>"></script>--%>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.dialog.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/jquery_ui/ui/jquery.ui.datepicker.js")%>"></script>
+    <%--<script type="text/javascript" src="<%# Page.ResolveClientUrl("~/css_hacims/validate.js")%>"></script>--%>
+<script type="text/javascript">
+		$(document).ready(main);
+		function main()
+		{
+			$("#feedb").makeFloat({x:"current",y:"current"});
+		}		
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+		//	$(".feed").colorbox({width:"800px", height:"430px", iframe:true});
+			$(".rpt_link").colorbox({width:"920px", height:"90%", iframe:true});
+		
+		});
+	</script>  
+    
+
+<asp:ContentPlaceHolder id="head" runat="server"> </asp:ContentPlaceHolder>
+   
+</head>
+<body>
+ <form id="form1" runat="server" autocomplete="off">
+ 
+
+ <div id="container">
+ <div id="feedb" style ="display :none;"><a href="~/administrator/feedback.aspx" runat="server" class="feed"></a></div>
+  <div id="header">
+    <div id="logininfo">
+      <ul>
+        <li class="welcome">Welcome!<span class="dname"><asp:Label ID="LabelDoctorName" runat="server" ToolTip="User Name" ></asp:Label></span><span class="spltr">|<asp:Label
+            ID="Label_Designation" runat="server" ToolTip="User Designation" ForeColor="DarkGray"></asp:Label></span><span class="designation"></span><span class="spltr">|</span><span class="dept"><asp:Label ID="Label_SubDepartment" runat="server" ToolTip="User Deprartment" style="color:#97ba3a;" Text="Label_SubDepartment"></asp:Label></span><span class="spltr">|&nbsp;</span><a id="AB" href="~/change_password.aspx" class="cpass" runat="server" >Change Password</a>
+            <asp:Literal ID="ltrDemo" runat="server" Text=""></asp:Literal>
+            <span class="spltr">|&nbsp;</span><a href="~/login.aspx" title="Logout" runat="server" >Logout</a></li>
+        
+        <li class="datet"><asp:Label ID="LabelDate" runat="server" ToolTip="Current Date"  style="color:#0155a6;"></asp:Label></li>
+        
+      </ul>
+    </div>
+    <div id="navigation"   style="margin-right:12px; " >
+             
+     <asp:Panel ID="Panel1"   CssClass="posmenu" runat="server"></asp:Panel> 
+   
+      
+    </div> <!--navigation END-->
+  </div>
+  <!--header END-->
+  
+<div id="content" > 
+  
+<div id="inner-content">
+<h1 class="mh1"><span><asp:SiteMapPath ID="SiteMapPath1" runat="server"   CurrentNodeStyle-ForeColor="#000"  RenderCurrentNodeAsLink="true" PathSeparator="&nbsp;&nbsp;&raquo;&nbsp;&nbsp;" RootNodeStyle-ForeColor="#999999" PathDirection="RootToCurrent"></asp:SiteMapPath></span> 
+   </h1>
+  
+  
+
+
+
+<div id="patient_info" runat="server" style="margin-top:5px; margin-bottom:5px;" >
+
+
+
+
+
+
+
+
+
+<asp:FormView ID="FormView2" runat="server"  HorizontalAlign="Left" Width="100%"><EditItemTemplate>
+                PayID:
+                <asp:TextBox ID="PayIDTextBox" runat="server" Text='<%# Bind("PayID") %>'> </asp:TextBox>
+                
+                PatientName:
+                <asp:TextBox ID="PatientNameTextBox" runat="server" Text='<%# Bind("PatientName") %>'> </asp:TextBox>
+                
+                Relation:
+                <asp:TextBox ID="RelationTextBox" runat="server" Text='<%# Bind("Relation") %>'> </asp:TextBox>
+                
+                RelationName:
+                <asp:TextBox ID="RelationNameTextBox" runat="server" Text='<%# Bind("RelationName") %>'> </asp:TextBox>
+                
+                Age:
+                <asp:TextBox ID="AgeTextBox" runat="server" Text='<%# Bind("Age") %>'> </asp:TextBox>
+                
+                PatientType:
+                <asp:TextBox ID="PatientTypeTextBox" runat="server" Text='<%# Bind("PatientType") %>'> </asp:TextBox>
+                
+                BPHigh:
+                <asp:TextBox ID="BPHighTextBox" runat="server" Text='<%# Bind("BPHigh") %>'> </asp:TextBox>
+                
+                BPLow:
+                <asp:TextBox ID="BPLowTextBox" runat="server" Text='<%# Bind("BPLow") %>'> </asp:TextBox>
+                
+                Pulse:
+                <asp:TextBox ID="PulseTextBox" runat="server" Text='<%# Bind("Pulse") %>'> </asp:TextBox>
+                
+                Temperature:
+                <asp:TextBox ID="TemperatureTextBox" runat="server" Text='<%# Bind("Temperature") %>'> </asp:TextBox>
+                
+                RR:
+                <asp:TextBox ID="RRTextBox" runat="server" Text='<%# Bind("RR") %>'> </asp:TextBox>
+                
+                StreetAddress:
+                <asp:TextBox ID="StreetAddressTextBox" runat="server" Text='<%# Bind("StreetAddress") %>'> </asp:TextBox>
+                
+                HomePhone:
+                <asp:TextBox ID="HomePhoneTextBox" runat="server" Text='<%# Bind("HomePhone") %>'> </asp:TextBox>
+                
+                MobilePhone:
+                <asp:TextBox ID="MobilePhoneTextBox" runat="server" Text='<%# Bind("MobilePhone") %>'> </asp:TextBox>
+                
+                CNIC:
+                <asp:TextBox ID="CNICTextBox" runat="server" Text='<%# Bind("CNIC") %>'> </asp:TextBox>
+                
+                Year:
+                <asp:TextBox ID="YearTextBox" runat="server" Text='<%# Bind("Year") %>'> </asp:TextBox>
+                
+                AgeType:
+                <asp:TextBox ID="AgeTypeTextBox" runat="server" Text='<%# Bind("AgeType") %>'> </asp:TextBox>
+                
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update"
+                    Text="Update"> </asp:LinkButton>
+                <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel"
+                    Text="Cancel"> </asp:LinkButton>
+            
+</EditItemTemplate>
+<InsertItemTemplate>
+                PayID:
+                <asp:TextBox ID="PayIDTextBox" runat="server" Text='<%# Bind("PayID") %>'> </asp:TextBox>
+                
+                PatientName:
+                <asp:TextBox ID="PatientNameTextBox" runat="server" Text='<%# Bind("PatientName") %>'> </asp:TextBox>
+                
+                Relation:
+                <asp:TextBox ID="RelationTextBox" runat="server" Text='<%# Bind("Relation") %>'> </asp:TextBox>
+                
+                RelationName:
+                <asp:TextBox ID="RelationNameTextBox" runat="server" Text='<%# Bind("RelationName") %>'> </asp:TextBox>
+                
+                Age:
+                <asp:TextBox ID="AgeTextBox" runat="server" Text='<%# Bind("Age") %>'> </asp:TextBox>
+                
+                PatientType:
+                <asp:TextBox ID="PatientTypeTextBox" runat="server" Text='<%# Bind("PatientType") %>'> </asp:TextBox>
+                
+                BPHigh:
+                <asp:TextBox ID="BPHighTextBox" runat="server" Text='<%# Bind("BPHigh") %>'> </asp:TextBox>
+                
+                BPLow:
+                <asp:TextBox ID="BPLowTextBox" runat="server" Text='<%# Bind("BPLow") %>'> </asp:TextBox>
+                
+                Pulse:
+                <asp:TextBox ID="PulseTextBox" runat="server" Text='<%# Bind("Pulse") %>'> </asp:TextBox>
+                
+                Temperature:
+                <asp:TextBox ID="TemperatureTextBox" runat="server" Text='<%# Bind("Temperature") %>'> </asp:TextBox>
+                
+                RR:
+                <asp:TextBox ID="RRTextBox" runat="server" Text='<%# Bind("RR") %>'> </asp:TextBox>
+                
+                StreetAddress:
+                <asp:TextBox ID="StreetAddressTextBox" runat="server" Text='<%# Bind("StreetAddress") %>'> </asp:TextBox>
+                
+                HomePhone:
+                <asp:TextBox ID="HomePhoneTextBox" runat="server" Text='<%# Bind("HomePhone") %>'> </asp:TextBox>
+                
+                MobilePhone:
+                <asp:TextBox ID="MobilePhoneTextBox" runat="server" Text='<%# Bind("MobilePhone") %>'> </asp:TextBox>
+                
+                CNIC:
+                <asp:TextBox ID="CNICTextBox" runat="server" Text='<%# Bind("CNIC") %>'> </asp:TextBox>
+                
+                Year:
+                <asp:TextBox ID="YearTextBox" runat="server" Text='<%# Bind("Year") %>'> </asp:TextBox>
+                
+                AgeType:
+                <asp:TextBox ID="AgeTypeTextBox" runat="server" Text='<%# Bind("AgeType") %>'> </asp:TextBox>
+                
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert"
+                    Text="Insert"> </asp:LinkButton>
+                <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel"
+                    Text="Cancel"> </asp:LinkButton>
+            
+</InsertItemTemplate>
+<ItemTemplate>
+
+<div id="p_info" class="patient-info">
+
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <%--<td valign="top"><img name="" visible="false" src="Employee_pic.aspx"  style="width:50px;" alt="" onclick="MM_openBrWindow('Employee_pic.aspx','','width=300,height=350')"  /></td>--%>
+    <td  valign="top" style="padding-left:10px; width:50%">
+    
+<ul>
+<li>
+<span class="name-p"> <asp:Label id="PatientNameLabel" runat="server"  Text='<%# Eval("prefix", "{0}") %>'></asp:Label></span>
+<span class="relation">&nbsp;<asp:Label id="RelationLabel" runat="server" Text='<%# Bind("Relation", "{0}") %>'></asp:Label>&nbsp;</span>
+<strong><asp:Label id="RelationNameLabel" runat="server"  Text='<%# Eval("RELATIONNAME", "{0}") %>'></asp:Label></strong>
+<span class="age"><asp:Label id="AgeLabel" runat="server"  Text='<%# Bind("Age") %>' ></asp:Label>  Year(s)<span class="splt">|</span><asp:Label id="LabelDateofBirth" runat="server"  Text='<%# Eval("DateOfBirth") %>' ></asp:Label><span class="splt">|</span><asp:Label id="LabelGender" runat="server" Text='<%# Eval("Gender", "{0}") %>'></asp:Label></span>
+<span class="add"> <asp:Label ID="Label_Address" runat="server" Text='<%# Bind("Address", "{0}") %>' ></asp:Label></span>
+<span class="age">MR # &nbsp;<span class="reg"><asp:Label id="RegistrationNo" runat="server" Text='<%# Eval("RegNo") %>'></asp:Label></span><span class="splt">|</span>&nbsp;<span class="visit"><div style ="display :none"><asp:Label ID="Label_PayID" runat="server" Text='<%# Eval("PayID") %>'></asp:Label></div>
+    <span class="docname" title="Doctor Name">
+    <asp:Label ID="Label_DoctorName" runat="server" 
+        Text='<%# Bind("DoctorName", "{0}") %>'></asp:Label>
+    <span title="Department">&nbsp;<asp:Label ID="Label_Department" runat="server" 
+        Text='<%# Eval("Dept_Name") %>'></asp:Label>
+    <span class="splt">/<strong><asp:Label ID="Label1" runat="server" 
+        Text='<%# Bind("BedNo", "{0}") %>'></asp:Label>
+    </strong><asp:Label ID="Label_SubDept" runat="server" 
+        Text='<%# Eval("SubDept_Name") %>'></asp:Label><span class="splt">|</span>
+    <span class="age red" title="Diagnosis"><asp:Label ID="Label_Diagnosis" 
+        runat="server" Text='<%# Bind("Diagonosis", "{0}") %>' Visible="false"></asp:Label>
+    </span>
+    </span></span></span></span></span>
+</li>
+</ul> 
+    
+</td>
+
+<%--<td valign="top" style="width:200px;"> 
+<div class="bxmain_1" style = " display :none;">
+<table  border="0" cellspacing="0" cellpadding="0" class="tbl" width="96%" >
+  <tr >
+    <td >Temp (F) : <span class="red"><asp:Label ID="Label_Temp" runat="server" Text='<%# Bind("Temp", "{0}") %>'></asp:Label> </span></td>  
+   <td>Weight (kg) : <asp:Label ID="Label_Weight" runat="server" Text='<%# Eval("Weight") %>' ></asp:Label></td>
+  </tr>
+  <tr>
+    <td>Pulse : <span class="green"><asp:Label ID="Label_Pulse" runat="server" Text='<%# Bind("Pulse", "{0}") %>'></asp:Label> </span></td>
+    <td>Height (cm) : 
+        <asp:Label ID="Label_Height" runat="server" Text='<%# Eval("Height") %>'></asp:Label></td>
+  </tr>
+  <tr>
+    <td colspan="2">BP : <span class="red"><asp:Label ID="Label_BP" runat="server" Text='<%# Bind("BP", "{0}") %>'></asp:Label> </span></td>
+    </tr>
+   <tr>
+    <td>RR : <span class="green"><asp:Label ID="Label_RR" runat="server" Text='<%# Bind("RR", "{0}") %>'></asp:Label> </span></td>
+    <td align="right"><a id="A1" href="" runat="server" style="font-size:10px;"></a></td>
+  </tr>
+</table>
+
+</div>  
+    
+     </td>--%>
+<td style="width:25%; padding-right:5px; padding-left:5px;" valign="top"> 
+<div class="bxmain_1">
+
+
+ <table  border="0" cellspacing="0" cellpadding="0" class="tbl" width="96%">
+ <tr><td><div class="alerts" style="margin-left:10px;">Alert(s)</div></td></tr>
+  <tr >
+    <td ><asp:Label ID="Label_Alert1" runat="server"  Text='<%# Bind("Alert1", "{0}") %>'></asp:Label>&nbsp;</td>  
+  
+  </tr>
+  <tr>
+    <td><asp:Label ID="Label_Alert2" runat="server"   Text='<%# Bind("Alert2", "{0}") %>'></asp:Label> &nbsp;</td>
+   
+  </tr>
+  <tr>
+    <td ><asp:Label ID="Label_Alert3" runat="server"  Text='<%# Bind("Alert3", "{0}") %>'></asp:Label>&nbsp;</td>
+    </tr>
+   
+</table>
+</div>
+ </td>
+  </tr>
+</table>
+  
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+  
+
+ 
+
+
+<asp:HiddenField ID="HiddenField_Pfname" runat="server" Value='<%# Eval("pfname", "{0}") %>' />
+    <asp:HiddenField ID="HiddenField_Pmname" runat="server" Value='<%# Eval("pmname", "{0}") %>' />
+    <asp:HiddenField ID="HiddenField_plname" runat="server" Value='<%# Eval("plname", "{0}") %>' />
+</div>  
+
+
+
+
+</ItemTemplate>
+</asp:FormView>
+
+
+
+  <asp:SqlDataSource ID="patient_detail" runat="server" ConnectionString="<%$ ConnectionStrings:Reg_ConnectionString %>"
+            SelectCommand="pt_basic_info" SelectCommandType="StoredProcedure" ProviderName="<%$ ConnectionStrings:Reg_ConnectionString.ProviderName %>">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="HiddenField_regNo" Name="regno" PropertyName="Value"
+                    Type="String" />
+                <asp:ControlParameter ControlID="HiddenField_Payis" Name="payid" PropertyName="Value"
+                    Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:HiddenField ID="HiddenField_regNo" runat="server" />
+        <asp:HiddenField ID="HiddenField_Payis" runat="server" />
+  
+                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server">
+                 </asp:ObjectDataSource>
+  
+  
+  
+  
+  
+  </div></div>
+<div id="forms_items" style="min-height:400px;" >
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+ 
+ </div>
+<asp:Label ID="label_i_f" runat ="server" Visible="false" ></asp:Label>
+<br />
+<br />
+
+ <asp:HiddenField ID="HiddenFieldPage_Name" runat="server" /><asp:HiddenField ID="HiddenFieldPage" runat="server" /> 
+  
+  
+ </div> <!--inner-content END-->
+ </div>
+  <!--content END-->
+  <div id="footer"><span><a href="#" title="HACIMS - Design &amp; Developed by MegaPlus Technologies" target="_blank">&copy; 2012  -  All rights reserved - MegaPlus Technologiesntainer END-->
+ 
+ 
+ 
+        
+      
+    
+ </form>
+</body>
+</html>

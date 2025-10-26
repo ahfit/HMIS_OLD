@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chart caption='Pulse' formatNumberScale='0' xAxisName='Time' yAxisName='Pulse' numberPrefix='' animation='1' divLineAlpha='1' bgSWFAlpha='1' showValues='1' rotateValues='0' bgAlpha='0' placeValuesInside='1' border='0'  bgColor='ff0000' borderColor='ffffff'  >
+  <set label='10:35:25' value='56'/>
+  <set label='10:40:15' value='56'/>
+  <set label='10:40:15' value='67'/>
+  <set label='14:36:04' value='78'/>
+  <set label='14:36:04' value='67'/>
+  <set label='16:10:04' value='85'/>
+  <set label='16:10:31' value='85'/>
+</chart>

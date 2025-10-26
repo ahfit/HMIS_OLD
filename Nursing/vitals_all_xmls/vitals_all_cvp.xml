@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<chart caption='CVP'  subcaption='(from 10:30 am to 11:00 am)' formatNumberScale='0' lineThickness='3' xAxisName='Time' yAxisName='Range ' numberPrefix='' animation='1' divLineAlpha='20'  bgSWFAlpha='1' showValues='1' rotateValues='0' bgAlpha='0' placeValuesInside='1' border='0'  bgColor='ff0000' borderColor='ffffff' yAxisMinValue='0' yAxisMaxValue='30'  anchorRadius='6' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridColor='CC3300' shadowAlpha='40' numvdivlines='5' bgColor='FFFFFF,CC3300'   divLineColor='CC3300' anchorBgColor='009900' >
+ 
+  <set label='10:35' value='30' color='009900' />
+  <set label='10:40' value='22' color='009900'/>
+  <set label='10:40' value='18' color='009900' />
+  <set label='14:36' value='12' color='009900'/>
+  <set label='14:36' value='17' color='009900' anchorBgColor='ff0033'/>
+  <set label='16:10' value='25'  color='009900'/>
+  <set label='16:10' value='4' color='009900'/>
+  
+ 
+	
+  
+</chart>
